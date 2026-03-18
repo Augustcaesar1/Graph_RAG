@@ -27,7 +27,7 @@
 ## 项目结构
 
 ```
-C9/
+/
   app.py                      # Streamlit Web 应用入口
   config.py                   # 系统配置（Neo4j、FAISS、模型等）
   requirements.txt            # Python 依赖
@@ -65,7 +65,7 @@ C9/
 在项目根目录：
 
 ```bash
-conda activate mytorch
+conda activate "你的虚拟环境"
 pip install -r requirements.txt
 ```
 
@@ -157,6 +157,3 @@ python scripts/import_dongzhou_to_neo4j.py
 
 确认 Neo4j Desktop 已启动 DBMS，并检查 `config.py` 中的 `neo4j_uri/user/password/database`。
 
-### 3) 向量索引太大不想提交
-
-本仓库默认 `.gitignore` 已忽略 `dongzhou_faiss_index/` 等索引产物；数据目录 `东周列国知识图谱/` 会被保留提交。
