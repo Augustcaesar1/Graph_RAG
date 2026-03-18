@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual envs
+.venv/
+venv/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/
+
+# Logs
+*.log
+
+# Local config / secrets
+.env
+.env.*
+
+# RAG artifacts / indexes
+# (FAISS stores index + metadata here)
+dongzhou_faiss_index/
+**/*faiss_index*/
+*.faiss
+*.pkl
+
+# Large datasets / exports
+_archive_*/
+
+# Temp
+*.tmp
+*.temp

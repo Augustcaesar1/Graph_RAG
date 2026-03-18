@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(du -sh ./*)",
+      "Bash(python:*)",
+      "Bash(streamlit run:*)"
+    ]
+  }
+}
