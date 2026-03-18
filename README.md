@@ -27,7 +27,6 @@
 ## 项目结构
 
 ```
-/
   app.py                      # Streamlit Web 应用入口
   config.py                   # 系统配置（Neo4j、FAISS、模型等）
   requirements.txt            # Python 依赖
