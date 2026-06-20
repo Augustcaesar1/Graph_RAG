@@ -1,0 +1,251 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "苏护",
+          "alias": [
+            "冀州侯"
+          ],
+          "description": "冀州侯，因反对纣王被迫献女妲己赎罪",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [
+            "武成王"
+          ],
+          "description": "商朝武成王",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "费仲",
+          "alias": [],
+          "description": "商朝权臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "尤浑",
+          "alias": [],
+          "description": "商朝权臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "商容",
+          "alias": [
+            "首相"
+          ],
+          "description": "商朝首相",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姬昌",
+          "alias": [
+            "西伯侯"
+          ],
+          "description": "西伯侯，周文王",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [
+            "苏娘娘"
+          ],
+          "description": "苏护之女，被献给纣王",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "周朝",
+          "attributes": {
+            "leader": "姬昌"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "冀州",
+          "alias": [],
+          "description": "苏护的封地",
+          "attributes": {}
+        },
+        {
+          "name": "午门",
+          "alias": [],
+          "description": "皇宫正门",
+          "attributes": {}
+        },
+        {
+          "name": "寿仙宫",
+          "alias": [],
+          "description": "纣王的宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "显庆殿",
+          "alias": [],
+          "description": "商朝宫殿",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "苏护进女赎罪",
+          "alias": [],
+          "description": "苏护被迫献女妲己以赎罪",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "苏护",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "苏护身服犯官之服，不敢冠冕衣裳，来至丹墀之下俯伏，口称：'犯臣苏护，死罪！死罪！'",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "飞虎见了苏护进女赎罪文书，忙差龙环出城，分付苏护",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "当时权臣费仲、尤浑见苏护又不先送礼物",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "尤浑",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "当时权臣费仲、尤浑见苏护又不先送礼物",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "商容",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "只见首相商容出班谏曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "但前日西伯侯姬昌有本，令苏护进女赎罪",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "CHILD_OF",
+        "target_entity": "苏护",
+        "evidence": "犯臣女妲己愿陛下万岁，万岁，万万岁！",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护",
+        "relation": "OPPOSES",
+        "target_entity": "纣王",
+        "evidence": "冀州苏护，你题反诗午门，'永不朝商'",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "OPPOSES",
+        "target_entity": "苏护",
+        "evidence": "这逆贼，你虽则献女赎罪，天子之喜怒不测，凡事俱在我二人点缀，其生死存亡，只在我等掌握之中，他全然不理我等，甚是可恶！",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "尤浑",
+        "relation": "OPPOSES",
+        "target_entity": "苏护",
+        "evidence": "这逆贼，你虽则献女赎罪，天子之喜怒不测，凡事俱在我二人点缀，其生死存亡，只在我等掌握之中，他全然不理我等，甚是可恶！",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "商容",
+        "relation": "OPPOSES",
+        "target_entity": "费仲",
+        "evidence": "丞相所奏，望陛下从之",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "妲己",
+        "evidence": "天子同妲己在寿仙宫筵宴，当夜成就凤友鸾交，恩爱如同胶漆",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护进女赎罪",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "苏护",
+        "evidence": "今苏护进女，已在都城候旨定夺",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护进女赎罪",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "妲己",
+        "evidence": "犯臣女妲己愿陛下万岁，万岁，万万岁！",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护进女赎罪",
+        "relation": "OCCURS_IN",
+        "target_entity": "朝歌",
+        "evidence": "今苏护进女，已在都城候旨定夺",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

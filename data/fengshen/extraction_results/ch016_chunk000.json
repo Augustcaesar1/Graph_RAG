@@ -1,0 +1,128 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "姜子牙",
+          "alias": [
+            "子牙",
+            "姜尚",
+            "飞熊"
+          ],
+          "description": "元始天尊弟子，善风水阴阳，能降妖除魔",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "宋异人",
+          "alias": [
+            "异人"
+          ],
+          "description": "姜子牙的结义兄弟",
+          "attributes": {}
+        },
+        {
+          "name": "马氏",
+          "alias": [],
+          "description": "姜子牙的妻子",
+          "attributes": {}
+        },
+        {
+          "name": "孙氏",
+          "alias": [],
+          "description": "宋异人的妻子",
+          "attributes": {}
+        },
+        {
+          "name": "刘乾",
+          "alias": [],
+          "description": "朝歌破落户，樵夫",
+          "attributes": {}
+        }
+      ],
+      "Faction": [
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {
+            "leader": "元始天尊"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "与商对抗的势力",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "西岐山",
+          "alias": [
+            "岐山"
+          ],
+          "description": "周的发源地",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "子牙火烧琵琶精",
+          "alias": [],
+          "description": "姜子牙收服五个妖物的故事",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "宋异人",
+        "relation": "BROTHER_OF",
+        "target_entity": "姜子牙",
+        "evidence": "话说异人与子牙来后园散闷",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "马氏",
+        "relation": "MARRIED_TO",
+        "target_entity": "姜子牙",
+        "evidence": "马氏同姆姆孙氏往后园暗暗的看子牙做何事",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "元始天尊弟子",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "辅佐周室伐商",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "子牙火烧琵琶精",
+        "evidence": "话说子牙在牡丹亭里，见风火影里，五个精灵作怪",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

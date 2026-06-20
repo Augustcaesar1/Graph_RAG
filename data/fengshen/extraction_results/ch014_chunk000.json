@@ -1,0 +1,255 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "哪吒",
+          "alias": [],
+          "description": "太乙真人弟子，莲花化身",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "太乙真人",
+          "alias": [],
+          "description": "哪吒的师父",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "李靖",
+          "alias": [],
+          "description": "陈塘关总兵，哪吒的父亲",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷夫人",
+          "alias": [],
+          "description": "李靖的妻子，哪吒的母亲",
+          "attributes": {}
+        },
+        {
+          "name": "金霞童兒",
+          "alias": [],
+          "description": "太乙真人的童子",
+          "attributes": {}
+        }
+      ],
+      "Faction": [
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "太乙真人所属教派",
+          "attributes": {}
+        },
+        {
+          "name": "商",
+          "alias": [],
+          "description": "李靖所属势力",
+          "attributes": {}
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "哪吒所属势力",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "乾元山",
+          "alias": [],
+          "description": "太乙真人的洞府所在地",
+          "attributes": {}
+        },
+        {
+          "name": "陈塘关",
+          "alias": [],
+          "description": "李靖镇守的关隘",
+          "attributes": {}
+        },
+        {
+          "name": "翠屏山",
+          "alias": [],
+          "description": "哪吒行宫所在地",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "火尖枪",
+          "alias": [],
+          "description": "太乙真人赐予哪吒的武器",
+          "attributes": {}
+        },
+        {
+          "name": "风火轮",
+          "alias": [],
+          "description": "太乙真人赐予哪吒的坐骑",
+          "attributes": {}
+        },
+        {
+          "name": "乾坤圈",
+          "alias": [],
+          "description": "太乙真人赐予哪吒的法宝",
+          "attributes": {}
+        },
+        {
+          "name": "混天绫",
+          "alias": [],
+          "description": "太乙真人赐予哪吒的法宝",
+          "attributes": {}
+        },
+        {
+          "name": "金砖",
+          "alias": [],
+          "description": "太乙真人赐予哪吒的法宝",
+          "attributes": {}
+        },
+        {
+          "name": "六陈鞭",
+          "alias": [],
+          "description": "李靖使用的武器",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "哪吒现莲花化身",
+          "alias": [],
+          "description": "太乙真人为哪吒重塑身体",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "太乙真人",
+        "relation": "MASTER_OF",
+        "target_entity": "哪吒",
+        "evidence": "真人分付哪吒：“此处非汝定身之所。你回到陈塘关，托一梦与你母亲，离关四十里，有一翠屏山，山上有一空地，令你母亲造一座哪吒行宫，你受香烟三载，又可立于人间，辅佐真主。可速去，不得迟误！”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FATHER_OF",
+        "target_entity": "哪吒",
+        "evidence": "夫人把梦中事说了一遍。李靖大怒曰：“你还哭他！他害我们不浅。常言‘梦随心生’，只因你思想他，便有许多梦魂颠倒，不必疑惑。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷夫人",
+        "relation": "MARRIED_TO",
+        "target_entity": "李靖",
+        "evidence": "李靖进后□，殷夫人接见。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷夫人",
+        "relation": "MOTHER_OF",
+        "target_entity": "哪吒",
+        "evidence": "哪吒来到香房，叫：“母亲，孩兒乃哪吒也。如今我魂魄无栖，望母亲念为兒死得好苦，离此四十里，有一翠屏山上，与孩兒建立行宫，使我受些香烟，好去托生天界。孩兒感母亲之慈德甚于天渊。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "哪吒跪诉前情：“被父亲将泥身打碎，烧毁行宫。弟子无所依倚，只得来见师父，望祈怜救。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "真人曰：“这就是李靖的不是。他既还了父母骨肉，他在翠屏山上，与你无干；今使他不受香火，如何成得身体。况姜子牙下山已快。也罢，既为你，就与你做件好事。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "真人分付哪吒：“此处非汝定身之所。你回到陈塘关，托一梦与你母亲，离关四十里，有一翠屏山，山上有一空地，令你母亲造一座哪吒行宫，你受香烟三载，又可立于人间，辅佐真主。可速去，不得迟误！”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "李靖因东伯姜文焕为父报仇，调四十万人马，游魂关大战窦荣，荣不能取胜。李靖在野马岭操演三军，紧守关隘。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "BESTOWS",
+        "target_entity": "火尖枪",
+        "evidence": "真人传哪吒火尖枪，不一时已自精熟。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "BESTOWS",
+        "target_entity": "风火轮",
+        "evidence": "真人曰：“枪法好了，赐你脚踏风火二轮，另授灵符秘诀。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "BESTOWS",
+        "target_entity": "乾坤圈",
+        "evidence": "真人又付豹皮囊，囊中放乾坤圈、混天绫、金砖一塊。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "BESTOWS",
+        "target_entity": "混天绫",
+        "evidence": "真人又付豹皮囊，囊中放乾坤圈、混天绫、金砖一塊。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "BESTOWS",
+        "target_entity": "金砖",
+        "evidence": "真人又付豹皮囊，囊中放乾坤圈、混天绫、金砖一塊。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "KILLS",
+        "target_entity": "哪吒",
+        "evidence": "李靖大怒，传令：“安营！待我上山进香。”人马站立，李靖纵马往山上来进香，男女闪开。李靖纵马径至庙前，只见庙门高悬一扁，书：“哪吒行宫”四字。进得庙来，见哪吒形相如生，左右站立鬼判。李靖指而骂曰：“畜生！你生前扰害父母，死后愚弄百姓！”骂罢，提六陈鞭，一鞭把哪吒金身打的粉碎。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OPPOSES",
+        "target_entity": "李靖",
+        "evidence": "哪吒曰：“师父在上，此仇决难干休！”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "哪吒现莲花化身",
+        "evidence": "真人将一粒金丹放于居中，法用先天，气运九转，分离龙、坎虎，绰住哪吒魂魄，望荷、莲里一推，喝声：“哪吒不成人形，更待何时！”只听得响一声，跳起一个人来，面如傅粉，脣似涂硃，眼运精光，身长一丈六尺，此乃哪吒莲花化身，见师父拜倒在地。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "CREATES",
+        "target_entity": "哪吒现莲花化身",
+        "evidence": "真人将一粒金丹放于居中，法用先天，气运九转，分离龙、坎虎，绰住哪吒魂魄，望荷、莲里一推，喝声：“哪吒不成人形，更待何时！”只听得响一声，跳起一个人来，面如傅粉，脣似涂硃，眼运精光，身长一丈六尺，此乃哪吒莲花化身，见师父拜倒在地。",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

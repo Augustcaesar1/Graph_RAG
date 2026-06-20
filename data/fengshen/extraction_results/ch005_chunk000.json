@@ -1,0 +1,248 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主，沉迷酒色",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "千年狐狸精化身，迷惑纣王",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "云中子",
+          "alias": [],
+          "description": "终南山炼气士，得道之仙",
+          "attributes": {
+            "sect": "道教"
+          }
+        },
+        {
+          "name": "金霞童子",
+          "alias": [],
+          "description": "云中子的童子",
+          "attributes": {}
+        },
+        {
+          "name": "梅伯",
+          "alias": [],
+          "description": "商朝上大夫",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "商容",
+          "alias": [],
+          "description": "商朝首相",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [],
+          "description": "商朝亚相",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [],
+          "description": "商朝镇国武成王",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "闻仲",
+          "alias": [],
+          "description": "商朝太师",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {}
+        },
+        {
+          "name": "道教",
+          "alias": [],
+          "description": "云中子所属教派",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "终南山",
+          "alias": [],
+          "description": "云中子修炼之地",
+          "attributes": {}
+        },
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "玉柱洞",
+          "alias": [],
+          "description": "云中子的洞府",
+          "attributes": {}
+        },
+        {
+          "name": "摘星楼",
+          "alias": [],
+          "description": "纣王宴乐之地",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "水火花篮",
+          "alias": [],
+          "description": "云中子携带的法器",
+          "attributes": {}
+        },
+        {
+          "name": "木剑",
+          "alias": [],
+          "description": "云中子削制的除妖工具",
+          "attributes": {}
+        },
+        {
+          "name": "照妖宝剑",
+          "alias": [],
+          "description": "金霞童子提到的宝剑",
+          "attributes": {}
+        },
+        {
+          "name": "拂尘",
+          "alias": [],
+          "description": "云中子手持的法器",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "云中子进剑除妖",
+          "alias": [],
+          "description": "云中子前往朝歌除妖",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "云中子",
+        "relation": "MASTER_OF",
+        "target_entity": "金霞童子",
+        "evidence": "忙唤金霞童子：“你与我将老枯松枝取一段来，待我削一木剑，去除妖邪。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "云中子",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "道教",
+        "evidence": "话说终南山有一炼气士，名曰云中子，乃是千百年得道之仙。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "云中子",
+        "relation": "OPPOSES",
+        "target_entity": "妲己",
+        "evidence": "此畜不过是千年狐狸，今假托人形，潜匿朝歌皇宫之内，若不早除，必为大患。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "妲己",
+        "evidence": "不言纣王贪恋妲己，终日荒淫，不理朝政。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "梅伯",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "内有上大夫梅伯与首相商容、亚相比干言曰：“天子荒淫，沉湎酒色，不理朝政，本积如山，此大乱之兆也。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "商容",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "内有上大夫梅伯与首相商容、亚相比干言曰：“天子荒淫，沉湎酒色，不理朝政，本积如山，此大乱之兆也。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "比干",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "内有上大夫梅伯与首相商容、亚相比干言曰：“天子荒淫，沉湎酒色，不理朝政，本积如山，此大乱之兆也。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "与镇国武成王黄飞虎抱本上殿。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "闻仲",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "止有北海逆命，已令太师闻仲剿除奸党，此不过疥癣之疾，何足挂虑？",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "云中子",
+        "relation": "OWNS",
+        "target_entity": "水火花篮",
+        "evidence": "手携水火花篮，意欲往虎兒崖前采药；",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "云中子",
+        "relation": "OWNS",
+        "target_entity": "拂尘",
+        "evidence": "道人左手携定花篮，右手执着拂尘，近到滴水檐前，执拂尘打个稽首，口称：“陛下，贫道稽首了。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "云中子",
+        "relation": "CREATES",
+        "target_entity": "木剑",
+        "evidence": "童兒取松枝与云中子，削成木剑，分付童子：“好生看守洞门，我去就来。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "云中子",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "云中子进剑除妖",
+        "evidence": "云中子离了终南山，脚踏祥云，望朝歌而来。",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

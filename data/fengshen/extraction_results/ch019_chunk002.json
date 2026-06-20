@@ -1,0 +1,200 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "伯邑考",
+          "alias": [
+            "邑考"
+          ],
+          "description": "姬昌长子，为救父朝商献艺",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王宠妃，狐妖化身",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姬昌",
+          "alias": [
+            "西伯"
+          ],
+          "description": "周文王，被囚于羑里",
+          "attributes": {
+            "faction": "周"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "纣王统治的王朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "反抗商朝的势力",
+          "attributes": {
+            "leader": "姬昌"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "摘星楼",
+          "alias": [],
+          "description": "纣王与妲己享乐的场所",
+          "attributes": {}
+        },
+        {
+          "name": "虿盆",
+          "alias": [],
+          "description": "商朝酷刑场所，充满毒虫",
+          "attributes": {}
+        },
+        {
+          "name": "羑里",
+          "alias": [],
+          "description": "姬昌被囚禁的地方",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "檀板",
+          "alias": [],
+          "description": "白猿演奏用的乐器",
+          "attributes": {}
+        },
+        {
+          "name": "瑶琴",
+          "alias": [],
+          "description": "伯邑考演奏的乐器",
+          "attributes": {}
+        }
+      ],
+      "Beast": [
+        {
+          "name": "白猿",
+          "alias": [],
+          "description": "千年得道之猿，善歌唱与识妖",
+          "attributes": {}
+        }
+      ],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "伯邑考进贡赎罪",
+          "alias": [],
+          "description": "伯邑考为救父姬昌向纣王进献白猿",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "伯邑考",
+        "relation": "CHILD_OF",
+        "target_entity": "姬昌",
+        "evidence": "伯邑考世受陛下洪恩",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "伯邑考为父朝商",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "纣王为商朝君主",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "妲己为纣王宠妃",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "姬昌为周文王",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "KILLS",
+        "target_entity": "白猿",
+        "evidence": "纣王一拳将白猿打跌在地，死于地下",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "KILLS",
+        "target_entity": "伯邑考",
+        "evidence": "将邑考拿下摘星楼，送入虿盆",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "OPPOSES",
+        "target_entity": "伯邑考",
+        "evidence": "妲己以手指邑考骂曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "OWNS",
+        "target_entity": "白猿",
+        "evidence": "邑考将猿猴进上摘星楼",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "OWNS",
+        "target_entity": "檀板",
+        "evidence": "邑考将檀板递与白猿",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "OWNS",
+        "target_entity": "瑶琴",
+        "evidence": "邑考领旨坐地，就于膝上抚弄一曲",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "白猿",
+        "relation": "OPPOSES",
+        "target_entity": "妲己",
+        "evidence": "白猿看见上面有个狐狸——不知狐狸乃妲己本相",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

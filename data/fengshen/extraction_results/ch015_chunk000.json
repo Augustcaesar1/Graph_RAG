@@ -1,0 +1,248 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "姜子牙",
+          "alias": [
+            "姜尚",
+            "子牙",
+            "飞熊"
+          ],
+          "description": "元始天尊弟子，奉命下山封神扶周",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "元始天尊",
+          "alias": [],
+          "description": "阐教教主，昆仑山玉虚宫之主",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "白鹤童子",
+          "alias": [],
+          "description": "元始天尊座下童子",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "南极仙翁",
+          "alias": [],
+          "description": "阐教仙人，姜子牙道友",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "宋异人",
+          "alias": [],
+          "description": "姜子牙结义兄弟，朝歌宋家庄员外",
+          "attributes": {}
+        },
+        {
+          "name": "马员外",
+          "alias": [
+            "马洪"
+          ],
+          "description": "马家庄员外，马氏之父",
+          "attributes": {}
+        },
+        {
+          "name": "马氏",
+          "alias": [],
+          "description": "姜子牙妻子，马员外之女",
+          "attributes": {}
+        },
+        {
+          "name": "昊天上帝",
+          "alias": [],
+          "description": "天庭主宰，命仙首十二称臣",
+          "attributes": {}
+        }
+      ],
+      "Faction": [
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {
+            "leader": "元始天尊"
+          }
+        },
+        {
+          "name": "截教",
+          "alias": [],
+          "description": "通天教主门下教派",
+          "attributes": {}
+        },
+        {
+          "name": "人道",
+          "alias": [],
+          "description": "三教之一，参与封神",
+          "attributes": {}
+        },
+        {
+          "name": "商",
+          "alias": [
+            "成汤"
+          ],
+          "description": "封神之战中的商朝",
+          "attributes": {}
+        },
+        {
+          "name": "周",
+          "alias": [
+            "周室"
+          ],
+          "description": "封神之战中的周朝",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "昆仑山",
+          "alias": [],
+          "description": "阐教圣地，玉虚宫所在",
+          "attributes": {}
+        },
+        {
+          "name": "玉虚宫",
+          "alias": [],
+          "description": "元始天尊道场",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "宋家庄",
+          "alias": [],
+          "description": "宋异人居所",
+          "attributes": {}
+        },
+        {
+          "name": "马家庄",
+          "alias": [],
+          "description": "马员外居所",
+          "attributes": {}
+        },
+        {
+          "name": "磻溪",
+          "alias": [],
+          "description": "姜子牙垂钓之地",
+          "attributes": {}
+        },
+        {
+          "name": "渭水",
+          "alias": [],
+          "description": "姜子牙活动区域",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "封神",
+          "alias": [],
+          "description": "元始天尊命姜子牙下山封神",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": [
+        {
+          "name": "封神榜",
+          "alias": [],
+          "description": "三教共编三百六十五位成神名单",
+          "attributes": {}
+        }
+      ]
+    },
+    "relations": [
+      {
+        "source_entity": "元始天尊",
+        "relation": "MASTER_OF",
+        "target_entity": "姜子牙",
+        "evidence": "天尊曰：‘你与我代劳，封神下山，扶助明主，身为将相，也不枉你上山修行四十年之功。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "元始天尊",
+        "relation": "MASTER_OF",
+        "target_entity": "白鹤童子",
+        "evidence": "命白鹤童子：‘请你师叔姜尚来。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "话说昆仑山玉虚宫掌阐教道法元始天尊因门下十二弟子犯了红尘之厄",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "成汤数尽，周室将兴。你与我代劳，封神下山，扶助明主",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "MARRIED_TO",
+        "target_entity": "马氏",
+        "evidence": "乃择选良时吉日，迎娶马氏。宋异人又排设酒席，邀庄前、庄后邻舍，四门亲友，庆贺迎亲。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "宋异人",
+        "relation": "RELATED_TO",
+        "target_entity": "姜子牙",
+        "evidence": "朝歌有一结义仁兄宋异人，不若去投他罢。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "马员外",
+        "relation": "FATHER_OF",
+        "target_entity": "马氏",
+        "evidence": "异人曰：‘马洪之女，才貌两全，正好配贤弟；还是我妹子，人家六十八岁黄花女兒。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "元始天尊",
+        "relation": "INITIATES",
+        "target_entity": "封神",
+        "evidence": "又因昊天上帝命仙首十二称臣；故此三教并谈，乃阐教、截教、人道三等，共编成三百六十五位成神",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "封神",
+        "evidence": "你与我代劳，封神下山，扶助明主，身为将相",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "LISTED_ON",
+        "target_entity": "封神榜",
+        "evidence": "共编成三百六十五位成神，又分八部：上四部雷、火、瘟、斗，下四部群星列宿、三山五岳、步雨兴云、善恶之神。",
+        "confidence": "implicit"
+      }
+    ]
+  }
+]

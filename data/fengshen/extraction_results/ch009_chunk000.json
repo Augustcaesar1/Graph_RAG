@@ -1,0 +1,188 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "雷开",
+          "alias": [],
+          "description": "商朝将领，奉命追捕殷洪",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷洪",
+          "alias": [
+            "殿下"
+          ],
+          "description": "商纣王之子，与殷郊为兄弟",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷破败",
+          "alias": [],
+          "description": "商朝将领，商容门生",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "商容",
+          "alias": [
+            "老丞相"
+          ],
+          "description": "商朝丞相，殷破败的座主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷郊",
+          "alias": [
+            "殿下",
+            "千岁"
+          ],
+          "description": "商纣王之子，与殷洪为兄弟",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [
+            "武成王"
+          ],
+          "description": "商朝武成王，后投奔周",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "赵启",
+          "alias": [],
+          "description": "商朝上大夫",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "微子启",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝势力",
+          "attributes": {
+            "leader": "纣王"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "轩辕庙",
+          "alias": [],
+          "description": "殷洪躲避追捕的庙宇",
+          "attributes": {}
+        },
+        {
+          "name": "太师府",
+          "alias": [],
+          "description": "商容的府邸",
+          "attributes": {}
+        },
+        {
+          "name": "午门",
+          "alias": [],
+          "description": "商朝宫殿的正门",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "殷破败",
+        "relation": "APPRENTICE_OF",
+        "target_entity": "商容",
+        "evidence": "殷破败是商容的门生",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷洪",
+        "relation": "BROTHER_OF",
+        "target_entity": "殷郊",
+        "evidence": "我兄弟二人，生前得何罪与天地",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "雷开",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "雷开领五十名军卒，往南都追趕",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷破败",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "殷破败望东鲁大道趕来",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "殿下同殷破败上马",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷洪",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "殷洪在帐上高坐",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "OPPOSES",
+        "target_entity": "殷破败",
+        "evidence": "黄飞虎一见，火从心上起，怒向胆边生",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "赵启",
+        "relation": "OPPOSES",
+        "target_entity": "殷破败",
+        "evidence": "赵启走上前，劈手一把，将殷破败捧的行刑旨扯得纷纷粉碎",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

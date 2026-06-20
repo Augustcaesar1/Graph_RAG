@@ -1,0 +1,304 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "赵启",
+          "alias": [],
+          "description": "上大夫",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷破败",
+          "alias": [],
+          "description": "商朝将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [],
+          "description": "武成王",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄明",
+          "alias": [],
+          "description": "黄飞虎部将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "周纪",
+          "alias": [],
+          "description": "黄飞虎部将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王妃子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷郊",
+          "alias": [],
+          "description": "纣王太子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷洪",
+          "alias": [],
+          "description": "纣王次子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "赤精子",
+          "alias": [],
+          "description": "太华山云霄洞仙人",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "广成子",
+          "alias": [],
+          "description": "九仙山桃源洞仙人",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "元始天尊",
+          "alias": [],
+          "description": "阐教教主",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "姜子牙",
+          "alias": [],
+          "description": "元始天尊弟子",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "商容",
+          "alias": [],
+          "description": "商朝丞相",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "周朝",
+          "attributes": {
+            "leader": "姬发"
+          }
+        },
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {
+            "leader": "元始天尊"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "寿仙宫",
+          "alias": [],
+          "description": "纣王宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "午门",
+          "alias": [],
+          "description": "朝歌城门",
+          "attributes": {}
+        },
+        {
+          "name": "太华山云霄洞",
+          "alias": [],
+          "description": "赤精子修炼地",
+          "attributes": {}
+        },
+        {
+          "name": "九仙山桃源洞",
+          "alias": [],
+          "description": "广成子修炼地",
+          "attributes": {}
+        },
+        {
+          "name": "昆仑山玉虚宫",
+          "alias": [],
+          "description": "元始天尊道场",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "商容死谏",
+          "alias": [],
+          "description": "商容在九间殿死节",
+          "attributes": {}
+        },
+        {
+          "name": "殷郊殷洪被救",
+          "alias": [],
+          "description": "广成子和赤精子救走殷郊殷洪",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": [
+        {
+          "name": "封神榜",
+          "alias": [],
+          "description": "封神之战的神位名单",
+          "attributes": {}
+        }
+      ]
+    },
+    "relations": [
+      {
+        "source_entity": "赤精子",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "太华山云霄洞赤精子",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "广成子",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "九仙山桃源洞广成子",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "元始天尊",
+        "relation": "LEADS",
+        "target_entity": "阐教",
+        "evidence": "昆仑山玉虚宫掌阐道法宣扬正教圣人元始天尊",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "俱是姜子牙帐下名符",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "CHILD_OF",
+        "target_entity": "纣王",
+        "evidence": "今逆子殷郊",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷洪",
+        "relation": "CHILD_OF",
+        "target_entity": "纣王",
+        "evidence": "助恶殷洪",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "广成子",
+        "relation": "SAVES",
+        "target_entity": "殷郊",
+        "evidence": "广成子忙唤黄巾力士：与我把那二位殿下抓回本山来听用",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "赤精子",
+        "relation": "SAVES",
+        "target_entity": "殷洪",
+        "evidence": "你带他一个，我带他一个回山",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "LISTED_ON",
+        "target_entity": "封神榜",
+        "evidence": "二位殿下乃封神榜上有名的",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷洪",
+        "relation": "LISTED_ON",
+        "target_entity": "封神榜",
+        "evidence": "二位殿下乃封神榜上有名的",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "商容",
+        "relation": "OPPOSES",
+        "target_entity": "纣王",
+        "evidence": "老夫此来，面见天子，有死无生，今日必犯颜真谏，舍身报国",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "赵启",
+        "relation": "OPPOSES",
+        "target_entity": "殷破败",
+        "evidence": "走上前，劈手一把，将殷破败捧的行刑旨扯得纷纷粉碎",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

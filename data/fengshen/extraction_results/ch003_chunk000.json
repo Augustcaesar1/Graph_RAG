@@ -1,0 +1,208 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "崇侯虎",
+          "alias": [],
+          "description": "商朝将领，崇黑虎之兄",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "崇黑虎",
+          "alias": [],
+          "description": "曹州侯，崇侯虎之弟，截教弟子",
+          "attributes": {
+            "sect": "截教",
+            "faction": "商"
+          }
+        },
+        {
+          "name": "苏护",
+          "alias": [],
+          "description": "冀州侯，妲己之父",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "苏全忠",
+          "alias": [],
+          "description": "苏护之子，冀州将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "苏护之女，后被献给纣王",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄元济",
+          "alias": [],
+          "description": "崇侯虎部下将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "崇应彪",
+          "alias": [],
+          "description": "崇侯虎之子",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝势力",
+          "attributes": {}
+        },
+        {
+          "name": "截教",
+          "alias": [],
+          "description": "通天教主门下教派",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "冀州",
+          "alias": [],
+          "description": "苏护的封地",
+          "attributes": {}
+        },
+        {
+          "name": "曹州",
+          "alias": [],
+          "description": "崇黑虎的封地",
+          "attributes": {}
+        },
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "西岐",
+          "alias": [],
+          "description": "周的发源地",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "湛金斧",
+          "alias": [],
+          "description": "崇黑虎的武器",
+          "attributes": {}
+        },
+        {
+          "name": "红葫芦",
+          "alias": [],
+          "description": "崇黑虎的法宝，内藏铁嘴神鹰",
+          "attributes": {}
+        }
+      ],
+      "Beast": [
+        {
+          "name": "火眼金睛兽",
+          "alias": [],
+          "description": "崇黑虎的坐骑",
+          "attributes": {}
+        },
+        {
+          "name": "铁嘴神鹰",
+          "alias": [],
+          "description": "崇黑虎葫芦中的神鹰",
+          "attributes": {}
+        }
+      ],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "崇黑虎",
+        "relation": "BROTHER_OF",
+        "target_entity": "崇侯虎",
+        "evidence": "此人乃崇侯虎兄弟崇黑虎也",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇黑虎",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "截教",
+        "evidence": "苏全忠不知崇黑虎幼拜截教真人为师",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇黑虎",
+        "relation": "OWNS",
+        "target_entity": "红葫芦",
+        "evidence": "秘授一个葫芦，背伏在脊背上，有无限神通",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇黑虎",
+        "relation": "OWNS",
+        "target_entity": "湛金斧",
+        "evidence": "用两柄湛金斧",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇黑虎",
+        "relation": "OWNS",
+        "target_entity": "火眼金睛兽",
+        "evidence": "骑火眼金睛兽",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇黑虎",
+        "relation": "DEFEATS",
+        "target_entity": "苏全忠",
+        "evidence": "二老爷得胜，生擒反臣苏全忠",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护",
+        "relation": "FATHER_OF",
+        "target_entity": "苏全忠",
+        "evidence": "只见长子全忠上前曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护",
+        "relation": "FATHER_OF",
+        "target_entity": "妲己",
+        "evidence": "只见小姐妲己，盈盈笑脸，微吐硃脣，口称：爹爹",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇应彪",
+        "relation": "CHILD_OF",
+        "target_entity": "崇侯虎",
+        "evidence": "崇应彪马上亦欠背称谢：叔父，有劳远涉",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "红葫芦",
+        "relation": "OWNS",
+        "target_entity": "铁嘴神鹰",
+        "evidence": "只见葫芦里边一道黑烟冒出，化开如网罗，大小黑烟中有噫哑之声，遮天映日飞来，乃是铁嘴神鹰",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

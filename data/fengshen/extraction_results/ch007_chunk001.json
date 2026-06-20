@@ -1,0 +1,245 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "费仲",
+          "alias": [],
+          "description": "商朝奸臣，设计陷害姜皇后",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜环",
+          "alias": [],
+          "description": "东伯侯姜桓楚家将，被费仲利用行刺纣王",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王宠妃，与费仲合谋陷害姜皇后",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜皇后",
+          "alias": [
+            "姜氏"
+          ],
+          "description": "纣王元配皇后，东伯侯姜桓楚之女",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [
+            "武成王"
+          ],
+          "description": "商朝大将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [
+            "亚比"
+          ],
+          "description": "商朝贤臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "鲁雄",
+          "alias": [],
+          "description": "商朝总兵",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "杨任",
+          "alias": [],
+          "description": "商朝上大夫",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄贵妃",
+          "alias": [],
+          "description": "纣王西宫贵妃",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜桓楚",
+          "alias": [
+            "东伯侯"
+          ],
+          "description": "姜皇后之父，东鲁诸侯之首",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷郊",
+          "alias": [],
+          "description": "姜皇后与纣王之子，东宫太子",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝势力",
+          "attributes": {
+            "leader": "纣王"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "寿仙宫",
+          "alias": [],
+          "description": "纣王与妲己居住的宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "分宫楼",
+          "alias": [],
+          "description": "商朝宫殿中的一处建筑",
+          "attributes": {}
+        },
+        {
+          "name": "午门",
+          "alias": [],
+          "description": "商朝宫殿的正门",
+          "attributes": {}
+        },
+        {
+          "name": "西宫",
+          "alias": [],
+          "description": "黄贵妃居住的宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "东鲁",
+          "alias": [],
+          "description": "姜桓楚的封地",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "费仲计废姜皇后",
+          "alias": [],
+          "description": "费仲设计陷害姜皇后的事件",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "费仲",
+        "relation": "OPPOSES",
+        "target_entity": "姜皇后",
+        "evidence": "费仲一见此人，计上心来，便叫：'你且起来，我有事用你。不知你肯用心去做否？你的富贵亦自不小。'",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜环",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "费仲",
+        "evidence": "姜环曰：'若老爷分付，安敢不努力前去？况小的受老爷知遇之恩，便使小的赴汤蹈火，万死不辞。'",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "ALLIES_WITH",
+        "target_entity": "费仲",
+        "evidence": "话说费仲密密将计策写明，暗付鲧捐。鲧捐得书，密奏与妲己。妲己登金大喜，正宫不久可居。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜皇后",
+        "relation": "CHILD_OF",
+        "target_entity": "姜桓楚",
+        "evidence": "姜后曰：'贤妃在上，我姜氏乃姜桓楚之女'",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "CHILD_OF",
+        "target_entity": "姜皇后",
+        "evidence": "况我生子殷郊，已正东宫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "CHILD_OF",
+        "target_entity": "纣王",
+        "evidence": "况我生子殷郊，已正东宫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜皇后",
+        "relation": "MARRIED_TO",
+        "target_entity": "纣王",
+        "evidence": "姜后乃朕元配",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄贵妃",
+        "relation": "MARRIED_TO",
+        "target_entity": "纣王",
+        "evidence": "黄妃乘辇至寿仙宫候旨",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "费仲计废姜皇后",
+        "evidence": "费仲一见此人，计上心来",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "费仲计废姜皇后",
+        "evidence": "妲己登金大喜，正宫不久可居",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜环",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "费仲计废姜皇后",
+        "evidence": "姜环点头，领计去了",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

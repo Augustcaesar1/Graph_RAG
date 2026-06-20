@@ -1,0 +1,308 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "纣王",
+          "alias": [
+            "寿王"
+          ],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "女娲",
+          "alias": [],
+          "description": "上古神女，补天救世",
+          "attributes": {}
+        },
+        {
+          "name": "商容",
+          "alias": [],
+          "description": "商朝首相",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [],
+          "description": "镇国武成王",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "闻仲",
+          "alias": [],
+          "description": "商朝太师",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜桓楚",
+          "alias": [],
+          "description": "东伯侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "鄂崇禹",
+          "alias": [],
+          "description": "南伯侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姬昌",
+          "alias": [],
+          "description": "西伯侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "崇侯虎",
+          "alias": [],
+          "description": "北伯侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "成汤",
+          "alias": [],
+          "description": "商朝开国君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "伊尹",
+          "alias": [],
+          "description": "商朝贤臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "桀王",
+          "alias": [],
+          "description": "夏朝末代君主",
+          "attributes": {
+            "faction": "夏"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "夏",
+          "alias": [],
+          "description": "夏朝",
+          "attributes": {
+            "leader": "桀王"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "女娲宫",
+          "alias": [],
+          "description": "供奉女娲的宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "南巢",
+          "alias": [],
+          "description": "桀王被放逐之地",
+          "attributes": {}
+        },
+        {
+          "name": "亳",
+          "alias": [],
+          "description": "商朝早期都城",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "纣王女娲宫进香",
+          "alias": [],
+          "description": "纣王在女娲宫进香并题诗",
+          "attributes": {}
+        },
+        {
+          "name": "成汤伐桀",
+          "alias": [],
+          "description": "成汤推翻夏桀的战争",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "纣王",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "纣王乃帝乙之三子也...随立寿王为天子，名曰纣王，都朝歌。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "商容",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "臣商容待罪宰相，执掌朝纲",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "武有镇国武成王黄飞虎",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "闻仲",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "太师闻仲奉敕征北",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜桓楚",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "东伯侯姜桓楚，居于东鲁",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "鄂崇禹",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "南伯侯鄂崇禹",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "西伯侯姬昌",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇侯虎",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "北伯侯崇侯虎",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "成汤",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "成汤乃黄帝之后也...是为成汤",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伊尹",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "伊尹乃相汤伐桀",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "桀王",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "夏",
+        "evidence": "桀王无道，信谗逐贤",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "纣王女娲宫进香",
+        "evidence": "纣王早朝登殿...往女娲宫进香",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "商容",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "纣王女娲宫进香",
+        "evidence": "臣商容待罪宰相...请陛下驾临女娲宫降香",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "纣王女娲宫进香",
+        "evidence": "武成王黄飞虎保驾",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "成汤",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "成汤伐桀",
+        "evidence": "伊尹乃相汤伐桀，放桀于南巢",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伊尹",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "成汤伐桀",
+        "evidence": "伊尹乃相汤伐桀",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "桀王",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "成汤伐桀",
+        "evidence": "桀恶日暴，民不聊生...放桀于南巢",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FATHER_OF",
+        "target_entity": "微子启",
+        "evidence": "帝乙生三子：长曰微子启",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FATHER_OF",
+        "target_entity": "微子衍",
+        "evidence": "帝乙生三子：...次曰微子衍",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FATHER_OF",
+        "target_entity": "寿王",
+        "evidence": "帝乙生三子：...三曰寿王",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

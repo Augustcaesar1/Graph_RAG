@@ -7,6 +7,7 @@ __pycache__/
 dist/
 build/
 .eggs/
+.pytest_cache/
 
 # Virtual envs
 .venv/
@@ -23,6 +24,7 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # Streamlit
 .streamlit/
@@ -36,7 +38,7 @@ Thumbs.db
 
 # RAG artifacts / indexes
 # (FAISS stores index + metadata here)
-dongzhou_faiss_index/
+outline_faiss_index/
 **/*faiss_index*/
 *.faiss
 *.pkl
@@ -47,3 +49,22 @@ _archive_*/
 # Temp
 *.tmp
 *.temp
+~$*.docx
+
+# Local AI/tooling workspaces
+.claude/
+.cursor/
+.trellis/
+AGENTS.md
+
+# Generated demo outputs
+scripts/pregen_results.txt
+
+# Local reference texts / course documents not required for the app
+冰与火之歌.txt
+红楼梦.txt
+封神演义 (许仲琳) (z-library.sk, 1lib.sk, z-lib.sk).txt
+图机器学习-报告-已填充.docx
+图机器学习-报告.docx
+图机器学习-报告模板.docx
+项目要求.docx

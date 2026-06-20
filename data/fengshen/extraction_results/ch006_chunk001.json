@@ -1,0 +1,284 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [
+            "苏美人"
+          ],
+          "description": "纣王宠妃",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "梅柏",
+          "alias": [],
+          "description": "商朝上大夫",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "商容",
+          "alias": [
+            "老丞相"
+          ],
+          "description": "商朝首相",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "杜元铣",
+          "alias": [
+            "杜太师"
+          ],
+          "description": "商朝太师",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [
+            "武成王"
+          ],
+          "description": "商朝武成王",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "微子",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "箕子",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "微子启",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "微子衍",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "寿仙宫",
+          "alias": [],
+          "description": "纣王宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "九龙桥",
+          "alias": [],
+          "description": "朝歌城内桥梁",
+          "attributes": {}
+        },
+        {
+          "name": "十里长亭",
+          "alias": [],
+          "description": "朝歌城外送别处",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "砲烙",
+          "alias": [],
+          "description": "酷刑刑具",
+          "attributes": {
+            "creator": "妲己"
+          }
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "造炮烙",
+          "alias": [],
+          "description": "纣王听妲己之言制造酷刑",
+          "attributes": {
+            "location": "朝歌"
+          }
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "纣王",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "纣王在宫欢乐，朝政荒乱",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "今陛下半载不朝，乐于深宫，朝朝饮宴，夜夜欢娱，不理朝政，不容谏章",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "梅柏",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "梅柏与元铣一党，违法进宫，不分内外",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "商容",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "商容乃三世之老臣，进内可赦",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "杜元铣",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "杜元铣乃治世之忠良",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "武成王黄飞虎见殿东二十根大铜柱",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "比干",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "当有黄飞虎、比干、微子、箕子、微子启、微子衍各官",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "微子",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "当有黄飞虎、比干、微子、箕子、微子启、微子衍各官",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "箕子",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "当有黄飞虎、比干、微子、箕子、微子启、微子衍各官",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "微子启",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "当有黄飞虎、比干、微子、箕子、微子启、微子衍各官",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "微子衍",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "当有黄飞虎、比干、微子、箕子、微子启、微子衍各官",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "CREATES",
+        "target_entity": "砲烙",
+        "evidence": "妾治一刑，杜狡臣之渎奏，除邪言之乱正",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "OPPOSES",
+        "target_entity": "梅柏",
+        "evidence": "梅柏与元铣一党，违法进宫，不分内外，本当与元铣一例典型",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "OPPOSES",
+        "target_entity": "杜元铣",
+        "evidence": "杜元铣与方士通谋，架捏妖言，摇惑军民，播乱朝政，污蔑朝廷",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "OPPOSES",
+        "target_entity": "商容",
+        "evidence": "首相商容观纣王将行无道，任信妲己，竟造砲烙",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "造炮烙",
+        "evidence": "纣王大悦，问妲己曰：'铜柱造完，如何处置'",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "造炮烙",
+        "evidence": "妾治一刑，杜狡臣之渎奏，除邪言之乱正",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

@@ -1,0 +1,265 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "姜后",
+          "alias": [
+            "姜娘娘"
+          ],
+          "description": "纣王皇后，被陷害致死",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄妃",
+          "alias": [],
+          "description": "纣王妃子，救助殷郊殷洪",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜环",
+          "alias": [],
+          "description": "陷害姜后的刺客",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷郊",
+          "alias": [
+            "太子"
+          ],
+          "description": "姜后长子，东宫太子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷洪",
+          "alias": [
+            "二殿下"
+          ],
+          "description": "姜后次子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "杨容",
+          "alias": [],
+          "description": "东宫太监",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王宠妃，进谗言害姜后",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "晁田",
+          "alias": [],
+          "description": "纣王臣子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "晁雷",
+          "alias": [],
+          "description": "纣王臣子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "杨妃",
+          "alias": [
+            "杨贵妃"
+          ],
+          "description": "纣王妃子，救助殷郊殷洪后自缢",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [
+            "昏君"
+          ],
+          "description": "商朝君主",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝势力",
+          "attributes": {
+            "leader": "纣王"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "西宫",
+          "alias": [],
+          "description": "姜后居所",
+          "attributes": {}
+        },
+        {
+          "name": "东宫",
+          "alias": [],
+          "description": "太子居所",
+          "attributes": {}
+        },
+        {
+          "name": "寿仙宫",
+          "alias": [],
+          "description": "纣王居所",
+          "attributes": {}
+        },
+        {
+          "name": "馨庆宫",
+          "alias": [],
+          "description": "杨妃居所",
+          "attributes": {}
+        },
+        {
+          "name": "九间殿",
+          "alias": [],
+          "description": "朝会议事之处",
+          "attributes": {}
+        },
+        {
+          "name": "白虎殿",
+          "alias": [],
+          "description": "停灵之处",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "龙凤剑",
+          "alias": [],
+          "description": "纣王赐予晁田晁雷诛杀殷郊殷洪的宝剑",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "姜后",
+        "relation": "MARRIED_TO",
+        "target_entity": "纣王",
+        "evidence": "姜后临绝，大叫数声道：‘妾侍圣躬十有六载，生二子，位立东宫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "CHILD_OF",
+        "target_entity": "姜后",
+        "evidence": "东宫太子殷郊、二殿下殷洪弟兄正在东宫无事弈棋",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷洪",
+        "relation": "CHILD_OF",
+        "target_entity": "姜后",
+        "evidence": "东宫太子殷郊、二殿下殷洪弟兄正在东宫无事弈棋",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "BROTHER_OF",
+        "target_entity": "殷洪",
+        "evidence": "东宫太子殷郊、二殿下殷洪弟兄正在东宫无事弈棋",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "OPPOSES",
+        "target_entity": "姜后",
+        "evidence": "妲己进献谗言残我手目",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜环",
+        "relation": "OPPOSES",
+        "target_entity": "姜后",
+        "evidence": "这个姜环做害我谋逆",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "KILLS",
+        "target_entity": "姜环",
+        "evidence": "把姜环一剑砍为两段",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "OWNS",
+        "target_entity": "龙凤剑",
+        "evidence": "着晁田、晁雷取龙凤剑，将二逆子首级取来",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "晁田",
+        "relation": "BROTHER_OF",
+        "target_entity": "晁雷",
+        "evidence": "臣晁田、晁雷奉皇上命",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "杨妃",
+        "relation": "RELATED_TO",
+        "target_entity": "殷郊",
+        "evidence": "二位殿下向前哭拜在地，杨贵妃大惊",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "杨妃",
+        "relation": "RELATED_TO",
+        "target_entity": "殷洪",
+        "evidence": "二位殿下向前哭拜在地，杨贵妃大惊",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄妃",
+        "relation": "RELATED_TO",
+        "target_entity": "殷郊",
+        "evidence": "黄妃急至宫门，只见晁田兄弟二人",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄妃",
+        "relation": "RELATED_TO",
+        "target_entity": "殷洪",
+        "evidence": "黄妃急至宫门，只见晁田兄弟二人",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

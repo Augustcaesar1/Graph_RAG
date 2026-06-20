@@ -1,0 +1,146 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主，暴虐无道",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "胶鬲",
+          "alias": [],
+          "description": "商朝谏议大夫，因直谏被逼跳楼身亡",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王宠妃，妖孽化身，残害忠良",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜尚",
+          "alias": [
+            "子牙"
+          ],
+          "description": "下大夫，后为周朝开国功臣",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [],
+          "description": "商朝丞相，忠臣",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝，纣王统治的朝代",
+          "attributes": {}
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "周朝，与商朝对立的势力",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "摘星楼",
+          "alias": [],
+          "description": "纣王与妲己宴乐之处",
+          "attributes": {}
+        },
+        {
+          "name": "鹿台",
+          "alias": [],
+          "description": "纣王建造的高台，奢华无比",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "造虿盆",
+          "alias": [],
+          "description": "纣王与妲己残害宫人的酷刑",
+          "attributes": {}
+        },
+        {
+          "name": "造酒池肉林",
+          "alias": [],
+          "description": "纣王与妲己奢靡享乐的设施",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "纣王",
+        "relation": "OPPOSES",
+        "target_entity": "胶鬲",
+        "evidence": "纣王大怒曰：‘好匹夫！怎敢无知侮谤圣君，罪在不赦！’叫左右：‘即将此匹夫剥净，送入虿盆，以正国法！’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "RELATED_TO",
+        "target_entity": "纣王",
+        "evidence": "纣王以手拂妲己之背曰：‘喜你这等奇法，妙不可言！’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜尚",
+        "relation": "RELATED_TO",
+        "target_entity": "比干",
+        "evidence": "子牙对比干曰：‘姜尚荷蒙大德提携，并早晚指教之恩，不期今日相别。此恩此德，不知何时可报。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "INITIATES",
+        "target_entity": "造虿盆",
+        "evidence": "纣王大怒曰：‘好匹夫！怎敢无知侮谤圣君，罪在不赦！’叫左右：‘即将此匹夫剥净，送入虿盆，以正国法！’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "INITIATES",
+        "target_entity": "造酒池肉林",
+        "evidence": "妲己又奏曰：‘陛下可再传旨，将虿盆左边掘一池，右边挖一沼。池中以糟丘为山；右边以酒为池。糟丘山上，用树枝插满，把肉披成薄片，挂在树枝之上，名曰‘肉林’。右边将酒灌满，名曰‘酒海’。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "INITIATES",
+        "target_entity": "造酒池肉林",
+        "evidence": "纣王曰：‘御妻异制奇观，真堪玩赏；非奇思妙想，不能有此。’随传旨，依法制造。",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

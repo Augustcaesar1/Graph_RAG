@@ -1,0 +1,261 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "李靖",
+          "alias": [],
+          "description": "陈塘关总兵，哪吒之父",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "哪吒",
+          "alias": [],
+          "description": "太乙真人弟子，灵珠子转世",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "石矶娘娘",
+          "alias": [],
+          "description": "骷髅山白骨洞截教仙人",
+          "attributes": {
+            "sect": "截教"
+          }
+        },
+        {
+          "name": "太乙真人",
+          "alias": [],
+          "description": "阐教金仙，哪吒师父",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "碧云童兒",
+          "alias": [],
+          "description": "石矶娘娘徒弟",
+          "attributes": {
+            "sect": "截教"
+          }
+        },
+        {
+          "name": "彩云童兒",
+          "alias": [],
+          "description": "石矶娘娘徒弟",
+          "attributes": {
+            "sect": "截教"
+          }
+        },
+        {
+          "name": "轩辕皇帝",
+          "alias": [],
+          "description": "乾坤弓、震天箭的传留者",
+          "attributes": {}
+        }
+      ],
+      "Faction": [
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {
+            "leader": "元始天尊"
+          }
+        },
+        {
+          "name": "截教",
+          "alias": [],
+          "description": "通天教主门下教派",
+          "attributes": {
+            "leader": "通天教主"
+          }
+        },
+        {
+          "name": "商",
+          "alias": [],
+          "description": "纣王统治的王朝",
+          "attributes": {}
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "武王伐纣建立的王朝",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "陈塘关",
+          "alias": [],
+          "description": "李靖镇守的关隘",
+          "attributes": {}
+        },
+        {
+          "name": "骷髅山白骨洞",
+          "alias": [],
+          "description": "石矶娘娘的洞府",
+          "attributes": {}
+        },
+        {
+          "name": "乾元山金光洞",
+          "alias": [],
+          "description": "太乙真人的洞府",
+          "attributes": {}
+        },
+        {
+          "name": "玉虚宫",
+          "alias": [],
+          "description": "元始天尊的道场",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "乾坤弓",
+          "alias": [],
+          "description": "轩辕皇帝传留的镇关之宝",
+          "attributes": {}
+        },
+        {
+          "name": "震天箭",
+          "alias": [],
+          "description": "轩辕皇帝传留的镇关之宝",
+          "attributes": {}
+        },
+        {
+          "name": "乾坤圈",
+          "alias": [],
+          "description": "哪吒的法宝",
+          "attributes": {}
+        },
+        {
+          "name": "混天绫",
+          "alias": [],
+          "description": "哪吒的法宝",
+          "attributes": {}
+        },
+        {
+          "name": "太阿剑",
+          "alias": [],
+          "description": "石矶娘娘的武器",
+          "attributes": {}
+        },
+        {
+          "name": "八卦龙须帕",
+          "alias": [],
+          "description": "石矶娘娘的法宝",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "太乙真人",
+        "relation": "MASTER_OF",
+        "target_entity": "哪吒",
+        "evidence": "真人问曰：‘哪吒为何这等慌张？’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "哪吒乃灵珠子下世，辅姜子牙而灭成汤，奉的是元始掌教符命。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "石矶娘娘",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "截教",
+        "evidence": "你乃截教，吾乃阐教",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FATHER_OF",
+        "target_entity": "哪吒",
+        "evidence": "就是李靖所生逆子哪吒",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "KILLS",
+        "target_entity": "碧云童兒",
+        "evidence": "射死石矶娘娘的徒弟",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "DEFEATS",
+        "target_entity": "彩云童兒",
+        "evidence": "拎起乾坤圈，一下打将来。彩云童兒不曾提防，夹颈一圈，‘呵呀’，一声，跌倒在地。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "石矶娘娘",
+        "relation": "OWNS",
+        "target_entity": "太阿剑",
+        "evidence": "手提太阿剑趕来",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "石矶娘娘",
+        "relation": "OWNS",
+        "target_entity": "八卦龙须帕",
+        "evidence": "石矶娘娘将八卦龙须帕丢起空中，欲伤真人",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "乾坤圈",
+        "evidence": "拎起乾坤圈，一下打将来",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "混天绫",
+        "evidence": "忙将七尺混天绫来裹娘娘",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "李靖居官二十五载",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "哪吒奉御敕钦命出世，辅保明君",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "轩辕皇帝",
+        "relation": "BESTOWS",
+        "target_entity": "乾坤弓",
+        "evidence": "这乾坤弓，震天箭，乃轩辕皇帝传留",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "轩辕皇帝",
+        "relation": "BESTOWS",
+        "target_entity": "震天箭",
+        "evidence": "这乾坤弓，震天箭，乃轩辕皇帝传留",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

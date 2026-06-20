@@ -1,0 +1,185 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "姜子牙",
+          "alias": [
+            "姜尚",
+            "子牙"
+          ],
+          "description": "元始天尊弟子，辅佐周室伐商",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "刘乾",
+          "alias": [],
+          "description": "朝歌城居民，姜子牙的顾客",
+          "attributes": {}
+        },
+        {
+          "name": "玉石琵琶精",
+          "alias": [],
+          "description": "轩辕坟中的妖精，与妲己有关",
+          "attributes": {}
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王的妃子，妖精",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [],
+          "description": "商朝的亚相",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝的君主",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "纣王统治的朝代",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "姜子牙辅佐的朝代",
+          "attributes": {
+            "leader": "武王"
+          }
+        },
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {
+            "leader": "元始天尊"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝的都城",
+          "attributes": {}
+        },
+        {
+          "name": "轩辕坟",
+          "alias": [],
+          "description": "玉石琵琶精的巢穴",
+          "attributes": {}
+        },
+        {
+          "name": "摘星楼",
+          "alias": [],
+          "description": "纣王的宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "午门",
+          "alias": [],
+          "description": "皇宫的正门",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "紫石砚台",
+          "alias": [],
+          "description": "姜子牙用来打妖精的工具",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "子牙火烧琵琶精",
+          "alias": [],
+          "description": "姜子牙在朝歌城识别并打死玉石琵琶精的事件",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "姜子牙",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "姜子牙自幼读书守礼，岂敢违法。但此女非人，乃是妖精。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "姜子牙自幼读书守礼，岂敢违法。但此女非人，乃是妖精。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "玉石琵琶精",
+        "relation": "RELATED_TO",
+        "target_entity": "妲己",
+        "evidence": "南门外轩辕坟中，有个玉石琵琶精，往朝歌城来看妲己",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "比干",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "比干勒住马，问曰：“甚么事？”内中有抱不平的人跪下，“启老爷：此间有一人算命，叫做姜尚。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "纣王宣比干见。比干进内，俯伏启奏。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "KILLS",
+        "target_entity": "玉石琵琶精",
+        "evidence": "子牙手中无物，止有一紫石砚台，用手抓起石砚，照妖精顶上响一声，打得脑浆喷出，血染衣襟。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "OWNS",
+        "target_entity": "紫石砚台",
+        "evidence": "子牙手中无物，止有一紫石砚台，用手抓起石砚，照妖精顶上响一声，打得脑浆喷出，血染衣襟。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "玉石琵琶精",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "轩辕坟",
+        "evidence": "南门外轩辕坟中，有个玉石琵琶精，往朝歌城来看妲己",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

@@ -1,0 +1,126 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "云中子",
+          "alias": [],
+          "description": "终南山玉柱洞炼气士",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "中立"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [
+            "苏美人"
+          ],
+          "description": "纣王宠妃，实为狐狸精",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "纣王统治的王朝",
+          "attributes": {}
+        },
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "终南山玉柱洞",
+          "alias": [],
+          "description": "云中子修行之地",
+          "attributes": {}
+        },
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "分宫楼",
+          "alias": [],
+          "description": "宫中建筑",
+          "attributes": {}
+        },
+        {
+          "name": "寿仙宫",
+          "alias": [],
+          "description": "纣王寝宫",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "巨阙剑",
+          "alias": [
+            "松树削的剑"
+          ],
+          "description": "云中子用松树削成的镇妖剑",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "云中子",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "贫道住终南山玉柱洞，云中子是也",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "云中子",
+        "relation": "OPPOSES",
+        "target_entity": "妲己",
+        "evidence": "因贫道闲居无事，采药于高峰．忽见妖气贯于朝歌，怪气生于禁闼。道心不缺，善念常随，贫道特来朝见陛下，除此妖魅耳",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "云中子",
+        "relation": "BESTOWS",
+        "target_entity": "巨阙剑",
+        "evidence": "云中子揭开花篮，取出松树削的剑来，拿在手中，对纣王曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "妲己",
+        "evidence": "纣王驾至寿仙宫前，不见妲己来接见，纣王心甚不安",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "巨阙剑",
+        "relation": "OPPOSES",
+        "target_entity": "妲己",
+        "evidence": "这是那云中子宝剑挂在分宫楼，镇压的这狐狸如此模样",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

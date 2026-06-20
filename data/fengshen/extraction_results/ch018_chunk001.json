@@ -1,0 +1,261 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "清虚道德真君",
+          "alias": [],
+          "description": "炼气士，救度杨任上山",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "杨任",
+          "alias": [],
+          "description": "被清虚道德真君救度，后助姜子牙",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝君主，昏庸无道",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "崇侯虎",
+          "alias": [],
+          "description": "商朝官员，督造鹿台",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜子牙",
+          "alias": [
+            "子牙",
+            "姜尚"
+          ],
+          "description": "商朝下大夫，后辅佐周室",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "马氏",
+          "alias": [],
+          "description": "姜子牙之妻，后改节",
+          "attributes": {}
+        },
+        {
+          "name": "宋异人",
+          "alias": [],
+          "description": "姜子牙的义兄",
+          "attributes": {}
+        },
+        {
+          "name": "孙氏",
+          "alias": [],
+          "description": "宋异人之妻",
+          "attributes": {}
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王宠妃，祸国殃民",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "张凤",
+          "alias": [],
+          "description": "临潼关总兵",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {}
+        },
+        {
+          "name": "商",
+          "alias": [],
+          "description": "纣王统治的王朝",
+          "attributes": {}
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "西岐的势力，与商对抗",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "青峰山",
+          "alias": [],
+          "description": "清虚道德真君居住地",
+          "attributes": {}
+        },
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "鹿台",
+          "alias": [],
+          "description": "纣王建造的奢华建筑",
+          "attributes": {}
+        },
+        {
+          "name": "西岐",
+          "alias": [],
+          "description": "周的发源地",
+          "attributes": {}
+        },
+        {
+          "name": "宋家庄",
+          "alias": [],
+          "description": "宋异人的庄园",
+          "attributes": {}
+        },
+        {
+          "name": "孟津",
+          "alias": [],
+          "description": "地名",
+          "attributes": {}
+        },
+        {
+          "name": "黄河",
+          "alias": [],
+          "description": "河流",
+          "attributes": {}
+        },
+        {
+          "name": "渑池县",
+          "alias": [],
+          "description": "地名",
+          "attributes": {}
+        },
+        {
+          "name": "临潼关",
+          "alias": [],
+          "description": "关隘",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "督造鹿台",
+          "alias": [],
+          "description": "纣王命崇侯虎督造鹿台",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "清虚道德真君",
+        "relation": "MASTER_OF",
+        "target_entity": "杨任",
+        "evidence": "贫道是炼气士清虚道德真君，因见子有忠心赤胆，直谏纣王，怜救万民，身遭剜目之灾，贫道怜你阳寿不绝，度你上山，后辅周王成其正道。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "杨任",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "贫道是炼气士清虚道德真君，因见子有忠心赤胆，直谏纣王，怜救万民，身遭剜目之灾，贫道怜你阳寿不绝，度你上山，后辅周王成其正道。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "杨任",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "后辅周王成其正道。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "且说纣王诏崇侯虎督造鹿台。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇侯虎",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "且说纣王诏崇侯虎督造鹿台。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "MARRIED_TO",
+        "target_entity": "马氏",
+        "evidence": "马氏接住：“恭喜大夫，今日回来。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "娘子，我同你往西岐去，守时候命。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "宋异人",
+        "relation": "BROTHER_OF",
+        "target_entity": "姜子牙",
+        "evidence": "贤弟，当时这一件事是我作的。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "天子听妲己之言，起造鹿台，命我督工。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "张凤",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "启老爷：商都下大夫姜尚来拜。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "INITIATES",
+        "target_entity": "督造鹿台",
+        "evidence": "且说纣王诏崇侯虎督造鹿台。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇侯虎",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "督造鹿台",
+        "evidence": "且说纣王诏崇侯虎督造鹿台。",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

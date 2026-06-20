@@ -1,0 +1,318 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "伯邑考",
+          "alias": [],
+          "description": "西伯侯姬昌长子，为父赎罪进贡朝歌",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "散宜生",
+          "alias": [],
+          "description": "西岐上大夫",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "太姬",
+          "alias": [],
+          "description": "伯邑考之母",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "姬发",
+          "alias": [],
+          "description": "伯邑考之弟",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "南宫适",
+          "alias": [],
+          "description": "西岐将领",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "韩荣",
+          "alias": [],
+          "description": "汜水关总兵",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [
+            "亚比"
+          ],
+          "description": "商朝亚相",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [
+            "帝辛"
+          ],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王宠妃",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姬昌",
+          "alias": [
+            "西伯侯"
+          ],
+          "description": "伯邑考之父",
+          "attributes": {
+            "faction": "周"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [
+            "殷商"
+          ],
+          "description": "纣王统治的王朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [
+            "西岐"
+          ],
+          "description": "姬昌统治的诸侯国",
+          "attributes": {
+            "leader": "姬昌"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "西岐",
+          "alias": [],
+          "description": "周国都城",
+          "attributes": {}
+        },
+        {
+          "name": "羑里",
+          "alias": [],
+          "description": "姬昌被囚禁之地",
+          "attributes": {}
+        },
+        {
+          "name": "汜水关",
+          "alias": [],
+          "description": "商朝关隘",
+          "attributes": {}
+        },
+        {
+          "name": "渑池县",
+          "alias": [],
+          "description": "地名",
+          "attributes": {}
+        },
+        {
+          "name": "孟津",
+          "alias": [],
+          "description": "地名",
+          "attributes": {}
+        },
+        {
+          "name": "太平街",
+          "alias": [],
+          "description": "丞相府所在地",
+          "attributes": {}
+        },
+        {
+          "name": "摘星楼",
+          "alias": [],
+          "description": "纣王与妲己的宫殿",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "七香车",
+          "alias": [],
+          "description": "轩辕皇帝遗物",
+          "attributes": {}
+        },
+        {
+          "name": "醒酒氈",
+          "alias": [],
+          "description": "解酒宝物",
+          "attributes": {}
+        },
+        {
+          "name": "白面猿猴",
+          "alias": [],
+          "description": "能歌善舞的灵兽",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "伯邑考",
+        "relation": "CHILD_OF",
+        "target_entity": "姬昌",
+        "evidence": "父亲得罪于天子，蒙丞相保护，得全性命",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "CHILD_OF",
+        "target_entity": "太姬",
+        "evidence": "随进宫辞母太姬",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "BROTHER_OF",
+        "target_entity": "姬发",
+        "evidence": "兄弟好生与众兄弟和美",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "西伯侯姬昌子伯邑考，纳贡代父赎罪",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "散宜生",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "时有上大夫散宜生阻谏",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬发",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "内事托与兄弟姬发",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "南宫适",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "军务托付南宫适",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "韩荣",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "守关总兵韩荣命开关",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "比干",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "只见一位大臣骑马而至，乃亚相比干也",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "纣王曰：'宣比干上楼。'",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "妲己在帘内，见邑考丰姿都雅",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "西伯侯姬昌子伯邑考，纳贡代父赎罪",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "OPPOSES",
+        "target_entity": "纣王",
+        "evidence": "犯臣子伯邑考朝见",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "OPPOSES",
+        "target_entity": "妲己",
+        "evidence": "妲己偷睛看邑考",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "OWNS",
+        "target_entity": "七香车",
+        "evidence": "自始祖亶父所遗七香车",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "OWNS",
+        "target_entity": "醒酒氈",
+        "evidence": "醒酒氈",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "OWNS",
+        "target_entity": "白面猿猴",
+        "evidence": "白面猿猴",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "MARRIED_TO",
+        "target_entity": "纣王",
+        "evidence": "纣王见妲己出来，口称：'御妻'",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

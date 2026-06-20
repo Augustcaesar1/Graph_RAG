@@ -1,0 +1,271 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "太乙真人",
+          "alias": [],
+          "description": "阐教仙人，哪吒的师父",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "石矶娘娘",
+          "alias": [
+            "石矶"
+          ],
+          "description": "顽石成精的妖怪",
+          "attributes": {}
+        },
+        {
+          "name": "哪吒",
+          "alias": [],
+          "description": "灵珠子转世，太乙真人弟子",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "李靖",
+          "alias": [],
+          "description": "陈塘关总兵，哪吒之父",
+          "attributes": {}
+        },
+        {
+          "name": "敖光",
+          "alias": [],
+          "description": "东海龙王",
+          "attributes": {
+            "faction": "龙族"
+          }
+        },
+        {
+          "name": "敖顺",
+          "alias": [],
+          "description": "西海龙王",
+          "attributes": {
+            "faction": "龙族"
+          }
+        },
+        {
+          "name": "敖明",
+          "alias": [],
+          "description": "南海龙王",
+          "attributes": {
+            "faction": "龙族"
+          }
+        },
+        {
+          "name": "敖吉",
+          "alias": [],
+          "description": "北海龙王",
+          "attributes": {
+            "faction": "龙族"
+          }
+        },
+        {
+          "name": "殷夫人",
+          "alias": [],
+          "description": "李靖之妻，哪吒之母",
+          "attributes": {}
+        }
+      ],
+      "Faction": [
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {
+            "leader": "元始天尊"
+          }
+        },
+        {
+          "name": "龙族",
+          "alias": [],
+          "description": "四海龙王所属势力",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "乾元山",
+          "alias": [],
+          "description": "太乙真人的道场",
+          "attributes": {}
+        },
+        {
+          "name": "陈塘关",
+          "alias": [],
+          "description": "李靖镇守的关隘",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "八卦龙须帕",
+          "alias": [],
+          "description": "石矶娘娘的法宝",
+          "attributes": {}
+        },
+        {
+          "name": "九龙神火罩",
+          "alias": [],
+          "description": "太乙真人的法宝",
+          "attributes": {}
+        },
+        {
+          "name": "乾坤圈",
+          "alias": [],
+          "description": "哪吒的法宝",
+          "attributes": {}
+        },
+        {
+          "name": "混天绫",
+          "alias": [],
+          "description": "哪吒的法宝",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "哪吒剔骨还父",
+          "alias": [],
+          "description": "哪吒为救父母自尽",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": [
+        {
+          "name": "灵珠子",
+          "alias": [],
+          "description": "哪吒的前身",
+          "attributes": {}
+        }
+      ]
+    },
+    "relations": [
+      {
+        "source_entity": "太乙真人",
+        "relation": "MASTER_OF",
+        "target_entity": "哪吒",
+        "evidence": "哪吒看见师父用此物罩了石矶",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "太乙真人乃阐教仙人",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "哪吒为太乙真人弟子",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "CHILD_OF",
+        "target_entity": "李靖",
+        "evidence": "李靖曰：‘公子回来了’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "CHILD_OF",
+        "target_entity": "殷夫人",
+        "evidence": "殷夫人见哪吒尸骸",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "MARRIED_TO",
+        "target_entity": "殷夫人",
+        "evidence": "殷夫人为李靖之妻",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "敖光",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "龙族",
+        "evidence": "四海龙王敖光、敖顺、敖明、敖吉",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "敖顺",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "龙族",
+        "evidence": "四海龙王敖光、敖顺、敖明、敖吉",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "敖明",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "龙族",
+        "evidence": "四海龙王敖光、敖顺、敖明、敖吉",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "敖吉",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "龙族",
+        "evidence": "四海龙王敖光、敖顺、敖明、敖吉",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "OWNS",
+        "target_entity": "九龙神火罩",
+        "evidence": "真人将九龙神火罩抛起空中",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "石矶娘娘",
+        "relation": "OWNS",
+        "target_entity": "八卦龙须帕",
+        "evidence": "石矶娘娘将八卦龙须帕丢起空中",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "乾坤圈",
+        "evidence": "真人收了神火罩，又收乾坤圈、混天绫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "混天绫",
+        "evidence": "真人收了神火罩，又收乾坤圈、混天绫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "DEFEATS",
+        "target_entity": "石矶娘娘",
+        "evidence": "太乙真人罩了石矶，石矶在罩内不知东西南北",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "哪吒剔骨还父",
+        "evidence": "哪吒便右手提剑，先去一臂膊，后自剖其腹，剜肠剔骨",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "BECOMES",
+        "target_entity": "灵珠子",
+        "evidence": "我一身非轻，乃灵珠子是也",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

@@ -1,0 +1,200 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "李靖",
+          "alias": [],
+          "description": "陈塘关总兵，哪吒之父",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "哪吒",
+          "alias": [],
+          "description": "太乙真人弟子，李靖之子",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "太乙真人",
+          "alias": [],
+          "description": "乾元山金光洞仙人，哪吒之师",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "敖光",
+          "alias": [],
+          "description": "东海龙王",
+          "attributes": {
+            "faction": "龙族"
+          }
+        },
+        {
+          "name": "敖丙",
+          "alias": [],
+          "description": "敖光之子",
+          "attributes": {
+            "faction": "龙族"
+          }
+        },
+        {
+          "name": "金霞童子",
+          "alias": [],
+          "description": "太乙真人座下童子",
+          "attributes": {
+            "sect": "阐教"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {}
+        },
+        {
+          "name": "龙族",
+          "alias": [],
+          "description": "东海龙王所属势力",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "陈塘关",
+          "alias": [],
+          "description": "李靖镇守的关隘",
+          "attributes": {}
+        },
+        {
+          "name": "乾元山金光洞",
+          "alias": [],
+          "description": "太乙真人修行之地",
+          "attributes": {}
+        },
+        {
+          "name": "宝德门",
+          "alias": [],
+          "description": "天宫门户之一",
+          "attributes": {}
+        },
+        {
+          "name": "南天门",
+          "alias": [],
+          "description": "天宫正门",
+          "attributes": {}
+        },
+        {
+          "name": "九湾河",
+          "alias": [],
+          "description": "哪吒与敖丙冲突发生地",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "乾坤圈",
+          "alias": [],
+          "description": "哪吒的法宝",
+          "attributes": {}
+        },
+        {
+          "name": "隐身符",
+          "alias": [],
+          "description": "太乙真人画在哪吒身上的符箓",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "哪吒闹海",
+          "alias": [],
+          "description": "哪吒与东海龙族的冲突事件",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "太乙真人",
+        "relation": "MASTER_OF",
+        "target_entity": "哪吒",
+        "evidence": "我是乾元山金光洞太乙真人弟子",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FATHER_OF",
+        "target_entity": "哪吒",
+        "evidence": "我李靖求仙未成，谁知你生下这样好兒子",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "我是乾元山金光洞太乙真人弟子",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "乾元山金光洞太乙真人",
+        "confidence": "implicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "乾坤圈",
+        "evidence": "提起手中乾坤圈",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "BESTOWS",
+        "target_entity": "哪吒",
+        "evidence": "太乙真人在他前心书了符箓，名曰‘隐身符’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "KILLS",
+        "target_entity": "敖丙",
+        "evidence": "昨日偶到九湾河洗澡，不意敖光子敖丙将恶语伤人，弟子一时怒发，将他伤了性命",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "敖光",
+        "relation": "FATHER_OF",
+        "target_entity": "敖丙",
+        "evidence": "敖光子敖丙",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OPPOSES",
+        "target_entity": "敖光",
+        "evidence": "哪吒看见敖光在此等候，心中大怒，撒开大步，提起手中乾坤圈，把敖光后心一圈",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "哪吒闹海",
+        "evidence": "昨日偶到九湾河洗澡，不意敖光子敖丙将恶语伤人，弟子一时怒发，将他伤了性命",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

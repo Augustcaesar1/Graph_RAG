@@ -1,0 +1,215 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "哪吒",
+          "alias": [],
+          "description": "太乙真人弟子，李靖之子",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "太乙真人",
+          "alias": [],
+          "description": "哪吒的师父，阐教仙人",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "李靖",
+          "alias": [],
+          "description": "哪吒的父亲，商朝将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "燃灯道人",
+          "alias": [],
+          "description": "灵鹫山元觉洞仙人，帮助李靖收服哪吒",
+          "attributes": {
+            "sect": "阐教"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {
+            "leader": "元始天尊"
+          }
+        },
+        {
+          "name": "商",
+          "alias": [],
+          "description": "纣王统治的王朝",
+          "attributes": {}
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "武王领导的伐商势力",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "翠屏山",
+          "alias": [],
+          "description": "哪吒与李靖发生冲突的地方",
+          "attributes": {}
+        },
+        {
+          "name": "乾元山",
+          "alias": [],
+          "description": "太乙真人的洞府所在地",
+          "attributes": {}
+        },
+        {
+          "name": "灵鹫山元觉洞",
+          "alias": [],
+          "description": "燃灯道人的修炼之地",
+          "attributes": {}
+        },
+        {
+          "name": "陈塘关",
+          "alias": [],
+          "description": "哪吒二次出世的地方",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "风火轮",
+          "alias": [],
+          "description": "哪吒的飞行法宝",
+          "attributes": {}
+        },
+        {
+          "name": "火尖枪",
+          "alias": [],
+          "description": "哪吒的武器",
+          "attributes": {}
+        },
+        {
+          "name": "玲珑塔",
+          "alias": [
+            "金塔"
+          ],
+          "description": "燃灯道人赐予李靖的法宝，用于收服哪吒",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "哪吒二次出世",
+          "alias": [],
+          "description": "哪吒在陈塘关重新现世",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": [
+        {
+          "name": "托塔天王",
+          "alias": [],
+          "description": "李靖未来的神位",
+          "attributes": {}
+        }
+      ]
+    },
+    "relations": [
+      {
+        "source_entity": "太乙真人",
+        "relation": "MASTER_OF",
+        "target_entity": "哪吒",
+        "evidence": "太乙真人曰：‘过来，与你师伯叩头！’哪吒不敢违拗师命，只得下拜。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FATHER_OF",
+        "target_entity": "哪吒",
+        "evidence": "真人曰：‘翠屏山之事，你也不该心量窄小，故此父子参商。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "CHILD_OF",
+        "target_entity": "李靖",
+        "evidence": "真人曰：‘翠屏山之事，你也不该心量窄小，故此父子参商。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "风火轮",
+        "evidence": "忙忙出洞，踏起风火二轮，追趕李靖。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "火尖枪",
+        "evidence": "哪吒持火尖枪来迎。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "燃灯道人",
+        "relation": "BESTOWS",
+        "target_entity": "李靖",
+        "evidence": "我秘受你这一座金塔。如哪吒不服，你便将此塔祭起烧他。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "OWNS",
+        "target_entity": "玲珑塔",
+        "evidence": "我秘受你这一座金塔。如哪吒不服，你便将此塔祭起烧他。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OPPOSES",
+        "target_entity": "李靖",
+        "evidence": "哪吒在旁只气的面如火发，恨不的吞了李靖才好。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "今商纣失德，天下大乱，你且不必做官，隐于山谷之中，暂忘名利。待武周兴兵，你再出来立功立业。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "你父子从此和睦，久后俱系一殿之臣，辅佐明君，成其正果",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "BECOMES",
+        "target_entity": "托塔天王",
+        "evidence": "后来父子四人，肉身成圣，托塔天王乃李靖也。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "哪吒二次出世",
+        "evidence": "此是哪吒二次出世于陈塘关。",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

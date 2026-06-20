@@ -1,0 +1,362 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "哪吒",
+          "alias": [],
+          "description": "太乙真人徒弟，李靖之子",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "李靖",
+          "alias": [],
+          "description": "陈塘关总兵，哪吒之父",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "商"
+          }
+        },
+        {
+          "name": "木吒",
+          "alias": [],
+          "description": "普贤真人徒弟，李靖次子",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "太乙真人",
+          "alias": [],
+          "description": "哪吒的师父",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "普贤真人",
+          "alias": [],
+          "description": "木吒的师父",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "文殊广法天尊",
+          "alias": [],
+          "description": "金吒的师父",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "金吒",
+          "alias": [],
+          "description": "文殊广法天尊徒弟，李靖长子",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {
+            "leader": "元始天尊"
+          }
+        },
+        {
+          "name": "商",
+          "alias": [],
+          "description": "纣王统治的王朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "武王领导的伐商势力",
+          "attributes": {
+            "leader": "武王"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "陈塘关",
+          "alias": [],
+          "description": "李靖镇守的关隘",
+          "attributes": {}
+        },
+        {
+          "name": "翠屏山",
+          "alias": [],
+          "description": "哪吒行宫所在地",
+          "attributes": {}
+        },
+        {
+          "name": "九公山白鹤洞",
+          "alias": [],
+          "description": "普贤真人修行之地",
+          "attributes": {}
+        },
+        {
+          "name": "五龙山云霄洞",
+          "alias": [],
+          "description": "文殊广法天尊修行之地",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "风火轮",
+          "alias": [],
+          "description": "哪吒的飞行法宝",
+          "attributes": {
+            "owner": "哪吒"
+          }
+        },
+        {
+          "name": "火尖枪",
+          "alias": [],
+          "description": "哪吒的武器",
+          "attributes": {
+            "owner": "哪吒"
+          }
+        },
+        {
+          "name": "画戟",
+          "alias": [],
+          "description": "李靖的武器",
+          "attributes": {
+            "owner": "李靖"
+          }
+        },
+        {
+          "name": "遁龙桩",
+          "alias": [
+            "七宝金莲"
+          ],
+          "description": "文殊广法天尊的法宝",
+          "attributes": {
+            "owner": "文殊广法天尊"
+          }
+        },
+        {
+          "name": "金砖",
+          "alias": [],
+          "description": "哪吒的法宝",
+          "attributes": {
+            "owner": "哪吒"
+          }
+        }
+      ],
+      "Beast": [
+        {
+          "name": "青骢",
+          "alias": [],
+          "description": "李靖的坐骑",
+          "attributes": {
+            "owner": "李靖"
+          }
+        }
+      ],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "哪吒闹海",
+          "alias": [],
+          "description": "哪吒与李靖的冲突",
+          "attributes": {
+            "participants": [
+              "哪吒",
+              "李靖",
+              "木吒",
+              "文殊广法天尊",
+              "太乙真人"
+            ]
+          }
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "太乙真人",
+        "relation": "MASTER_OF",
+        "target_entity": "哪吒",
+        "evidence": "吾乃乾元山金光洞太乙真人徒弟哪吒是也",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "普贤真人",
+        "relation": "MASTER_OF",
+        "target_entity": "木吒",
+        "evidence": "来者乃九公山白鹤洞普贤真人徒弟木吒是也",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "文殊广法天尊",
+        "relation": "MASTER_OF",
+        "target_entity": "金吒",
+        "evidence": "唤金吒：‘把扁拐取来！’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FATHER_OF",
+        "target_entity": "哪吒",
+        "evidence": "李靖怒喝曰：‘胡说！人死岂有再生之理！’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FATHER_OF",
+        "target_entity": "木吒",
+        "evidence": "李靖看时，乃是次子木吒",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FATHER_OF",
+        "target_entity": "金吒",
+        "evidence": "唤金吒：‘把扁拐取来！’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OPPOSES",
+        "target_entity": "李靖",
+        "evidence": "哪吒曰：‘李靖！我骨肉已交还与你，与你无相干碍，你为何往翠屏山鞭打我的金身，火烧我的行宫？今日拿你，报一鞭之恨！’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "DEFEATS",
+        "target_entity": "李靖",
+        "evidence": "哪吒力大无穷，三五合把李靖杀的马仰人翻，力尽筋输，汗流脊背",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "DEFEATS",
+        "target_entity": "木吒",
+        "evidence": "哪吒见李靖站立一旁，又恐走了他，哪吒性急，将枪挑开剑，用手取金砖望空打来。木吒不提防，一砖正中后心，打了一交，跌在地下",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "文殊广法天尊",
+        "relation": "CAPTURES",
+        "target_entity": "哪吒",
+        "evidence": "天尊袖中取一物，名曰‘遁龙桩’，又名‘七宝金莲’，望空丢起。只见风生四野，云雾迷空，播土扬尘，落来有声，把哪吒昏沉沉不知南北，黑惨惨怎认东西，颈项套一个金圈，两只腿两个金圈，靠着黄邓邓金柱子站着",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "风火轮",
+        "evidence": "哪吒脚踏风火二轮",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "火尖枪",
+        "evidence": "手提火尖枪",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "金砖",
+        "evidence": "用手取金砖望空打来",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "OWNS",
+        "target_entity": "画戟",
+        "evidence": "忙提画戟",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "OWNS",
+        "target_entity": "青骢",
+        "evidence": "上了青骢",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "文殊广法天尊",
+        "relation": "OWNS",
+        "target_entity": "遁龙桩",
+        "evidence": "袖中取一物，名曰‘遁龙桩’，又名‘七宝金莲’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "吾乃乾元山金光洞太乙真人徒弟哪吒是也",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "木吒",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "来者乃九公山白鹤洞普贤真人徒弟木吒是也",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "金吒",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "唤金吒：‘把扁拐取来！’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "玉虚宫元始门下",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "普贤真人",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "来者乃九公山白鹤洞普贤真人徒弟木吒是也",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "文殊广法天尊",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "玉虚宫元始门下",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "哪吒与李靖的冲突",
+        "confidence": "inferred"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "李靖为陈塘关总兵",
+        "confidence": "inferred"
+      }
+    ]
+  }
+]

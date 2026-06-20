@@ -1,0 +1,317 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "哪吒",
+          "alias": [],
+          "description": "陈塘关李靖第三子，太乙真人弟子",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "陈塘关"
+          }
+        },
+        {
+          "name": "太乙真人",
+          "alias": [],
+          "description": "昆仑山玉虚宫仙人，哪吒的师父",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "昆仑山"
+          }
+        },
+        {
+          "name": "敖光",
+          "alias": [
+            "东海龙君"
+          ],
+          "description": "东海龙王，敖丙之父",
+          "attributes": {
+            "sect": "龙族",
+            "faction": "东海"
+          }
+        },
+        {
+          "name": "敖丙",
+          "alias": [
+            "三太子"
+          ],
+          "description": "东海龙王三太子",
+          "attributes": {
+            "sect": "龙族",
+            "faction": "东海"
+          }
+        },
+        {
+          "name": "李靖",
+          "alias": [],
+          "description": "陈塘关总兵，哪吒之父",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "陈塘关"
+          }
+        },
+        {
+          "name": "殷夫人",
+          "alias": [],
+          "description": "李靖之妻，哪吒之母",
+          "attributes": {
+            "faction": "陈塘关"
+          }
+        },
+        {
+          "name": "李艮",
+          "alias": [
+            "夜叉"
+          ],
+          "description": "东海巡海夜叉",
+          "attributes": {
+            "sect": "龙族",
+            "faction": "东海"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {
+            "leader": "元始天尊"
+          }
+        },
+        {
+          "name": "龙族",
+          "alias": [],
+          "description": "东海龙王一族",
+          "attributes": {
+            "leader": "敖光"
+          }
+        },
+        {
+          "name": "陈塘关",
+          "alias": [],
+          "description": "李靖镇守的关隘",
+          "attributes": {
+            "leader": "李靖"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "昆仑山玉虚宫",
+          "alias": [
+            "玉虚宫"
+          ],
+          "description": "阐教圣地，太乙真人修行之处",
+          "attributes": {}
+        },
+        {
+          "name": "东海",
+          "alias": [],
+          "description": "敖光统治的海域",
+          "attributes": {}
+        },
+        {
+          "name": "陈塘关",
+          "alias": [],
+          "description": "李靖镇守的关隘",
+          "attributes": {}
+        },
+        {
+          "name": "九湾河",
+          "alias": [],
+          "description": "哪吒洗澡的地方",
+          "attributes": {}
+        },
+        {
+          "name": "水晶宫",
+          "alias": [],
+          "description": "东海龙王的宫殿",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "乾坤圈",
+          "alias": [],
+          "description": "太乙真人赐予哪吒的法宝",
+          "attributes": {
+            "owner": "哪吒"
+          }
+        },
+        {
+          "name": "混天绫",
+          "alias": [],
+          "description": "哪吒的法宝",
+          "attributes": {
+            "owner": "哪吒"
+          }
+        },
+        {
+          "name": "画杆戟",
+          "alias": [],
+          "description": "敖丙的武器",
+          "attributes": {
+            "owner": "敖丙"
+          }
+        }
+      ],
+      "Beast": [
+        {
+          "name": "逼水兽",
+          "alias": [],
+          "description": "敖丙的坐骑",
+          "attributes": {
+            "owner": "敖丙"
+          }
+        }
+      ],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "哪吒闹海",
+          "alias": [],
+          "description": "哪吒打死夜叉李艮和敖丙的事件",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "太乙真人",
+        "relation": "MASTER_OF",
+        "target_entity": "哪吒",
+        "evidence": "我是乾元山金光洞太乙真人弟子",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "CHILD_OF",
+        "target_entity": "李靖",
+        "evidence": "我乃陈塘关李靖第三子哪吒是也",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "CHILD_OF",
+        "target_entity": "殷夫人",
+        "evidence": "哪吒来见母夫人",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "MARRIED_TO",
+        "target_entity": "殷夫人",
+        "evidence": "李靖见夫人来",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "敖光",
+        "relation": "FATHER_OF",
+        "target_entity": "敖丙",
+        "evidence": "只见龙王三太子敖丙出来，口称：“父王，为何大怒？”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "KILLS",
+        "target_entity": "李艮",
+        "evidence": "夜叉李艮被一孩童打死在陆地",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "KILLS",
+        "target_entity": "敖丙",
+        "evidence": "陈塘关李靖之子哪吒把三太子打死",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "乾坤圈",
+        "evidence": "把右手套的乾坤圈望空中一举",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "混天绫",
+        "evidence": "把七尺混天绫望空一展",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "敖丙",
+        "relation": "OWNS",
+        "target_entity": "画杆戟",
+        "evidence": "提画杆戟，径出水晶宫来",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "敖丙",
+        "relation": "OWNS",
+        "target_entity": "逼水兽",
+        "evidence": "上了逼水兽，提画杆戟，径出水晶宫来",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "我是乾元山金光洞太乙真人弟子",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "此宝原系昆仑山玉虚宫所赐太乙真人镇金光洞之物",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "敖光",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "龙族",
+        "evidence": "敖光在水晶宫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "敖丙",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "龙族",
+        "evidence": "东海龙君三太子敖丙",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李艮",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "龙族",
+        "evidence": "我差夜叉来看，便将我夜叉打死",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "陈塘关",
+        "evidence": "俺父亲镇守此间，乃一镇之主",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "陈塘关",
+        "evidence": "我乃陈塘关李靖第三子哪吒是也",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "哪吒闹海",
+        "evidence": "哪吒打死夜叉李艮和敖丙",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

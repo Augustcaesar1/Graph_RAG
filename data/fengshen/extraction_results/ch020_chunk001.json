@@ -1,0 +1,329 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "散宜生",
+          "alias": [],
+          "description": "西岐上大夫",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "太颠",
+          "alias": [],
+          "description": "西岐神武将军",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "闳夭",
+          "alias": [],
+          "description": "西岐将领",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "费仲",
+          "alias": [],
+          "description": "商朝上大夫",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "尤浑",
+          "alias": [],
+          "description": "商朝大夫",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姬昌",
+          "alias": [
+            "西伯侯"
+          ],
+          "description": "西岐之主",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "伯邑考",
+          "alias": [],
+          "description": "姬昌长子",
+          "attributes": {
+            "faction": "周"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝势力",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [
+            "西岐"
+          ],
+          "description": "西岐势力",
+          "attributes": {
+            "leader": "姬昌"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "西岐",
+          "alias": [],
+          "description": "周势力所在地",
+          "attributes": {}
+        },
+        {
+          "name": "羑里",
+          "alias": [],
+          "description": "姬昌被囚之地",
+          "attributes": {}
+        },
+        {
+          "name": "汜水关",
+          "alias": [],
+          "description": "商朝关隘",
+          "attributes": {}
+        },
+        {
+          "name": "界牌关",
+          "alias": [],
+          "description": "商朝关隘",
+          "attributes": {}
+        },
+        {
+          "name": "穿云关",
+          "alias": [],
+          "description": "商朝关隘",
+          "attributes": {}
+        },
+        {
+          "name": "潼关",
+          "alias": [],
+          "description": "商朝关隘",
+          "attributes": {}
+        },
+        {
+          "name": "临潼关",
+          "alias": [],
+          "description": "商朝关隘",
+          "attributes": {}
+        },
+        {
+          "name": "渑池县",
+          "alias": [],
+          "description": "商朝地名",
+          "attributes": {}
+        },
+        {
+          "name": "孟津",
+          "alias": [],
+          "description": "商朝地名",
+          "attributes": {}
+        },
+        {
+          "name": "游魂关",
+          "alias": [],
+          "description": "商朝关隘",
+          "attributes": {}
+        },
+        {
+          "name": "三山关",
+          "alias": [],
+          "description": "商朝关隘",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "明珠",
+          "alias": [],
+          "description": "贿赂礼物",
+          "attributes": {}
+        },
+        {
+          "name": "白璧",
+          "alias": [],
+          "description": "贿赂礼物",
+          "attributes": {}
+        },
+        {
+          "name": "彩缎表里",
+          "alias": [],
+          "description": "贿赂礼物",
+          "attributes": {}
+        },
+        {
+          "name": "黄金",
+          "alias": [],
+          "description": "贿赂礼物",
+          "attributes": {}
+        },
+        {
+          "name": "玉带",
+          "alias": [],
+          "description": "贿赂礼物",
+          "attributes": {}
+        },
+        {
+          "name": "白旄",
+          "alias": [],
+          "description": "象征权力的物品",
+          "attributes": {}
+        },
+        {
+          "name": "黄钺",
+          "alias": [],
+          "description": "象征权力的物品",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "贿赂费尤",
+          "alias": [],
+          "description": "散宜生派人贿赂费仲、尤浑",
+          "attributes": {}
+        },
+        {
+          "name": "赦免姬昌",
+          "alias": [],
+          "description": "纣王赦免姬昌",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "散宜生",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "西岐卑职散宜生顿首百拜致书于上大夫费公思主台下",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太颠",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "末将乃西岐神武将军太颠是也",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "闳夭",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "闳夭也往尤浑处送礼回至",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "费仲抵暮出朝，归至府第无事",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "尤浑",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "尤浑在侧，见费仲力保",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "西伯侯在羑里之中",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "纣王在摘星楼与二臣下棋",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "CHILD_OF",
+        "target_entity": "姬昌",
+        "evidence": "闲思长子之苦，被纣王醢尸",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "散宜生",
+        "relation": "INITIATES",
+        "target_entity": "贿赂费尤",
+        "evidence": "宜生曰：‘不过用明珠、白璧、彩缎表里、黄金、玉带，共礼二分’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "贿赂费尤",
+        "evidence": "费仲看了书共礼单，自思：‘此礼价值万金，如今怎能行事。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "尤浑",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "贿赂费尤",
+        "evidence": "尤浑在侧，见费仲力保，想必也是得了西岐礼物",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "INITIATES",
+        "target_entity": "赦免姬昌",
+        "evidence": "纣王即降赦条，单赦姬昌速离羑里",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "赦免姬昌",
+        "evidence": "费仲乘机奏曰：‘臣闻姬昌素有叛逆不臣之心，一向防备。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "尤浑",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "赦免姬昌",
+        "evidence": "尤浑启曰：‘依费仲所奏，其实不差。’",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

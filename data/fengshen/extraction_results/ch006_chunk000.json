@@ -1,0 +1,161 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主，荒淫无道",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王宠妃，妖狐化身",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "云中子",
+          "alias": [],
+          "description": "终南山道士，试图除妖",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "杜元铣",
+          "alias": [],
+          "description": "司天台首官，忠臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "商容",
+          "alias": [],
+          "description": "商朝首相，忠臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "梅柏",
+          "alias": [],
+          "description": "商朝大夫，忠臣",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝势力",
+          "attributes": {}
+        },
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "终南山",
+          "alias": [],
+          "description": "云中子修行之地",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "木剑",
+          "alias": [],
+          "description": "云中子所献，用于镇压妖魅",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "妲己",
+        "evidence": "纣王见惊坏了妲己，慌忙无措",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "云中子",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "云中子尚不曾回终南山",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "杜元铣",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "杜元铣乃三世之老臣，陛下之股肱",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "商容",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "商容乃三世之老臣",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "梅柏",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "梅柏乃商朝大夫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "云中子",
+        "relation": "OPPOSES",
+        "target_entity": "妲己",
+        "evidence": "云中子点首叹曰：‘我只欲以此剑镇灭妖氛’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "KILLS",
+        "target_entity": "杜元铣",
+        "evidence": "传朕旨意：把杜元铣枭首示众",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "云中子",
+        "relation": "OWNS",
+        "target_entity": "木剑",
+        "evidence": "将我此剑焚毁",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "LOSES",
+        "target_entity": "木剑",
+        "evidence": "即传旨命侍御官，将此宝剑立刻焚毁",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

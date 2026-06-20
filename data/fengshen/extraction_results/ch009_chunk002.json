@@ -1,0 +1,109 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "商容",
+          "alias": [],
+          "description": "商朝三世老臣，忠谏而死",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王宠妃",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝势力",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "午门",
+          "alias": [],
+          "description": "皇宫正门",
+          "attributes": {}
+        },
+        {
+          "name": "九间殿",
+          "alias": [],
+          "description": "商朝宫殿",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "商容死节",
+          "alias": [],
+          "description": "商容在九间殿撞死谏君",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "商容",
+        "relation": "OPPOSES",
+        "target_entity": "纣王",
+        "evidence": "商容手指纣王大骂曰：‘昏君！你心迷酒色，荒乱国政’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "商容",
+        "relation": "OPPOSES",
+        "target_entity": "妲己",
+        "evidence": "愿陛下速赐妲己自尽于宫闱，申皇后、太子屈死之冤",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "KILLS",
+        "target_entity": "商容",
+        "evidence": "纣王拍案大骂：‘快拿匹夫击顶！’...商容望后一闪，一头撞倒龙盘石柱上面",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "商容",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "商",
+        "evidence": "我乃三世之股肱，托孤之大臣",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "商容死节",
+        "relation": "OCCURS_IN",
+        "target_entity": "九间殿",
+        "evidence": "速马朝歌见纣王，九间殿上尽忠良",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "姬昌",
+          "alias": [
+            "西伯侯",
+            "姬伯"
+          ],
+          "description": "西岐之主，周文王",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "费仲",
+          "alias": [],
+          "description": "商朝奸臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "尤浑",
+          "alias": [],
+          "description": "商朝奸臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [],
+          "description": "商朝贤臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [
+            "武成王"
+          ],
+          "description": "商朝大将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "微子",
+          "alias": [],
+          "description": "商朝贤臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "箕子",
+          "alias": [],
+          "description": "商朝贤臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "晁田",
+          "alias": [],
+          "description": "商朝将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "伯邑考",
+          "alias": [],
+          "description": "姬昌长子",
+          "attributes": {
+            "faction": "周"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {}
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "周朝",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "西岐",
+          "alias": [],
+          "description": "周朝发源地",
+          "attributes": {}
+        },
+        {
+          "name": "羑里城",
+          "alias": [],
+          "description": "姬昌被囚之地",
+          "attributes": {}
+        },
+        {
+          "name": "十里长亭",
+          "alias": [],
+          "description": "饯别之地",
+          "attributes": {}
+        }
+      ],
+      "Event": [
+        {
+          "name": "姬昌被囚",
+          "alias": [],
+          "description": "姬昌被纣王囚禁",
+          "attributes": {}
+        },
+        {
+          "name": "姬昌归国",
+          "alias": [],
+          "description": "姬昌被释放归国",
+          "attributes": {}
+        },
+        {
+          "name": "姬昌被召回",
+          "alias": [],
+          "description": "姬昌被纣王召回",
+          "attributes": {}
+        }
+      ]
+    },
+    "relations": [
+      {
+        "source_entity": "纣王",
+        "relation": "OPPOSES",
+        "target_entity": "姬昌",
+        "evidence": "王大骂曰：‘老匹夫！释你归国，不思报效君恩，而反侮辱天子，尚有何说。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "OPPOSES",
+        "target_entity": "姬昌",
+        "evidence": "费仲奏曰：‘臣有一计，可除姬昌。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "尤浑",
+        "relation": "OPPOSES",
+        "target_entity": "姬昌",
+        "evidence": "费、尤二人在马上骂曰：‘这老畜生！自己死在目前，反言善终正寝。我等反寒冰冻死。分明骂我等。这样可恶！’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "比干",
+        "relation": "ALLIES_WITH",
+        "target_entity": "姬昌",
+        "evidence": "比干出朝，径至馆驿来看姬伯。左右通报。姬昌出门迎接，叙礼坐下。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "ALLIES_WITH",
+        "target_entity": "姬昌",
+        "evidence": "黄飞虎与微子慰劳曰：‘今日贤侯归国，不才等具有水酒一杯，一来为君侯荣饯，尚有一言奉渎。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "微子",
+        "relation": "ALLIES_WITH",
+        "target_entity": "姬昌",
+        "evidence": "微子曰：‘虽然天子有负贤侯，望乞念先君之德，不可有失臣节，妄生异端，则不才辈幸甚，万民幸甚！’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "箕子",
+        "relation": "ALLIES_WITH",
+        "target_entity": "姬昌",
+        "evidence": "百官钦敬，武成王黄飞虎、微子、箕子、比干等俱在此伺候多时。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FATHER_OF",
+        "target_entity": "伯邑考",
+        "evidence": "着伯邑考上顺母命，下和弟兄，不可更四岐规矩。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "周",
+        "evidence": "姬昌乃仁德君子，待人心实，那有虚意。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "商",
+        "evidence": "王曰：‘诏赦已出，众臣皆知，岂有出乎反乎之理。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "商",
+        "evidence": "费仲奏曰：‘臣有一计，可除姬昌。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "尤浑",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "商",
+        "evidence": "费、尤二人在马上骂曰：‘这老畜生！自己死在目前，反言善终正寝。我等反寒冰冻死。分明骂我等。这样可恶！’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "比干",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "商",
+        "evidence": "比干出朝，径至馆驿来看姬伯。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "商",
+        "evidence": "黄飞虎与微子慰劳曰：‘今日贤侯归国，不才等具有水酒一杯，一来为君侯荣饯，尚有一言奉渎。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "微子",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "商",
+        "evidence": "微子曰：‘虽然天子有负贤侯，望乞念先君之德，不可有失臣节，妄生异端，则不才辈幸甚，万民幸甚！’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "箕子",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "商",
+        "evidence": "百官钦敬，武成王黄飞虎、微子、箕子、比干等俱在此伺候多时。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "晁田",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "商",
+        "evidence": "晁田得旨追趕。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "周",
+        "evidence": "着伯邑考上顺母命，下和弟兄，不可更四岐规矩。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "姬昌被囚",
+        "evidence": "姬昌同晁田回朝歌来。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "姬昌归国",
+        "evidence": "姬昌随带家将，竟出西门，来到十里长亭。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "姬昌被召回",
+        "evidence": "姬昌同晁田往午门来，就有报马飞报黄飞虎。",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

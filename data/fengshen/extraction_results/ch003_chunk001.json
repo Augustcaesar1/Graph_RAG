@@ -1,0 +1,213 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "苏护",
+          "alias": [],
+          "description": "冀州侯，因拒绝献女妲己给纣王而反商",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "苏护之女，被纣王强纳为妃",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "崇黑虎",
+          "alias": [],
+          "description": "曹州侯，崇侯虎之弟，有异术",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "郑伦",
+          "alias": [],
+          "description": "苏护部将，督粮官，拜西昆仑度厄真人为师",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "崇侯虎",
+          "alias": [],
+          "description": "北伯侯，崇黑虎之兄",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "度厄真人",
+          "alias": [],
+          "description": "西昆仑仙人，郑伦之师",
+          "attributes": {
+            "sect": "阐教"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "纣王统治的王朝",
+          "attributes": {}
+        },
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "冀州",
+          "alias": [],
+          "description": "苏护的封地",
+          "attributes": {}
+        },
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "曹州",
+          "alias": [],
+          "description": "崇黑虎的封地",
+          "attributes": {}
+        },
+        {
+          "name": "西昆仑",
+          "alias": [],
+          "description": "度厄真人修炼之地",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "降魔杵",
+          "alias": [],
+          "description": "郑伦的武器",
+          "attributes": {}
+        },
+        {
+          "name": "湛金斧",
+          "alias": [],
+          "description": "崇黑虎的武器",
+          "attributes": {}
+        },
+        {
+          "name": "红葫芦",
+          "alias": [],
+          "description": "崇黑虎的法宝",
+          "attributes": {}
+        }
+      ],
+      "Beast": [
+        {
+          "name": "火眼金睛兽",
+          "alias": [],
+          "description": "郑伦和崇黑虎的坐骑",
+          "attributes": {}
+        }
+      ],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": [
+        {
+          "name": "封神榜",
+          "alias": [],
+          "description": "记录封神之人的名单",
+          "attributes": {}
+        }
+      ]
+    },
+    "relations": [
+      {
+        "source_entity": "度厄真人",
+        "relation": "MASTER_OF",
+        "target_entity": "郑伦",
+        "evidence": "郑伦也曾拜西昆仑度厄真人为师。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "郑伦",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "郑伦也曾拜西昆仑度厄真人为师。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护",
+        "relation": "FATHER_OF",
+        "target_entity": "妲己",
+        "evidence": "苏护一见妲己，乃亲生之女",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇黑虎",
+        "relation": "BROTHER_OF",
+        "target_entity": "崇侯虎",
+        "evidence": "崇黑虎，崇侯虎之弟",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "郑伦",
+        "relation": "DEFEATS",
+        "target_entity": "崇黑虎",
+        "evidence": "郑伦生擒崇黑虎",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "郑伦",
+        "relation": "OWNS",
+        "target_entity": "降魔杵",
+        "evidence": "使两柄降魔杵",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇黑虎",
+        "relation": "OWNS",
+        "target_entity": "湛金斧",
+        "evidence": "两柄湛金斧",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇黑虎",
+        "relation": "OWNS",
+        "target_entity": "红葫芦",
+        "evidence": "崇黑虎脊背上背一红葫芦",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "郑伦",
+        "relation": "OWNS",
+        "target_entity": "火眼金睛兽",
+        "evidence": "上了火眼金睛兽",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇黑虎",
+        "relation": "OWNS",
+        "target_entity": "火眼金睛兽",
+        "evidence": "也是金睛兽",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "郑伦",
+        "relation": "LISTED_ON",
+        "target_entity": "封神榜",
+        "evidence": "真人知道郑伦‘封神榜’上有名之士",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

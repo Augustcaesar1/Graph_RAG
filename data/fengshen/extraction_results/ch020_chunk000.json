@@ -1,0 +1,232 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "姬昌",
+          "alias": [
+            "西伯侯",
+            "姬伯"
+          ],
+          "description": "西岐之主，被囚于羑里城",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "费仲",
+          "alias": [],
+          "description": "纣王宠臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "尤浑",
+          "alias": [],
+          "description": "纣王宠臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姬发",
+          "alias": [
+            "二公子"
+          ],
+          "description": "姬昌之子，西岐公子",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "南宫适",
+          "alias": [
+            "南将军"
+          ],
+          "description": "西岐大将军",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "散宜生",
+          "alias": [
+            "上大夫"
+          ],
+          "description": "西岐大夫",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "邑考",
+          "alias": [
+            "公子"
+          ],
+          "description": "姬昌之子，被纣王杀害",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "太颠",
+          "alias": [],
+          "description": "西岐将领",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "闳夭",
+          "alias": [],
+          "description": "西岐将领",
+          "attributes": {
+            "faction": "周"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "纣王统治的王朝",
+          "attributes": {}
+        },
+        {
+          "name": "周",
+          "alias": [
+            "西岐"
+          ],
+          "description": "姬昌统治的诸侯国",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "羑里城",
+          "alias": [],
+          "description": "姬昌被囚禁的地方",
+          "attributes": {}
+        },
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "西岐",
+          "alias": [],
+          "description": "姬昌的封地",
+          "attributes": {}
+        },
+        {
+          "name": "显庆殿",
+          "alias": [],
+          "description": "纣王与费仲、尤浑弈棋的地方",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "姬昌",
+        "relation": "FATHER_OF",
+        "target_entity": "姬发",
+        "evidence": "姬发一日升殿，端门官来报：‘有跟随公子往朝歌家将候旨。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FATHER_OF",
+        "target_entity": "邑考",
+        "evidence": "我兒不听父言，遭此碎身之祸！",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬发",
+        "relation": "BROTHER_OF",
+        "target_entity": "邑考",
+        "evidence": "有跟随公子往朝歌家将候旨。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "KILLS",
+        "target_entity": "邑考",
+        "evidence": "将殿下醢为肉酱。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "OPPOSES",
+        "target_entity": "姬昌",
+        "evidence": "昌数无差，定知子肉。恐欲不食，又遭屠戮，只得勉强忍食，以为脱身之计，不得已而为之也。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "尤浑",
+        "relation": "OPPOSES",
+        "target_entity": "姬昌",
+        "evidence": "费尤在侧献谗言。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "散宜生",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "周",
+        "evidence": "散宜生厉声言曰：‘公子休乱，臣有事奉启！’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "南宫适",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "周",
+        "evidence": "有大将军南宫适大叫曰：‘公子乃西岐之幼主，今进贡与纣王，反遭醢尸之惨。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太颠",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "周",
+        "evidence": "一分差太颠送费仲；",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "闳夭",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "周",
+        "evidence": "一分差闳夭送尤浑。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "散宜生",
+        "relation": "MENTIONS",
+        "target_entity": "费仲",
+        "evidence": "今纣王宠信费、尤二贼，临行不带礼物贿赂二人，故殿下有丧身之祸。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "散宜生",
+        "relation": "MENTIONS",
+        "target_entity": "尤浑",
+        "evidence": "今纣王宠信费、尤二贼，临行不带礼物贿赂二人，故殿下有丧身之祸。",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

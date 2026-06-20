@@ -1,0 +1,178 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "苏护",
+          "alias": [],
+          "description": "冀州侯，反商将领",
+          "attributes": {
+            "faction": "商叛军"
+          }
+        },
+        {
+          "name": "崇侯虎",
+          "alias": [],
+          "description": "商朝将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "赵丙",
+          "alias": [],
+          "description": "苏护部将",
+          "attributes": {
+            "faction": "商叛军"
+          }
+        },
+        {
+          "name": "崇应彪",
+          "alias": [],
+          "description": "崇侯虎长子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄元济",
+          "alias": [],
+          "description": "崇侯虎部将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "孙子羽",
+          "alias": [],
+          "description": "崇侯虎部将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "苏全忠",
+          "alias": [],
+          "description": "苏护长子",
+          "attributes": {
+            "faction": "商叛军"
+          }
+        },
+        {
+          "name": "姬昌",
+          "alias": [
+            "西伯侯"
+          ],
+          "description": "西岐首领",
+          "attributes": {
+            "faction": "周"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝势力",
+          "attributes": {}
+        },
+        {
+          "name": "商叛军",
+          "alias": [],
+          "description": "以苏护为首的反商势力",
+          "attributes": {}
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "西岐势力",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "冀州",
+          "alias": [],
+          "description": "苏护封地",
+          "attributes": {}
+        },
+        {
+          "name": "五岗镇",
+          "alias": [],
+          "description": "苏全忠埋伏地点",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "冀州侯苏护反商",
+          "alias": [],
+          "description": "苏护起兵反抗商朝",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "苏护",
+        "relation": "OPPOSES",
+        "target_entity": "崇侯虎",
+        "evidence": "话说两家大战，苏护有心劫营，崇侯虎不曾防备",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "赵丙",
+        "relation": "KILLS",
+        "target_entity": "金蔡",
+        "evidence": "金蔡正战，早被赵丙一刀砍于马下",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇应彪",
+        "relation": "CHILD_OF",
+        "target_entity": "崇侯虎",
+        "evidence": "有长子应彪保父",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏全忠",
+        "relation": "CHILD_OF",
+        "target_entity": "苏护",
+        "evidence": "护令长子到前殿问曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏全忠",
+        "relation": "KILLS",
+        "target_entity": "孙子羽",
+        "evidence": "全忠大喝一声，刺子羽于马下",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏全忠",
+        "relation": "DEFEATS",
+        "target_entity": "崇侯虎",
+        "evidence": "一戟把崇侯虎护脚金甲挑下了半边",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏全忠",
+        "relation": "DEFEATS",
+        "target_entity": "崇应彪",
+        "evidence": "全忠当心一戟刺来。应彪急闪时，早中左臂",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇侯虎",
+        "relation": "OPPOSES",
+        "target_entity": "姬昌",
+        "evidence": "吾想西伯侯姬昌自在安然，违避旨意，按兵不动，坐观成败，真是可恨！",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

@@ -1,0 +1,387 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "杨妃",
+          "alias": [],
+          "description": "纣王妃子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜后",
+          "alias": [],
+          "description": "纣王正宫皇后",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄贵妃",
+          "alias": [],
+          "description": "纣王贵妃",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "晁田",
+          "alias": [],
+          "description": "商朝将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "晁雷",
+          "alias": [],
+          "description": "商朝将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷郊",
+          "alias": [
+            "太子"
+          ],
+          "description": "纣王与姜后长子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷洪",
+          "alias": [],
+          "description": "纣王与姜后次子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [
+            "武成王"
+          ],
+          "description": "商朝大将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "方弼",
+          "alias": [],
+          "description": "商朝镇殿大将军",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "方相",
+          "alias": [],
+          "description": "商朝镇殿大将军",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王宠妃",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "微子",
+          "alias": [],
+          "description": "商朝宗室",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [],
+          "description": "商朝亚相",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "箕子",
+          "alias": [],
+          "description": "商朝宗室",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "杨任",
+          "alias": [],
+          "description": "商朝上大夫",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄明",
+          "alias": [],
+          "description": "黄飞虎部将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "周纪",
+          "alias": [],
+          "description": "黄飞虎部将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "龙环",
+          "alias": [],
+          "description": "黄飞虎部将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "吴炎",
+          "alias": [],
+          "description": "黄飞虎部将",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [
+            "朝歌"
+          ],
+          "description": "商朝势力",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "东鲁",
+          "alias": [],
+          "description": "东方诸侯势力",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "寿仙宫",
+          "alias": [],
+          "description": "纣王宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "白虎殿",
+          "alias": [],
+          "description": "商朝宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "西宫",
+          "alias": [],
+          "description": "姜后宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "东宫",
+          "alias": [],
+          "description": "太子居所",
+          "attributes": {}
+        },
+        {
+          "name": "馨庆宫",
+          "alias": [],
+          "description": "商朝宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "长朝殿",
+          "alias": [],
+          "description": "商朝大殿",
+          "attributes": {}
+        },
+        {
+          "name": "九间殿",
+          "alias": [],
+          "description": "商朝大殿",
+          "attributes": {}
+        },
+        {
+          "name": "午门",
+          "alias": [],
+          "description": "朝歌城门",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "五色神牛",
+          "alias": [],
+          "description": "黄飞虎坐骑",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "方弼方相反朝歌",
+          "alias": [],
+          "description": "方弼方相保护殷郊殷洪反出朝歌",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "姜后",
+        "evidence": "太子乃自己亲生之子，父子天性",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "杨妃",
+        "evidence": "有宫官报入寿仙宫中。纣王闻杨妃自缢",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "黄贵妃",
+        "evidence": "只见黄贵妃乘辇回旨",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FATHER_OF",
+        "target_entity": "殷郊",
+        "evidence": "太子乃自己亲生之子",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FATHER_OF",
+        "target_entity": "殷洪",
+        "evidence": "生二子，位立东宫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜后",
+        "relation": "MOTHER_OF",
+        "target_entity": "殷郊",
+        "evidence": "生二子，位立东宫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜后",
+        "relation": "MOTHER_OF",
+        "target_entity": "殷洪",
+        "evidence": "生二子，位立东宫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "方弼",
+        "relation": "BROTHER_OF",
+        "target_entity": "方相",
+        "evidence": "却是镇殿大将军方弼、方相兄弟二人",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "OWNS",
+        "target_entity": "五色神牛",
+        "evidence": "自上五色神牛，催开坐下兽",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "方弼",
+        "relation": "OPPOSES",
+        "target_entity": "纣王",
+        "evidence": "纣王无道，杀子而绝宗庙，诛妻有坏纲常，今日保二位殿下往东鲁借兵，除了昏君",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "方相",
+        "relation": "OPPOSES",
+        "target_entity": "纣王",
+        "evidence": "纣王无道，杀子而绝宗庙，诛妻有坏纲常，今日保二位殿下往东鲁借兵，除了昏君",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "方弼",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "方弼方相反朝歌",
+        "evidence": "方弼既反，保二位殿下出都城去了",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "方相",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "方弼方相反朝歌",
+        "evidence": "方弼既反，保二位殿下出都城去了",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "方弼方相反朝歌",
+        "evidence": "方弼既反，保二位殿下出都城去了",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷洪",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "方弼方相反朝歌",
+        "evidence": "方弼既反，保二位殿下出都城去了",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "黄飞虎乃商朝大将",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "晁田",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "晁田乃商朝将领",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "晁雷",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "晁雷乃商朝将领",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

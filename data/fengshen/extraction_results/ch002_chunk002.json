@@ -1,0 +1,192 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "苏护",
+          "alias": [
+            "冀州侯"
+          ],
+          "description": "冀州侯，因拒绝献女给纣王而反商",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "崇侯虎",
+          "alias": [
+            "北伯侯"
+          ],
+          "description": "北伯侯，商朝将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "苏全忠",
+          "alias": [],
+          "description": "苏护之子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "梅武",
+          "alias": [],
+          "description": "崇侯虎麾下偏将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "赵丙",
+          "alias": [],
+          "description": "苏护麾下副将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "陈季贞",
+          "alias": [],
+          "description": "苏护麾下将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "崇应彪",
+          "alias": [],
+          "description": "崇侯虎长子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "金蔡",
+          "alias": [],
+          "description": "崇侯虎麾下将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄元济",
+          "alias": [],
+          "description": "崇侯虎麾下将领",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝势力",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "冀州",
+          "alias": [],
+          "description": "苏护统治的地区",
+          "attributes": {
+            "leader": "苏护"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "冀州",
+          "alias": [],
+          "description": "苏护统治的地区",
+          "attributes": {}
+        },
+        {
+          "name": "五岗镇",
+          "alias": [],
+          "description": "苏全忠埋伏的地点",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "冀州侯苏护反商",
+          "alias": [],
+          "description": "苏护因拒绝献女给纣王而反商",
+          "attributes": {}
+        },
+        {
+          "name": "劫营",
+          "alias": [],
+          "description": "苏护夜袭崇侯虎军营",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "苏护",
+        "relation": "FATHER_OF",
+        "target_entity": "苏全忠",
+        "evidence": "苏护见子得胜，传令擂鼓。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇侯虎",
+        "relation": "FATHER_OF",
+        "target_entity": "崇应彪",
+        "evidence": "后有长子崇应彪压住阵脚。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护",
+        "relation": "OPPOSES",
+        "target_entity": "崇侯虎",
+        "evidence": "苏护大怒曰：‘若是别镇诸侯，还有他议；此人素行不道，断不能以礼解释。不若乘此大破其兵，以振军威，且为万姓除害。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏全忠",
+        "relation": "DEFEATS",
+        "target_entity": "梅武",
+        "evidence": "两马相交，二十回合，早被苏全忠一戟刺梅武于马下。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "赵丙",
+        "relation": "KILLS",
+        "target_entity": "金蔡",
+        "evidence": "金蔡正战，早被赵丙一刀砍于马下。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护",
+        "relation": "LEADS",
+        "target_entity": "劫营",
+        "evidence": "且言苏护把人马暗暗调出城来，只待劫营。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "冀州",
+        "evidence": "马已至冀州，请千岁军令定夺。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇侯虎",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "商",
+        "evidence": "今奉诏问罪，则当肘膝辕门，尚敢巧语支吾，持兵贯甲，以骋其强暴哉！",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

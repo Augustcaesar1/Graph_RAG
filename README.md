@@ -1,162 +1,224 @@
-# 东周列国历史知识图谱 GraphRAG 问答系统
+# 封神演义 Graph RAG
 
-![演示截图](pic/Presentation.png)
+基于 **大模型 + Neo4j 知识图谱 + FAISS 向量检索 + Streamlit** 的《封神演义》增强型 RAG 问答系统。
 
-基于 **Neo4j 知识图谱 + FAISS 向量检索 + 大模型生成** 的春秋战国历史问答应用，提供 Streamlit Web 界面，支持：
+本项目对照 `项目要求.docx` 实现：从非结构化文本中使用 LLM 抽取实体与关系，构建知识图谱，结合向量检索与图检索进行问答，并在 Web UI 中展示原文片段与知识图谱子图溯源。
 
-- 人物/事件/诸侯国的检索与问答
-- 人物关系、事件参与者等 **图谱关系推理（Graph RAG）**
-- 文献片段引用与知识溯源（来源卡片 + 三元组展示 + 子图可视化）
+## 数据源
 
-> 数据主题：东周列国（春秋战国 BCE770–BCE221）
+- 原始语料：`./封神演义.txt`
+- 规模：99 回，约 60 万字，超过 500 个非结构化文本片段
+- 编码：已转换为 UTF-8
 
----
+数据处理链路：
 
-## 目录
+- `scripts/import_fengshen_to_neo4j.py` 读取 `封神演义.txt`。
+- `parse_chapters()` 按“第X回”解析章节边界。
+- `split_chapter_text()` 按句号、问号、感叹号、换行等断点切分文本，避免硬截断语义。
+- `_persist_text_chunks()` 将每回正文整理为 TextChunk 节点，并与 Chapter 节点相连，用于原文溯源和向量检索。
 
-- [项目结构](#项目结构)
-- [运行环境](#运行环境)
-- [快速开始](#快速开始)
-- [配置说明](#配置说明)
-- [数据导入（Neo4j）](#数据导入neo4j)
-- [向量索引（FAISS）](#向量索引faiss)
-- [常见问题](#常见问题)
+## 核心功能
 
----
+- LLM 知识抽取：NER + 关系抽取，输出标准三元组 `(头实体, 关系, 尾实体)`
+- Neo4j 图谱存储：人物、教派、法宝、阵法、事件等节点
+- 实体对齐：基于 alias 合并重复实体，降低同名/别名带来的图谱冗余
+- FAISS 向量检索：全文文本块向量化，支持 Top-K 相似文本块检索
+- GraphRAG 检索：实体链接、多跳邻居检索、路径/子图提取
+- 混合检索融合：文本片段 + 图谱三元组合并为 LLM 上下文
+- 防幻觉回答：回答只基于检索上下文，信息不足时明确说明无法确定
+- Streamlit 可视化：问答、原文溯源、知识图谱子图展示
+
+## Schema 设计
+
+### 实体类型
+
+| 类型 | 说明 | 示例 |
+|------|------|------|
+| Person | 人物 | 姜子牙、哪吒、杨戬、纣王、妲己 |
+| Faction | 教派/势力 | 商、周、阐教、截教、西方教 |
+| Location | 地点 | 朝歌、西岐、玉虚宫、碧游宫 |
+| Artifact | 法宝 | 打神鞭、乾坤圈、混天绫、翻天印 |
+| Beast | 坐骑/灵兽 | 四不像、哮天犬、五色神牛 |
+| Formation | 阵法 | 十绝阵、九曲黄河阵、诛仙阵、万仙阵 |
+| Event | 事件/战役 | 哪吒闹海、武王伐纣、破诛仙阵 |
+| DeityPosition | 神位/封号 | 三坛海会大神、文曲星 |
+| TextChunk | 原文片段 | 第X回片段，用于溯源 |
+
+### 关系类型
+
+- 师承：`MASTER_OF`, `APPRENTICE_OF`
+- 归属：`BELONGS_TO_SECT`, `FIGHTS_FOR`
+- 亲属：`FATHER_OF`, `CHILD_OF`, `BROTHER_OF`, `MARRIED_TO`
+- 对抗：`KILLS`, `DEFEATS`, `CAPTURES`, `OPPOSES`
+- 法宝：`OWNS`, `BESTOWS`, `LOSES`, `STEALS`
+- 事件/阵法：`CREATES`, `DEPLOYS`, `BREAKS`, `PARTICIPATES_IN`, `OCCURS_IN`, `LEADS`, `INITIATES`
+- 封神结局：`LISTED_ON`, `BECOMES`
+- 通用：`ALLIES_WITH`, `BETRAYS`, `RELATED_TO`, `MENTIONS`
+
+## 系统架构
+
+```text
+封神演义.txt
+  └─ scripts/import_fengshen_to_neo4j.py
+       ├─ parse_chapters / split_chapter_text：章节解析、切块
+       ├─ FengshenKGExtractor：LLM NER/RE 抽取
+       ├─ Neo4j：实体、关系、TextChunk、索引、别名合并
+       └─ data/fengshen/extraction_results：抽取缓存
+
+Streamlit app.py
+  └─ rag_modules/bootstrap.py
+       ├─ graph_data_preparation.py：Neo4j → RAG 文档
+       ├─ faiss_index_construction.py：FAISS 向量索引
+       ├─ hybrid_retrieval.py：BM25/FAISS/图谱混合检索
+       ├─ graph_rag_retrieval.py：图路径、多跳、子图检索
+       ├─ intelligent_query_router.py：查询路由
+       └─ generation_integration.py：基于证据上下文生成答案
+```
 
 ## 项目结构
 
+```text
+app.py                              # Streamlit Web UI
+config.py                           # 配置
+封神演义.txt                         # 原始语料
+.env.example                        # 环境变量模板
+rag_modules/
+  fengshen_kg_extraction.py          # LLM 知识抽取模块
+  gold_schema.py                     # Schema 定义
+  graph_data_preparation.py          # Neo4j → RAG 文档
+  faiss_index_construction.py        # FAISS 索引
+  hybrid_retrieval.py                # 混合检索
+  graph_rag_retrieval.py             # 图检索
+  generation_integration.py          # LLM 答案生成
+  intelligent_query_router.py        # 智能路由
+scripts/
+  import_fengshen_to_neo4j.py        # 导入入口
+  run_e2e_queries.py                 # 端到端问答检查
+tests/                              # 自动化测试
+ui/styles.py                        # Streamlit 样式
 ```
-C9/
-  app.py                      # Streamlit Web 应用入口
-  config.py                   # 系统配置（Neo4j、FAISS、模型等）
-  requirements.txt            # Python 依赖
-  scripts/
-    import_dongzhou_to_neo4j.py  # 将 xlsx 数据导入 Neo4j
-  rag_modules/
-    graph_data_preparation.py    # 从 Neo4j 读取 Person/Event/State 并构建文档
-    hybrid_retrieval.py          # 混合检索（双层检索 + 向量增强 + round-robin 合并）
-    graph_rag_retrieval_new.py   # 图RAG 检索（子图/多跳/路径等）
-    faiss_index_construction.py  # FAISS 索引构建/加载
-    generation_integration.py    # 大模型生成 + Embedding 客户端
-    intelligent_query_router.py  # 查询分析与路由（传统/图RAG/组合）
-  东周列国知识图谱/              # 数据目录（xlsx）
-  dongzhou_faiss_index/         # 本地向量索引落盘目录（运行后生成）
-```
-
----
-
-## 运行环境
-
-- Python 3.10+（建议）
-- Neo4j Desktop（本地 DBMS）
-- Conda 环境：你可以使用自己的环境名（例如 `mytorch`）
-
----
 
 ## 快速开始
 
-### 1) 启动 Neo4j Desktop
-
-在 Neo4j Desktop 中启动 DBMS，并确认 Bolt 连接可用（通常是 `bolt://127.0.0.1:7687`）。
-
-### 2) 安装依赖
-
-在项目根目录：
+### 1. 安装依赖
 
 ```bash
-conda activate mytorch
 pip install -r requirements.txt
 ```
 
-### 3) 导入数据到 Neo4j
+### 2. 配置环境变量
 
-> 注意：该脚本会清空目标数据库（`MATCH (n) DETACH DELETE n`），请确认选对 DBMS/数据库。
+复制 `.env.example` 为 `.env`，填写：
 
 ```bash
-python scripts/import_dongzhou_to_neo4j.py
+SILICONFLOW_API_KEY=sk-xxx
+NEO4J_URI=bolt://localhost:7687
+NEO4J_USER=neo4j
+NEO4J_PASSWORD=12345678
 ```
 
-数据默认读取目录在脚本中配置（可按需修改）：
+### 3. 导入知识图谱
 
-- `scripts/import_dongzhou_to_neo4j.py` 内的 `DATA_DIR`
+建议先测试前 3 回：
 
-### 4) 启动 Web 应用
+```bash
+python scripts/import_fengshen_to_neo4j.py --chapter-limit 3
+```
+
+全量导入：
+
+```bash
+python scripts/import_fengshen_to_neo4j.py
+```
+
+如果已有 LLM 抽取缓存，只写入 Neo4j：
+
+```bash
+python scripts/import_fengshen_to_neo4j.py --skip-extraction
+```
+
+只做抽取，不写数据库：
+
+```bash
+python scripts/import_fengshen_to_neo4j.py --extraction-only --chapter-limit 3
+```
+
+### 4. 启动问答系统
 
 ```bash
 streamlit run app.py
 ```
 
-打开页面后，在侧边栏点击 **「🚀 初始化系统」**。
+打开页面后点击「初始化系统」。
 
----
+## 核心 Prompt
 
-## 配置说明
+知识抽取 Prompt 位于：
 
-配置文件：`config.py`
+- `rag_modules/fengshen_kg_extraction.py` 的 `NER_RE_SYSTEM_PROMPT`
 
-- Neo4j：
-  - `neo4j_uri`（bolt 地址）
-  - `neo4j_user` / `neo4j_password`
-  - `neo4j_database`
+该 Prompt 要求模型识别 Person、Faction、Location、Artifact、Beast、Formation、Event、DeityPosition 等实体，并抽取师承、阵营、亲属、对抗、法宝、事件、封神结局等关系。每条关系必须包含 evidence 原文证据，且只抽取文本中明确出现或可严格推断的事实。
 
-- 向量索引（FAISS）：
-  - `faiss_index_path`：默认 `./dongzhou_faiss_index`
+问答生成 Prompt 位于：
 
-- 大模型与 Embedding：
-  - `llm_api_base`：默认 `https://api.siliconflow.cn/v1`
-  - `llm_model`：默认 `deepseek-ai/DeepSeek-V3`
-  - `embedding_model`：默认 `BAAI/bge-m3`
+- `rag_modules/generation_integration.py` 的 `generate_adaptive_answer()`
 
-环境变量（至少设置一个）：
+该 Prompt 要求模型只基于检索信息回答，优先使用原文摘录验证观点，每个关键事实标注 `[1]`、`[2]` 等证据编号；信息不足时必须说明“根据当前资料无法完全确定”。
 
-- `SILICONFLOW_API_KEY`（推荐）
-- 或 `OPENAI_API_KEY` / `MOONSHOT_API_KEY`
+## 测试案例与验收建议
 
----
+| 类型 | 问题 | 重点验证 |
+|------|------|----------|
+| 简单查询 | 哪吒是谁？ | 人物简介、原文证据、引用编号 |
+| 多跳推理 | 哪吒的师父是谁？他属于哪个教派？有哪些法宝？ | 师承 → 教派 → 法宝链路 |
+| 图谱关系 | 姜子牙和元始天尊是什么关系？ | 人物关系与师承图谱 |
+| 边界问题 | 孙悟空在封神演义中有什么法宝？ | 资料不足时拒绝编造 |
 
-## 数据导入（Neo4j）
-
-导入脚本：`scripts/import_dongzhou_to_neo4j.py`
-
-导入后图谱包含：
-
-- 节点（Labels）：
-  - `Person`：历史人物（name、state、is_king、life_year 等）
-  - `Event`：战争/事件（event_id、name、time_start、location、attacker、defender、result 等）
-  - `State`：诸侯国（name）
-
-- 关系（Relationships）：
-  - `(:Person)-[:BELONGS_TO]->(:State)`
-  - `(:Person)-[:ATTACKED_IN|DEFENDED_IN|ASSISTED_ATTACK_IN|ASSISTED_DEFEND_IN]->(:Event)`
-  - `(:Person)-[:FRIEND_OF|ALLY_OF|RIVAL_OF|ENEMY_OF|SIBLING|FATHER_SON|TEACHER_STUDENT|LORD_MINISTER|SPOUSE|RELATED_TO]->(:Person)`
-
----
-
-## 向量索引（FAISS）
-
-初始化时会从 Neo4j 读取人物/事件信息构建文档与分块，然后建立向量索引。
-
-索引落盘路径：
-
-- `config.py` 的 `faiss_index_path`（默认 `./dongzhou_faiss_index`）
-
----
-
-## 常见问题
-
-### 1) 提示数据库无数据
-
-请先运行导入脚本：
+端到端脚本：
 
 ```bash
-python scripts/import_dongzhou_to_neo4j.py
+python scripts/run_e2e_queries.py
 ```
 
-### 2) Neo4j 连接失败
+自动化测试：
 
-确认 Neo4j Desktop 已启动 DBMS，并检查 `config.py` 中的 `neo4j_uri/user/password/database`。
+```bash
+pytest
+```
 
-### 3) 向量索引太大不想提交
+### 纯向量 RAG vs GraphRAG 对比建议
 
-本仓库默认 `.gitignore` 已忽略 `dongzhou_faiss_index/` 等索引产物；数据目录 `东周列国知识图谱/` 会被保留提交。
+项目验收报告中建议列出以下对比表。纯向量 RAG 只使用 FAISS 文本块；GraphRAG 使用智能路由后的图谱检索/混合检索结果。
+
+| 问题 | 纯向量 RAG 预期特点 | GraphRAG 预期特点 |
+|------|---------------------|-------------------|
+| 哪吒是谁？ | 可从相似文本块回答基础介绍 | 可同时给出人物节点、原文片段和相关关系 |
+| 哪吒的师父是谁？他属于哪个教派？有哪些法宝？ | 可能召回分散片段，需要模型自行拼接 | 可沿师承、教派、法宝关系进行多跳组织 |
+| 孙悟空在封神演义中有什么法宝？ | 可能因相似神魔文本产生误答 | 更容易基于图谱无实体/无证据而拒答 |
+
+## 验收对照
+
+- ≥500 条非结构化文本：由全书按回/段落切分 TextChunk 满足
+- 文本清洗与分句：`parse_chapters()`、`split_chapter_text()`、`_persist_text_chunks()`
+- LLM NER/RE：`rag_modules/fengshen_kg_extraction.py`
+- 标准三元组：关系写入 Neo4j，UI/检索中以 source-relation-target 形式展示
+- 图数据库：Neo4j 节点与关系 + 索引
+- 实体对齐：`_merge_aliased_entities()` 基于 alias 合并重复实体
+- 向量数据库：FAISS
+- 实体链接、多跳、子图检索：`graph_rag_retrieval.py`
+- 混合检索：`hybrid_retrieval.py` + `intelligent_query_router.py`
+- QA Pipeline：`generation_integration.py`
+- Web UI 和图谱溯源：`app.py`
+- 自动化验证：`tests/` + `scripts/run_e2e_queries.py`
+
+## 交付物建议
+
+最终提交建议包含：
+
+- 源代码、`requirements.txt`、`.env.example`
+- `封神演义.txt` 或说明数据获取方式
+- LLM 抽取缓存样例或 `data/fengshen/extraction_results/merged_kg.json`
+- 项目报告：需求、设计、实现、Prompt、测试、纯向量 RAG vs GraphRAG 对比
+- 5 分钟演示视频或 PPT：展示图谱构建、问答交互、原文溯源、知识图谱子图
+
+不建议提交：`.env`、`__pycache__/`、`.pytest_cache/`、`~$*.docx`、`.claude/`、`.cursor/`、`.trellis/`、无关小说文本和本地模板文件。

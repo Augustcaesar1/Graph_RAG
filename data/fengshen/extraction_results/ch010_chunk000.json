@@ -1,0 +1,241 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "商容",
+          "alias": [],
+          "description": "商朝忠臣，撞死谏纣王",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "赵启",
+          "alias": [],
+          "description": "商朝大夫，砲烙而死",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王宠妃",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "费仲",
+          "alias": [],
+          "description": "纣王宠臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜桓楚",
+          "alias": [],
+          "description": "东伯侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姬昌",
+          "alias": [
+            "西伯侯"
+          ],
+          "description": "西伯侯，周文王",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "伯邑考",
+          "alias": [],
+          "description": "姬昌长子",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "姬发",
+          "alias": [
+            "武王"
+          ],
+          "description": "姬昌次子，周武王",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "散宜生",
+          "alias": [],
+          "description": "西岐上大夫",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "南宫适",
+          "alias": [],
+          "description": "西岐大将军",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "太姜",
+          "alias": [],
+          "description": "姬昌之母",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "太姬",
+          "alias": [],
+          "description": "姬昌元妃",
+          "attributes": {
+            "faction": "周"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "周朝",
+          "attributes": {
+            "leader": "姬昌"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "西岐",
+          "alias": [],
+          "description": "周国都城",
+          "attributes": {}
+        },
+        {
+          "name": "燕山",
+          "alias": [],
+          "description": "姬昌途经之地",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "砲烙赵启",
+          "alias": [],
+          "description": "纣王用砲烙酷刑处死赵启",
+          "attributes": {
+            "location": "朝歌"
+          }
+        },
+        {
+          "name": "姬昌赴朝歌",
+          "alias": [],
+          "description": "姬昌奉诏前往朝歌",
+          "attributes": {
+            "location": "西岐至朝歌"
+          }
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "赵启",
+        "relation": "OPPOSES",
+        "target_entity": "纣王",
+        "evidence": "指纣王骂曰：‘无道昏君！绝首相，退忠良，诸侯失望；宠妲己，信谗佞，社稷摧颓。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "KILLS",
+        "target_entity": "赵启",
+        "evidence": "两边将砲烙烧红，把赵启剥去冠冕，将铁索裹身，只烙的筋断皮焦，骨化烟飞",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "妲己",
+        "evidence": "且说纣王回宫，妲己接见。纣王携手相搀，并坐龙墩之上。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "费仲跪而奏曰：‘姜后已亡，殿下又失，商容撞死，赵启砲烙，文武各有怨言，只恐内传音信，构惹姜桓楚兵来，必生祸乱。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "姬昌拜诏毕，设筵款待天使。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FATHER_OF",
+        "target_entity": "伯邑考",
+        "evidence": "宣兒伯邑考至，分付曰：‘昨日天使宣召，我起一易课，此去多凶少吉，纵不致损身，该有七年大难。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FATHER_OF",
+        "target_entity": "姬发",
+        "evidence": "西伯侯有四乳，二十四妃，生九十九子，长曰伯邑考，次子姬发即武王天子也。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太姜",
+        "relation": "MOTHER_OF",
+        "target_entity": "姬昌",
+        "evidence": "姬昌退至后宫，来见母亲太姜，行礼毕。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太姬",
+        "relation": "MARRIED_TO",
+        "target_entity": "姬昌",
+        "evidence": "随出内宫与元妃太姬作别。",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

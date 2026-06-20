@@ -1,0 +1,287 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "哪吒",
+          "alias": [
+            "灵珠子"
+          ],
+          "description": "太乙真人弟子，陈塘关李靖之子",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "敖光",
+          "alias": [],
+          "description": "东海龙王",
+          "attributes": {
+            "faction": "龙族"
+          }
+        },
+        {
+          "name": "太乙真人",
+          "alias": [],
+          "description": "乾元山金光洞仙人，哪吒师父",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "李靖",
+          "alias": [],
+          "description": "陈塘关总兵，哪吒之父",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "石矶娘娘",
+          "alias": [],
+          "description": "骷髅山白骨洞仙人",
+          "attributes": {
+            "sect": "截教"
+          }
+        },
+        {
+          "name": "碧云童子",
+          "alias": [],
+          "description": "石矶娘娘门人",
+          "attributes": {
+            "sect": "截教"
+          }
+        },
+        {
+          "name": "彩云童子",
+          "alias": [],
+          "description": "石矶娘娘门人",
+          "attributes": {
+            "sect": "截教"
+          }
+        },
+        {
+          "name": "姜子牙",
+          "alias": [],
+          "description": "玉虚宫弟子，辅佐周室伐商",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {
+            "leader": "元始天尊"
+          }
+        },
+        {
+          "name": "截教",
+          "alias": [],
+          "description": "通天教主门下教派",
+          "attributes": {
+            "leader": "通天教主"
+          }
+        },
+        {
+          "name": "龙族",
+          "alias": [],
+          "description": "四海龙王所属势力",
+          "attributes": {}
+        },
+        {
+          "name": "商",
+          "alias": [],
+          "description": "纣王统治的王朝",
+          "attributes": {}
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "武王领导的伐商势力",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "宝德门",
+          "alias": [],
+          "description": "天界门户",
+          "attributes": {}
+        },
+        {
+          "name": "陈塘关",
+          "alias": [],
+          "description": "李靖镇守的关隘",
+          "attributes": {}
+        },
+        {
+          "name": "乾元山金光洞",
+          "alias": [],
+          "description": "太乙真人修炼之地",
+          "attributes": {}
+        },
+        {
+          "name": "骷髅山白骨洞",
+          "alias": [],
+          "description": "石矶娘娘修炼之地",
+          "attributes": {}
+        },
+        {
+          "name": "玉虚宫",
+          "alias": [],
+          "description": "元始天尊道场",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "乾坤弓",
+          "alias": [],
+          "description": "轩辕黄帝传留的镇关之宝",
+          "attributes": {}
+        },
+        {
+          "name": "震天箭",
+          "alias": [],
+          "description": "轩辕黄帝传留的镇关之宝",
+          "attributes": {}
+        },
+        {
+          "name": "乾坤圈",
+          "alias": [],
+          "description": "哪吒的法宝",
+          "attributes": {}
+        },
+        {
+          "name": "八卦云光帕",
+          "alias": [],
+          "description": "石矶娘娘的法宝",
+          "attributes": {}
+        }
+      ],
+      "Beast": [
+        {
+          "name": "青鸾",
+          "alias": [],
+          "description": "石矶娘娘的坐骑",
+          "attributes": {}
+        }
+      ],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "哪吒闹海",
+          "alias": [],
+          "description": "哪吒与东海龙王的冲突",
+          "attributes": {}
+        },
+        {
+          "name": "武王伐纣",
+          "alias": [],
+          "description": "周武王讨伐商纣王的战争",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "太乙真人",
+        "relation": "MASTER_OF",
+        "target_entity": "哪吒",
+        "evidence": "吾非别人，乃乾元山金光洞太乙真人弟子灵珠子是也",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "CHILD_OF",
+        "target_entity": "李靖",
+        "evidence": "脱化陈塘关李门为子",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "KILLS",
+        "target_entity": "敖光",
+        "evidence": "哪吒在宝德门将敖光踏住后心",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "KILLS",
+        "target_entity": "碧云童子",
+        "evidence": "被这一箭正中咽喉，翻身倒地而死",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "石矶娘娘",
+        "relation": "MASTER_OF",
+        "target_entity": "碧云童子",
+        "evidence": "有一石矶娘娘的门人，名曰碧云童子",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "石矶娘娘",
+        "relation": "MASTER_OF",
+        "target_entity": "彩云童子",
+        "evidence": "彩云童兒看着洞府",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "李靖乃道德之士，亦明玄中奥妙",
+        "confidence": "implicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "乾坤圈",
+        "evidence": "一顿乾坤圈打死你",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "石矶娘娘",
+        "relation": "OWNS",
+        "target_entity": "八卦云光帕",
+        "evidence": "将八卦云光帕——上面有坎离震兑之玉，包罗万象之珍。——望下一丢",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "石矶娘娘",
+        "relation": "OWNS",
+        "target_entity": "青鸾",
+        "evidence": "石矶娘娘乘青鸾而来",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "奉玉虚宫符命来保明君",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "陈塘关总兵",
+        "confidence": "implicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "姜子牙不久下山，吾乃是破纣辅周先行官是也",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

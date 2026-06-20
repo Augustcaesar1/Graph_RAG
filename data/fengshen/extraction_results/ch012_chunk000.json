@@ -1,0 +1,287 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "李靖",
+          "alias": [],
+          "description": "陈塘关总兵官",
+          "attributes": {
+            "sect": "西昆仑",
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷氏",
+          "alias": [],
+          "description": "李靖的元配夫人",
+          "attributes": {}
+        },
+        {
+          "name": "金吒",
+          "alias": [],
+          "description": "李靖长子",
+          "attributes": {
+            "sect": "五龙山云霄洞"
+          }
+        },
+        {
+          "name": "木吒",
+          "alias": [],
+          "description": "李靖次子",
+          "attributes": {
+            "sect": "九宫山白鹤洞"
+          }
+        },
+        {
+          "name": "哪吒",
+          "alias": [],
+          "description": "李靖三子，灵珠子化身",
+          "attributes": {
+            "sect": "乾元山金光洞"
+          }
+        },
+        {
+          "name": "度厄真人",
+          "alias": [],
+          "description": "李靖的师父",
+          "attributes": {
+            "sect": "西昆仑"
+          }
+        },
+        {
+          "name": "太乙真人",
+          "alias": [],
+          "description": "哪吒的师父",
+          "attributes": {
+            "sect": "乾元山金光洞"
+          }
+        },
+        {
+          "name": "文殊广法天尊",
+          "alias": [],
+          "description": "金吒的师父",
+          "attributes": {
+            "sect": "五龙山云霄洞"
+          }
+        },
+        {
+          "name": "普贤真人",
+          "alias": [],
+          "description": "木吒的师父",
+          "attributes": {
+            "sect": "九宫山白鹤洞"
+          }
+        },
+        {
+          "name": "敖光",
+          "alias": [],
+          "description": "东海龙王",
+          "attributes": {}
+        },
+        {
+          "name": "李艮",
+          "alias": [
+            "巡海夜叉"
+          ],
+          "description": "东海巡海夜叉",
+          "attributes": {}
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {}
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "周朝",
+          "attributes": {}
+        },
+        {
+          "name": "西昆仑",
+          "alias": [],
+          "description": "度厄真人的教派",
+          "attributes": {}
+        },
+        {
+          "name": "乾元山金光洞",
+          "alias": [],
+          "description": "太乙真人的洞府",
+          "attributes": {}
+        },
+        {
+          "name": "五龙山云霄洞",
+          "alias": [],
+          "description": "文殊广法天尊的洞府",
+          "attributes": {}
+        },
+        {
+          "name": "九宫山白鹤洞",
+          "alias": [],
+          "description": "普贤真人的洞府",
+          "attributes": {}
+        },
+        {
+          "name": "东海龙族",
+          "alias": [],
+          "description": "东海龙王的势力",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "陈塘关",
+          "alias": [],
+          "description": "李靖镇守的关隘",
+          "attributes": {}
+        },
+        {
+          "name": "乾元山金光洞",
+          "alias": [],
+          "description": "太乙真人的洞府",
+          "attributes": {}
+        },
+        {
+          "name": "九湾河",
+          "alias": [],
+          "description": "东海口上的河流",
+          "attributes": {}
+        },
+        {
+          "name": "水晶宫",
+          "alias": [],
+          "description": "东海龙王的宫殿",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "乾坤圈",
+          "alias": [],
+          "description": "哪吒的法宝",
+          "attributes": {}
+        },
+        {
+          "name": "混天绫",
+          "alias": [],
+          "description": "哪吒的法宝",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "哪吒出世",
+          "alias": [],
+          "description": "哪吒降生",
+          "attributes": {}
+        },
+        {
+          "name": "哪吒闹海",
+          "alias": [],
+          "description": "哪吒在九湾河洗澡引发的事件",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "度厄真人",
+        "relation": "MASTER_OF",
+        "target_entity": "李靖",
+        "evidence": "拜西昆仑度厄真人为师",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "遣下山辅佐纣王，官居总兵",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FATHER_OF",
+        "target_entity": "金吒",
+        "evidence": "生有二子：长曰金吒",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FATHER_OF",
+        "target_entity": "木吒",
+        "evidence": "次曰木吒",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "李靖",
+        "relation": "FATHER_OF",
+        "target_entity": "哪吒",
+        "evidence": "夫人生下一个妖精来了",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷氏",
+        "relation": "MARRIED_TO",
+        "target_entity": "李靖",
+        "evidence": "元配殷氏",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "MASTER_OF",
+        "target_entity": "哪吒",
+        "evidence": "待贫道与他起个名，就与贫道做个徒弟",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "文殊广法天尊",
+        "relation": "MASTER_OF",
+        "target_entity": "金吒",
+        "evidence": "长曰金吒，拜五龙山云霄洞文殊广法天尊为师",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "普贤真人",
+        "relation": "MASTER_OF",
+        "target_entity": "木吒",
+        "evidence": "次曰木吒，拜九宫山白鹤洞普贤真人为师",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "乾坤圈",
+        "evidence": "右手套一金镯",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "OWNS",
+        "target_entity": "混天绫",
+        "evidence": "肚腹上围着一塊红绫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "KILLS",
+        "target_entity": "李艮",
+        "evidence": "夜叉李艮被一孩童打死在陆地",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "哪吒",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "哪吒闹海",
+        "evidence": "哪吒将此宝放在水中，把水俱映红了",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

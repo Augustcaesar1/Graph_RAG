@@ -1,0 +1,166 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜皇后",
+          "alias": [
+            "姜后"
+          ],
+          "description": "纣王元配皇后",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [
+            "苏美人",
+            "苏妲己"
+          ],
+          "description": "纣王宠妃",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄贵妃",
+          "alias": [],
+          "description": "西宫贵妃，黄飞虎之妹",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "杨贵妃",
+          "alias": [],
+          "description": "馨庆宫贵妃",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "鲧捐",
+          "alias": [],
+          "description": "妲己的侍婢",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "费仲",
+          "alias": [],
+          "description": "中谏大夫，纣王宠臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜环",
+          "alias": [],
+          "description": "费仲府中之人",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝势力",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "寿仙宫",
+          "alias": [],
+          "description": "纣王与妲己饮宴的宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "中宫",
+          "alias": [],
+          "description": "姜皇后的宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "西宫",
+          "alias": [],
+          "description": "黄贵妃的宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "馨庆宫",
+          "alias": [],
+          "description": "杨贵妃的宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "御花园",
+          "alias": [],
+          "description": "纣王游幸的花园",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "姜皇后",
+        "evidence": "那姜后乃纣王元配",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "妲己",
+        "evidence": "苏美人，你当去接梓童",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄贵妃",
+        "relation": "BROTHER_OF",
+        "target_entity": "黄飞虎",
+        "evidence": "西宫黄贵妃——乃黄飞虎之妹",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "OPPOSES",
+        "target_entity": "姜皇后",
+        "evidence": "妲己切齿曰：“我乃天子之宠妃，姜后自恃元配，对黄、杨二贵妃耻辱我不堪，此恨如何不报！”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "商",
+        "evidence": "费仲在宫门外，只见鲧捐出宫曰：“费大夫，娘娘有密旨一封，你拿出去自拆，观其机密，不可漏泄。若成事之后，苏娘娘决不负大夫。宜速，不宜迟。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "MENTIONS",
+        "target_entity": "费仲",
+        "evidence": "鲧捐曰：“明日天子幸御园，娘娘暗传懿旨，宣召中谏大夫费仲到宫，待奴婢分付他，定一妙计，若害了姜皇后，许他官居显任，爵禄加增，他素有才名，自当用心，万无一失。”",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

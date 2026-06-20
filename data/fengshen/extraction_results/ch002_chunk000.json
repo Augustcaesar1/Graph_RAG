@@ -1,0 +1,258 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "商容",
+          "alias": [],
+          "description": "商朝首相",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜桓楚",
+          "alias": [
+            "东伯侯"
+          ],
+          "description": "东伯侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "鄂崇禹",
+          "alias": [
+            "南伯侯"
+          ],
+          "description": "南伯侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姬昌",
+          "alias": [
+            "西伯侯"
+          ],
+          "description": "西伯侯",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "崇侯虎",
+          "alias": [
+            "北伯侯"
+          ],
+          "description": "北伯侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "闻仲",
+          "alias": [
+            "太师"
+          ],
+          "description": "商朝太师",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "费仲",
+          "alias": [],
+          "description": "商朝奸臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "尤浑",
+          "alias": [],
+          "description": "商朝奸臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "苏护",
+          "alias": [
+            "冀州侯"
+          ],
+          "description": "冀州侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [
+            "亚相"
+          ],
+          "description": "商朝亚相",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "周朝",
+          "attributes": {
+            "leader": "姬昌"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "冀州",
+          "alias": [],
+          "description": "苏护的封地",
+          "attributes": {}
+        },
+        {
+          "name": "午门",
+          "alias": [],
+          "description": "商朝宫殿的城门",
+          "attributes": {}
+        },
+        {
+          "name": "显庆殿",
+          "alias": [],
+          "description": "商朝宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "龙德殿",
+          "alias": [],
+          "description": "商朝宫殿",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "商容",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "老臣商容启奏陛下",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜桓楚",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "东伯侯姜桓楚",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "鄂崇禹",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "南伯侯鄂崇禹",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "西伯侯姬昌",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇侯虎",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "北伯侯崇侯虎",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "闻仲",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "此时太师闻仲不在都城",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "纣王宠用费仲、尤浑",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "尤浑",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "纣王宠用费仲、尤浑",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "内中有位诸侯，乃冀州侯，姓苏名护",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "比干",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "亚相比干",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "OPPOSES",
+        "target_entity": "苏护",
+        "evidence": "纣王听苏护之言，勃然大怒",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "OPPOSES",
+        "target_entity": "苏护",
+        "evidence": "也是合当有事，那日二人查天下诸侯俱送有礼物，独苏护并无礼单，心中大怒，怀恨于心",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "尤浑",
+        "relation": "OPPOSES",
+        "target_entity": "苏护",
+        "evidence": "也是合当有事，那日二人查天下诸侯俱送有礼物，独苏护并无礼单，心中大怒，怀恨于心",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

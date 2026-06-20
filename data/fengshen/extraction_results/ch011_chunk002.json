@@ -1,0 +1,305 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "姬昌",
+          "alias": [
+            "西伯侯"
+          ],
+          "description": "周文王，精通先天数",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [
+            "武成王"
+          ],
+          "description": "商朝大将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "微子",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "费仲",
+          "alias": [],
+          "description": "商朝奸臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "尤浑",
+          "alias": [],
+          "description": "商朝奸臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜文焕",
+          "alias": [
+            "东伯侯"
+          ],
+          "description": "反商诸侯",
+          "attributes": {
+            "faction": "反商"
+          }
+        },
+        {
+          "name": "鄂顺",
+          "alias": [
+            "南伯侯"
+          ],
+          "description": "反商诸侯",
+          "attributes": {
+            "faction": "反商"
+          }
+        },
+        {
+          "name": "太乙真人",
+          "alias": [],
+          "description": "阐教仙人",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "姜子牙",
+          "alias": [],
+          "description": "元始天尊弟子",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "白鹤童子",
+          "alias": [],
+          "description": "玉虚宫使者",
+          "attributes": {
+            "sect": "阐教"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "周朝",
+          "attributes": {
+            "leader": "姬昌"
+          }
+        },
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {
+            "leader": "元始天尊"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "羑里",
+          "alias": [
+            "羑里城"
+          ],
+          "description": "姬昌被囚禁之地"
+        },
+        {
+          "name": "午门",
+          "alias": [],
+          "description": "商朝宫殿大门"
+        },
+        {
+          "name": "太庙",
+          "alias": [],
+          "description": "商朝宗庙"
+        },
+        {
+          "name": "游魂关",
+          "alias": [],
+          "description": "东伯侯攻打之地"
+        },
+        {
+          "name": "三山关",
+          "alias": [],
+          "description": "南伯侯攻打之地"
+        },
+        {
+          "name": "乾元山金光洞",
+          "alias": [],
+          "description": "太乙真人修炼之地"
+        },
+        {
+          "name": "昆仑山玉虚宫",
+          "alias": [
+            "玉虚宫"
+          ],
+          "description": "元始天尊道场"
+        }
+      ],
+      "Event": [
+        {
+          "name": "太庙火灾",
+          "alias": [],
+          "description": "姬昌预言并应验的事件"
+        },
+        {
+          "name": "东伯侯反商",
+          "alias": [],
+          "description": "姜文焕起兵反商"
+        },
+        {
+          "name": "南伯侯反商",
+          "alias": [],
+          "description": "鄂顺起兵反商"
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "姬昌",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "姬昌素有令名，为诸侯瞻仰，军民钦服",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "王大骂曰：“老匹夫！释你归国，不思报效君恩，而反侮辱天子，尚有何说。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "黄飞虎看报，见反了东伯侯姜文焕",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "比干",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "比干奏曰：“臣等非为姬昌，实为国也。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "微子",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "微子、比干、黄飞虎等朝见毕",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "纣王谓费仲曰：“姬昌言明日太庙火灾，若应其言，如之奈何？”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "尤浑",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "尤浑奏曰：“传旨，明日令看守太庙宫官仔细防闲，亦不必焚香，其火从何而至。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜文焕",
+        "relation": "OPPOSES",
+        "target_entity": "商",
+        "evidence": "反了东伯侯姜文焕，领四十万人马，兵取游魂关",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "鄂顺",
+        "relation": "OPPOSES",
+        "target_entity": "商",
+        "evidence": "反了南伯侯鄂顺，领人马二十万取三山关",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "太乙真人",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "乾元山金光洞太乙真人，因神仙一千五百年犯了杀戒",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "一则姜子牙该斩将封神，成汤天下该灭，周室将兴",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "白鹤童子",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "只听昆仑山玉虚宫白鹤童子持玉札到山",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "太庙火灾",
+        "evidence": "昌奏曰：“陛下，明日太庙火灾，速将宗社神主请开，恐毁社稷根本！”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜文焕",
+        "relation": "INITIATES",
+        "target_entity": "东伯侯反商",
+        "evidence": "反了东伯侯姜文焕，领四十万人马，兵取游魂关",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "鄂顺",
+        "relation": "INITIATES",
+        "target_entity": "南伯侯反商",
+        "evidence": "反了南伯侯鄂顺，领人马二十万取三山关",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

@@ -1,0 +1,151 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "伯邑考",
+          "alias": [
+            "邑考"
+          ],
+          "description": "西伯侯姬昌长子，为救父前往朝歌进贡",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王宠妃，九尾狐化身",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姬昌",
+          "alias": [
+            "西伯"
+          ],
+          "description": "西伯侯，伯邑考之父",
+          "attributes": {
+            "faction": "周"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "纣王统治的王朝",
+          "attributes": {}
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "西伯侯姬昌的势力",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "摘星楼",
+          "alias": [],
+          "description": "纣王与妲己的居所",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "瑶琴",
+          "alias": [],
+          "description": "伯邑考所弹之琴",
+          "attributes": {}
+        }
+      ],
+      "Beast": [
+        {
+          "name": "白面猿猴",
+          "alias": [
+            "白猿"
+          ],
+          "description": "伯邑考进贡的灵兽，善歌唱",
+          "attributes": {}
+        }
+      ],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "伯邑考",
+        "relation": "CHILD_OF",
+        "target_entity": "姬昌",
+        "evidence": "伯邑考乃圣人之子，因为父受羁囚之厄",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "伯邑考为父朝商，误入陷阱",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "纣王是商朝末代君主",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "妲己是纣王宠妃",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "西伯侯姬昌的势力",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "OWNS",
+        "target_entity": "白面猿猴",
+        "evidence": "伯邑考前进白面猿猴，善能歌唱",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "OPPOSES",
+        "target_entity": "妲己",
+        "evidence": "妲己邪念不绝...反被他羞辱一场",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "MARRIED_TO",
+        "target_entity": "纣王",
+        "evidence": "妲己是纣王宠妃",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

@@ -1,0 +1,233 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "苏护",
+          "alias": [
+            "冀州侯"
+          ],
+          "description": "冀州侯，因纣王欲选其女为妃而反商",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [
+            "昏君"
+          ],
+          "description": "商朝末代君主，荒淫无道",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "费仲",
+          "alias": [],
+          "description": "纣王宠臣，谗言惑主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "尤浑",
+          "alias": [],
+          "description": "纣王宠臣，谗言惑主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "鲁雄",
+          "alias": [],
+          "description": "商朝将领，为苏护求情",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "崇侯虎",
+          "alias": [
+            "北伯侯"
+          ],
+          "description": "北伯侯，贪婪暴横",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姬昌",
+          "alias": [
+            "西伯侯"
+          ],
+          "description": "西伯侯，仁德信义",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [],
+          "description": "商朝丞相，忠良之臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "苏全忠",
+          "alias": [],
+          "description": "苏护长子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷破败",
+          "alias": [],
+          "description": "商朝将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "晁田",
+          "alias": [],
+          "description": "商朝将领",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "周朝",
+          "attributes": {
+            "leader": "姬昌"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "冀州",
+          "alias": [],
+          "description": "苏护的封地",
+          "attributes": {}
+        },
+        {
+          "name": "西岐",
+          "alias": [],
+          "description": "姬昌的封地",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "苏护反商",
+          "alias": [],
+          "description": "苏护因纣王欲选其女为妃而反商",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "苏护",
+        "relation": "OPPOSES",
+        "target_entity": "纣王",
+        "evidence": "苏护大怒，骂曰：‘无道昏君，不思量祖宗德业，宠信谗臣谄媚之言，欲选吾女进宫为妃。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "OPPOSES",
+        "target_entity": "苏护",
+        "evidence": "此必是费仲、尤恽以酒色迷惑君心，欲专朝政。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "尤浑",
+        "relation": "OPPOSES",
+        "target_entity": "苏护",
+        "evidence": "此必是费仲、尤恽以酒色迷惑君心，欲专朝政。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "鲁雄",
+        "relation": "OPPOSES",
+        "target_entity": "崇侯虎",
+        "evidence": "鲁雄在侧自思：‘崇侯虎乃贪鄙暴横之夫，提兵远征，所经地方，必遭残害，黎庶何以得安。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "OPPOSES",
+        "target_entity": "崇侯虎",
+        "evidence": "姬昌曰：‘公言固是有理，独不思君命所差，概不由己？",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护",
+        "relation": "FATHER_OF",
+        "target_entity": "苏全忠",
+        "evidence": "护之长子苏全忠率领诸将出郭迎接。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "苏护乃忠良之士，素怀忠义",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "纣王见苏护当面折诤一番，不能遂愿",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "西伯便对二丞相言：‘侯虎先去，姬昌暂回西岐，领兵续进。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "苏护反商",
+        "evidence": "苏护离了朝歌，同众士卒，不一日回到冀州。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇侯虎",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "苏护反商",
+        "evidence": "崇侯虎领五万人马，即日出兵，离了朝歌，望冀州进发。",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

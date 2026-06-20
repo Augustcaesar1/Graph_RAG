@@ -1,0 +1,186 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "姜桓楚",
+          "alias": [],
+          "description": "东伯侯，姜皇后之父",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王宠妃",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姬昌",
+          "alias": [
+            "姬伯"
+          ],
+          "description": "西伯侯，周文王",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "鄂崇禹",
+          "alias": [],
+          "description": "南伯侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "崇侯虎",
+          "alias": [],
+          "description": "北伯侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "费仲",
+          "alias": [],
+          "description": "纣王奸臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [
+            "亚比"
+          ],
+          "description": "纣王大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜皇后",
+          "alias": [],
+          "description": "纣王元配，姜桓楚之女",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "周朝",
+          "attributes": {
+            "leader": "姬昌"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "西宫",
+          "alias": [],
+          "description": "姜皇后屈死之地",
+          "attributes": {}
+        },
+        {
+          "name": "午门",
+          "alias": [],
+          "description": "处决姜桓楚之地",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "姜桓楚",
+        "relation": "FATHER_OF",
+        "target_entity": "姜皇后",
+        "evidence": "姜皇后乃桓楚之女",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "姜皇后",
+        "evidence": "纣王无道，杀子诛妻，自立妲己为正宫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "妲己",
+        "evidence": "自立妲己为正宫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "KILLS",
+        "target_entity": "姜皇后",
+        "evidence": "纣王无道，杀子诛妻",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "KILLS",
+        "target_entity": "姜桓楚",
+        "evidence": "命武士：'拿出午门，碎醢其尸，以正国法！'",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "OPPOSES",
+        "target_entity": "姜桓楚",
+        "evidence": "奸臣费仲暗进偏殿见纣王，具言四路诸侯俱到了。纣王大喜。——'明日升殿，四侯必有奏章，上言阻谏。臣启陛下，明日但四侯上本，陛下不必看本，不分皁白，传旨拿出午门枭首，此为上策。'",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "OPPOSES",
+        "target_entity": "纣王",
+        "evidence": "姬伯劝曰：'皇后受屈，殿下无踪，人死不能复生。今夜我等各具奏章，明早见君，犯颜力谏，必分清白，以正人伦。'",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜桓楚",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "臣镇东鲁，肃严边庭，奉法守公，自尽臣节",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "西伯侯姬昌",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

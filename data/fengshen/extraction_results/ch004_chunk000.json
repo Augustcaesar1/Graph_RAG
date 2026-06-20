@@ -1,0 +1,287 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "苏护",
+          "alias": [],
+          "description": "冀州侯，妲己之父",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "崇黑虎",
+          "alias": [],
+          "description": "曹州侯，崇侯虎之弟",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "崇侯虎",
+          "alias": [],
+          "description": "北伯侯，崇黑虎之兄",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "苏全忠",
+          "alias": [],
+          "description": "苏护之子，妲己之兄",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "苏护之女，后被狐狸精附体",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姬昌",
+          "alias": [
+            "西伯侯"
+          ],
+          "description": "西岐之主",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "散宜生",
+          "alias": [],
+          "description": "西岐大夫",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "费仲",
+          "alias": [],
+          "description": "商朝权臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "尤浑",
+          "alias": [],
+          "description": "商朝权臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [
+            "武成王"
+          ],
+          "description": "商朝大将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "西岐",
+          "attributes": {
+            "leader": "姬昌"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "西岐",
+          "alias": [],
+          "description": "周的都城",
+          "attributes": {}
+        },
+        {
+          "name": "冀州",
+          "alias": [],
+          "description": "苏护的封地",
+          "attributes": {}
+        },
+        {
+          "name": "曹州",
+          "alias": [],
+          "description": "崇黑虎的封地",
+          "attributes": {}
+        },
+        {
+          "name": "恩州驿",
+          "alias": [],
+          "description": "驿站名",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "豹尾鞭",
+          "alias": [],
+          "description": "苏护的武器",
+          "attributes": {
+            "owner": "苏护"
+          }
+        }
+      ],
+      "Beast": [
+        {
+          "name": "金睛兽",
+          "alias": [],
+          "description": "崇黑虎的坐骑",
+          "attributes": {
+            "owner": "崇黑虎"
+          }
+        }
+      ],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "苏护",
+        "relation": "FATHER_OF",
+        "target_entity": "妲己",
+        "evidence": "苏护将妲己安置在后面内堂里",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护",
+        "relation": "FATHER_OF",
+        "target_entity": "苏全忠",
+        "evidence": "只是我苏护止此一子，被令兄囚禁行营",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇黑虎",
+        "relation": "BROTHER_OF",
+        "target_entity": "崇侯虎",
+        "evidence": "想我兄弟二人，自始祖一脉，相传六世，俺弟兄系同胞一本",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏全忠",
+        "relation": "CHILD_OF",
+        "target_entity": "苏护",
+        "evidence": "只是我苏护止此一子，被令兄囚禁行营",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "CHILD_OF",
+        "target_entity": "苏护",
+        "evidence": "苏护将妲己安置在后面内堂里",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "苏护反商",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇黑虎",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "崇黑虎怒发如雷，领了三千人马，上了金睛兽，自回曹州去了",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇侯虎",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "崇侯虎愧莫敢当，只得收拾人马，自回本国，具表请罪",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "西伯侯姬昌好生可恶！今按兵不举，坐观成败",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "散宜生",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "话说宜生接了回书，竟往西岐",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "费仲",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "当时权臣费仲、尤浑见苏护又不先送礼物",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "尤浑",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "当时权臣费仲、尤浑见苏护又不先送礼物",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "飞虎见了苏护进女赎罪文书，忙差龙环出城",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "纣王在龙德殿，有随侍官启驾",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇黑虎",
+        "relation": "OWNS",
+        "target_entity": "金睛兽",
+        "evidence": "崇黑虎怒发如雷，领了三千人马，上了金睛兽",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "苏护",
+        "relation": "OWNS",
+        "target_entity": "豹尾鞭",
+        "evidence": "将一根豹尾鞭放在案桌之旁",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

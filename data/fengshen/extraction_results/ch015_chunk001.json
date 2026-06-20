@@ -1,0 +1,153 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "姜子牙",
+          "alias": [
+            "子牙"
+          ],
+          "description": "昆仑学道之人，后辅佐周室伐商",
+          "attributes": {
+            "sect": "昆仑"
+          }
+        },
+        {
+          "name": "马氏",
+          "alias": [],
+          "description": "姜子牙的妻子",
+          "attributes": {}
+        },
+        {
+          "name": "宋异人",
+          "alias": [
+            "宋伯伯"
+          ],
+          "description": "姜子牙的朋友",
+          "attributes": {}
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王的妃子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "武成王",
+          "alias": [
+            "黄飞虎"
+          ],
+          "description": "商朝将领",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝势力",
+          "attributes": {
+            "leader": "纣王"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "昆仑山",
+          "alias": [
+            "昆仑"
+          ],
+          "description": "姜子牙学道之地",
+          "attributes": {}
+        },
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "西门",
+          "alias": [],
+          "description": "朝歌城门",
+          "attributes": {}
+        },
+        {
+          "name": "南门",
+          "alias": [],
+          "description": "朝歌城门",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "笊篱",
+          "alias": [],
+          "description": "姜子牙编的竹器",
+          "attributes": {}
+        },
+        {
+          "name": "干面",
+          "alias": [],
+          "description": "姜子牙卖的面粉",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "姜子牙",
+        "relation": "MARRIED_TO",
+        "target_entity": "马氏",
+        "evidence": "马氏曰：‘贤妻说得是。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "宋异人",
+        "relation": "RELATED_TO",
+        "target_entity": "姜子牙",
+        "evidence": "宋异人听得子牙夫妇吵嚷，忙来问子牙曰：‘贤弟，为何事夫妻相争？’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "昆仑",
+        "evidence": "子牙曰：‘我三十二岁在昆仑学道，不识甚么世务生意，只会编笊篱。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "OPPOSES",
+        "target_entity": "东南四百镇诸侯",
+        "evidence": "此时因纣王无道，反了东南四百镇诸侯，报来甚是紧急",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "武成王",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "武成王日日操练人马",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

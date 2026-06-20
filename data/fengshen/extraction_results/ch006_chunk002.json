@@ -1,0 +1,187 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主，残暴无道",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "梅柏",
+          "alias": [],
+          "description": "商朝上大夫，三朝旧臣，因直言谏君被炮烙处死",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [
+            "苏美人"
+          ],
+          "description": "纣王宠妃，蛊惑纣王残害忠良",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "微子",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "箕子",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [
+            "武成王"
+          ],
+          "description": "商朝武成王",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜皇后",
+          "alias": [],
+          "description": "纣王皇后",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "午门",
+          "alias": [],
+          "description": "商朝宫殿的午门",
+          "attributes": {}
+        },
+        {
+          "name": "九间殿",
+          "alias": [],
+          "description": "商朝宫殿的九间殿",
+          "attributes": {}
+        },
+        {
+          "name": "寿仙宫",
+          "alias": [],
+          "description": "纣王与妲己的寝宫",
+          "attributes": {}
+        },
+        {
+          "name": "中宫",
+          "alias": [],
+          "description": "姜皇后的寝宫",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "砲烙",
+          "alias": [],
+          "description": "纣王发明的酷刑，用烧红的铜柱烙死犯人",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "梅柏被砲烙",
+          "alias": [],
+          "description": "梅柏因直言谏君被纣王用砲烙酷刑处死",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "纣王",
+        "relation": "KILLS",
+        "target_entity": "梅柏",
+        "evidence": "纣王大怒，将梅柏剥去衣服，赤身将铁索绑缚其手足，抱住铜柱。可怜梅柏，大叫一声，其气已绝。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "RELATED_TO",
+        "target_entity": "砲烙",
+        "evidence": "纣王下辇，携妲己手而言曰：‘美人妙策，朕今日殿前砲烙了梅柏，使众臣俱不敢出头强谏，钳口结舌，唯唯而退。是此砲烙乃治国之奇宝也。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "妲己",
+        "evidence": "纣王回宫，妲己迎接圣驾。纣王下辇，携妲己手而言曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "姜皇后",
+        "evidence": "有阵风将此乐音送到中宫，姜皇后尚未寝",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "微子",
+        "relation": "ALLIES_WITH",
+        "target_entity": "箕子",
+        "evidence": "内有微子、箕子、比干对武成王黄飞虎曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "微子",
+        "relation": "ALLIES_WITH",
+        "target_entity": "比干",
+        "evidence": "内有微子、箕子、比干对武成王黄飞虎曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "箕子",
+        "relation": "ALLIES_WITH",
+        "target_entity": "比干",
+        "evidence": "内有微子、箕子、比干对武成王黄飞虎曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "OPPOSES",
+        "target_entity": "纣王",
+        "evidence": "黄飞虎闻言，将五柳长须捻在手内，大怒曰：‘三位殿下，据我未将看将起来，此砲烙不是砲烙大臣，乃烙的是纣王江山，砲的是成汤社稷。’",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

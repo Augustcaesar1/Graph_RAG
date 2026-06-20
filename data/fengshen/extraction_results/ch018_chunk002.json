@@ -1,0 +1,237 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "姜子牙",
+          "alias": [
+            "姜尚",
+            "子牙"
+          ],
+          "description": "元始天尊弟子，辅佐周室伐商",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "张凤",
+          "alias": [],
+          "description": "商朝将领，执掌关隘",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "伯邑考",
+          "alias": [],
+          "description": "周文王长子",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "散宜生",
+          "alias": [],
+          "description": "周朝上大夫",
+          "attributes": {
+            "faction": "周"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "纣王统治的王朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "西岐的势力，与商对抗",
+          "attributes": {
+            "leader": "周文王"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝的都城",
+          "attributes": {}
+        },
+        {
+          "name": "西岐",
+          "alias": [],
+          "description": "周朝的根据地",
+          "attributes": {}
+        },
+        {
+          "name": "临潼关",
+          "alias": [],
+          "description": "商朝的关隘",
+          "attributes": {}
+        },
+        {
+          "name": "潼关",
+          "alias": [],
+          "description": "商朝的关隘",
+          "attributes": {}
+        },
+        {
+          "name": "穿云关",
+          "alias": [],
+          "description": "商朝的关隘",
+          "attributes": {}
+        },
+        {
+          "name": "界牌关",
+          "alias": [],
+          "description": "商朝的关隘",
+          "attributes": {}
+        },
+        {
+          "name": "汜水关",
+          "alias": [],
+          "description": "商朝的关隘",
+          "attributes": {}
+        },
+        {
+          "name": "金鸡岭",
+          "alias": [],
+          "description": "西岐的地界",
+          "attributes": {}
+        },
+        {
+          "name": "首阳山",
+          "alias": [],
+          "description": "西岐的地界",
+          "attributes": {}
+        },
+        {
+          "name": "燕山",
+          "alias": [],
+          "description": "西岐的地界",
+          "attributes": {}
+        },
+        {
+          "name": "白柳村",
+          "alias": [],
+          "description": "西岐的地界",
+          "attributes": {}
+        },
+        {
+          "name": "西岐山",
+          "alias": [],
+          "description": "西岐的地界",
+          "attributes": {}
+        },
+        {
+          "name": "西岐城",
+          "alias": [],
+          "description": "西岐的都城",
+          "attributes": {}
+        },
+        {
+          "name": "磻溪",
+          "alias": [],
+          "description": "姜子牙隐居的地方",
+          "attributes": {}
+        },
+        {
+          "name": "羑里",
+          "alias": [],
+          "description": "周文王被囚禁的地方",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "祖遗三件宝贝",
+          "alias": [],
+          "description": "伯邑考准备进贡的宝物",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "子牙救民出关",
+          "alias": [],
+          "description": "姜子牙使用土遁救出百姓",
+          "attributes": {}
+        },
+        {
+          "name": "伯邑考代父赎罪",
+          "alias": [],
+          "description": "伯邑考前往朝歌代父赎罪",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "姜子牙",
+        "relation": "OPPOSES",
+        "target_entity": "张凤",
+        "evidence": "张凤听罢大怒，言曰：“汝乃江湖术士，一旦富贵，不思报本于君恩，反以巧言而惑我。况逃民不忠，若听汝言，亦陷我以不义。我受命执掌关隘，自宜尽臣子之节，逃民玩法，不守国规，宜当拿解于朝歌。自思只是不放过此关，彼自然回国，我己自存一线之生路矣。若论国法，连汝并解回朝，以正国典。奈吾初会，暂且姑免。”喝两边：“把姜尚叉将出去！”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "子牙曰：“此处就是汜水关外金鸡岭，乃西岐州地方。你们好好去罢！”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "张凤",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "我受命执掌关隘，自宜尽臣子之节，逃民玩法，不守国规，宜当拿解于朝歌。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "CHILD_OF",
+        "target_entity": "周文王",
+        "evidence": "邑考曰：“父王囚羑里七年，孤欲自往朝歌，代父赎罪。卿等意下如何？”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "伯邑考传命：“既朝歌逃民因纣王失政，来归吾土，无妻者给银与他娶妻。又与银子，令众人僦居安处。鳏寡孤独者在三济仓造名，自领口粮。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "散宜生",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "散宜生接看手本。翌日伯邑考传命：“既朝歌逃民因纣王失政，来归吾土，无妻者给银与他娶妻。又与银子，令众人僦居安处。鳏寡孤独者在三济仓造名，自领口粮。”宜生领命。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "子牙救民出关",
+        "evidence": "子牙到一更时候，望昆仑山拜罢，口中念念有词，一声响。这一会，子牙士遁救出万民。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "伯邑考",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "伯邑考代父赎罪",
+        "evidence": "伯邑考叹曰：“父王有难，七载禁于异乡，举目无亲。为人子者，于心何忍。所谓立国立家，徒为虚设，要我等九十九子何用！我自带祖遗三件宝贝，往朝歌进贡，以赎父罪。”",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

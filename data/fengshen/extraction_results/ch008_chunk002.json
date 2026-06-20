@@ -1,0 +1,339 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "方弼",
+          "alias": [],
+          "description": "商朝将领，反叛朝歌保护殷郊、殷洪",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "方相",
+          "alias": [],
+          "description": "商朝将领，方弼之弟，反叛朝歌保护殷郊、殷洪",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷郊",
+          "alias": [],
+          "description": "商纣王之子，东宫太子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷洪",
+          "alias": [],
+          "description": "商纣王之子，殷郊之弟",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [
+            "武成王"
+          ],
+          "description": "商朝将领，武成王",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王宠妃",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷破败",
+          "alias": [],
+          "description": "商朝将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "雷开",
+          "alias": [],
+          "description": "商朝将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜桓楚",
+          "alias": [],
+          "description": "东伯侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "鄂崇禹",
+          "alias": [
+            "商伯侯"
+          ],
+          "description": "商伯侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "周纪",
+          "alias": [],
+          "description": "黄飞虎部下",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [
+            "朝歌"
+          ],
+          "description": "商朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "东鲁",
+          "alias": [],
+          "description": "东伯侯姜桓楚的领地",
+          "attributes": {
+            "leader": "姜桓楚"
+          }
+        },
+        {
+          "name": "南都",
+          "alias": [],
+          "description": "商伯侯鄂崇禹的领地",
+          "attributes": {
+            "leader": "鄂崇禹"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "东鲁",
+          "alias": [],
+          "description": "东伯侯姜桓楚的领地",
+          "attributes": {}
+        },
+        {
+          "name": "南都",
+          "alias": [],
+          "description": "商伯侯鄂崇禹的领地",
+          "attributes": {}
+        },
+        {
+          "name": "西岐",
+          "alias": [],
+          "description": "周朝的根据地",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "龙凤剑",
+          "alias": [],
+          "description": "商纣王赐予黄飞虎的宝剑",
+          "attributes": {}
+        },
+        {
+          "name": "宝玦",
+          "alias": [
+            "玉玦"
+          ],
+          "description": "黄飞虎的玉佩",
+          "attributes": {}
+        }
+      ],
+      "Beast": [
+        {
+          "name": "五色神牛",
+          "alias": [],
+          "description": "黄飞虎的坐骑",
+          "attributes": {}
+        }
+      ],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "方弼",
+        "relation": "BROTHER_OF",
+        "target_entity": "方相",
+        "evidence": "方弼与弟言曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "BROTHER_OF",
+        "target_entity": "殷洪",
+        "evidence": "殷郊上前一把抱住兄弟殷洪",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "OWNS",
+        "target_entity": "五色神牛",
+        "evidence": "黄飞虎坐五色神牛飞奔趕来",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "OWNS",
+        "target_entity": "宝玦",
+        "evidence": "可将我内悬宝玦，拿去前途货卖",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "BESTOWS",
+        "target_entity": "龙凤剑",
+        "evidence": "天子赐龙凤剑前来",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "黄飞虎乃是元戎",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "方弼",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "方弼、方相背负二位殿下",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "方相",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "方弼、方相背负二位殿下",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "殷郊乃东宫太子",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷洪",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "殷洪乃郡王",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "MARRIED_TO",
+        "target_entity": "纣王",
+        "evidence": "妲己见未曾拿住殷郊，复进言曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷破败",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "殷破败、雷开点飞骑三千",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "雷开",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "殷破败、雷开点飞骑三千",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "周纪",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "黄飞虎对周纪曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "OPPOSES",
+        "target_entity": "殷郊",
+        "evidence": "黄将军来拿我等",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "OPPOSES",
+        "target_entity": "殷洪",
+        "evidence": "黄将军来拿我等",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "OPPOSES",
+        "target_entity": "方弼",
+        "evidence": "黄将军来拿我等",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "OPPOSES",
+        "target_entity": "方相",
+        "evidence": "黄将军来拿我等",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "KILLS",
+        "target_entity": "殷洪",
+        "evidence": "殷郊自思，料不能脱此灾，也罢，将军既奉君命，不敢违法",
+        "confidence": "implicit"
+      },
+      {
+        "source_entity": "殷洪",
+        "relation": "KILLS",
+        "target_entity": "殷郊",
+        "evidence": "殷洪上前急止之曰",
+        "confidence": "implicit"
+      }
+    ]
+  }
+]

@@ -1,0 +1,237 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "姬昌",
+          "alias": [
+            "西伯",
+            "西伯侯",
+            "文王"
+          ],
+          "description": "周文王，被商纣王囚禁七年后获释",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [
+            "武成王"
+          ],
+          "description": "商朝武成王，后叛商投周",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "微子",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "箕子",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "微子启",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "微子衍",
+          "alias": [],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "麦云",
+          "alias": [],
+          "description": "商朝谏议大夫",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "麦智",
+          "alias": [],
+          "description": "商朝谏议大夫",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "龙环",
+          "alias": [],
+          "description": "黄飞虎副将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "吴贤",
+          "alias": [],
+          "description": "黄飞虎副将",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {}
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "周国",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "西岐",
+          "alias": [],
+          "description": "周国都城",
+          "attributes": {}
+        },
+        {
+          "name": "羑里",
+          "alias": [],
+          "description": "姬昌被囚禁之地",
+          "attributes": {}
+        },
+        {
+          "name": "龙德殿",
+          "alias": [],
+          "description": "商朝宫殿",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [
+        {
+          "name": "白旄",
+          "alias": [],
+          "description": "象征权力的旗帜",
+          "attributes": {}
+        },
+        {
+          "name": "黄钺",
+          "alias": [],
+          "description": "象征权力的斧钺",
+          "attributes": {}
+        },
+        {
+          "name": "铜符",
+          "alias": [],
+          "description": "通行凭证",
+          "attributes": {}
+        }
+      ],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "姬昌获释",
+          "alias": [],
+          "description": "商纣王赦免姬昌",
+          "attributes": {}
+        },
+        {
+          "name": "文王夸官",
+          "alias": [],
+          "description": "姬昌在朝歌夸官三日",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "商纣王",
+        "relation": "CAPTURES",
+        "target_entity": "姬昌",
+        "evidence": "吾羁囚七载，毫无尺寸美意与尔众民",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "商纣王",
+        "relation": "BESTOWS",
+        "target_entity": "姬昌",
+        "evidence": "今朕特诏，赦卿无罪。七载无辜，仍加封贤良忠孝百公之长，特专征伐。赐卿白旄、黄钺，坐镇西岐。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "BESTOWS",
+        "target_entity": "姬昌",
+        "evidence": "须臾，取出铜符令箭，交与文王",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "OPPOSES",
+        "target_entity": "商纣王",
+        "evidence": "但当今宠信邪佞，不听忠言，陷坏大臣，荒于酒色，不整朝纲，不容谏本",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "周",
+        "evidence": "姬昌见众官慌忙行礼，慰曰：“犯官七年未见众位大人，今一旦荷蒙天恩特赦，此皆叨列位大人之福廕，方能再见天日也。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄飞虎",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "武成王黄爷看操回来",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "文王夸官",
+        "evidence": "文王在城中夸官两日",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "姬昌获释",
+        "evidence": "犯臣姬昌，罪不胜诛，蒙恩赦宥，虽粉骨碎身，皆陛下所赐之年。",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

@@ -1,499 +1,362 @@
 """
-东周列国图数据库数据准备模块
-从Neo4j读取 Person / Event / State 节点，转换为 RAG 文档
+封神演义图数据库数据准备模块
+从 Neo4j 读取 Person / Faction / Artifact / Beast / Formation / Event / DeityPosition / Location / TextChunk 节点，转换为 RAG 文档
 """
 
-import logging
+import csv
 import json
-from typing import List, Dict, Any, Optional
-from dataclasses import dataclass
+import logging
+from collections import defaultdict
+from io import StringIO
+from typing import Any, Dict, List, Optional
 
-from neo4j import GraphDatabase
 from langchain_core.documents import Document
+from neo4j import GraphDatabase
+
+from .gold_schema import ENTITY_TYPES, RELATION_LABELS_ZH
 
 logger = logging.getLogger(__name__)
 
-@dataclass
-class GraphNode:
-    """图节点数据结构"""
-    node_id: str
-    labels: List[str]
-    name: str
-    properties: Dict[str, Any]
 
-@dataclass
-class GraphRelation:
-    """图关系数据结构"""
-    start_node_id: str
-    end_node_id: str
-    relation_type: str
-    properties: Dict[str, Any]
+class GraphNode:
+    def __init__(self, node_id: str, labels: List[str], name: str, properties: Dict[str, Any]):
+        self.node_id = node_id
+        self.labels = labels
+        self.name = name
+        self.properties = properties
 
 
 class GraphDataPreparationModule:
-    """图数据库数据准备模块 - 从Neo4j读取东周列国数据并转换为文档"""
+    """从 Neo4j 读取封神演义图数据并转换为 RAG 文档"""
 
-    def __init__(self, uri: str, user: str, password: str, database: str = "neo4j"):
-        self.uri = uri
-        self.user = user
-        self.password = password
-        self.database = database
-        self.driver = None
+    def __init__(self, uri: str = None, user: str = None, password: str = None, database: str = "neo4j", driver=None, config=None):
+        if config is not None:
+            self.uri = config.neo4j_uri
+            self.user = config.neo4j_user
+            self.password = config.neo4j_password
+            self.database = config.neo4j_database
+        else:
+            self.uri = uri
+            self.user = user
+            self.password = password
+            self.database = database
         self.documents: List[Document] = []
         self.chunks: List[Document] = []
 
-        # 节点列表（对应原来的 recipes/ingredients/steps）
-        self.persons: List[GraphNode] = []
-        self.events:  List[GraphNode] = []
-        self.states:  List[GraphNode] = []
-
-        # 兼容旧接口（app.py 统计使用）
-        self.recipes    = self.persons
-        self.ingredients= self.events
-
-        self._connect()
+        self.nodes_by_type: Dict[str, List[GraphNode]] = {etype: [] for etype in ENTITY_TYPES}
+        self.text_chunks: List[GraphNode] = []
+        self.chapters: List[GraphNode] = []
+        self.communities: List[GraphNode] = []
+        if driver is not None:
+            self.driver = driver
+        else:
+            self.driver = None
+            self._connect()
 
     def _connect(self):
-        """建立Neo4j连接"""
         try:
-            self.driver = GraphDatabase.driver(
-                self.uri,
-                auth=(self.user, self.password),
-                database=self.database
-            )
-            with self.driver.session() as session:
-                result = session.run("RETURN 1 as test")
-                if result.single():
+            self.driver = GraphDatabase.driver(self.uri, auth=(self.user, self.password))
+            with self.driver.session(database=self.database) as session:
+                if session.run("RETURN 1 AS test").single():
                     logger.info("Neo4j 连接测试成功")
         except Exception as e:
-            logger.error(f"连接Neo4j失败: {e}")
+            logger.error("连接Neo4j失败: %s", e)
             raise
 
     def close(self):
-        if hasattr(self, 'driver') and self.driver:
+        if getattr(self, "driver", None):
             self.driver.close()
 
-    # ─────────────────────────────────────────────────────────────
-    # 加载图数据
-    # ─────────────────────────────────────────────────────────────
+    @property
+    def persons(self): return self.nodes_by_type.get("Person", [])
+    @property
+    def factions(self): return self.nodes_by_type.get("Faction", [])
+    @property
+    def artifacts(self): return self.nodes_by_type.get("Artifact", [])
+    @property
+    def beasts(self): return self.nodes_by_type.get("Beast", [])
+    @property
+    def formations(self): return self.nodes_by_type.get("Formation", [])
+    @property
+    def events(self): return self.nodes_by_type.get("Event", [])
+    @property
+    def deity_positions(self): return self.nodes_by_type.get("DeityPosition", [])
+    @property
+    def locations(self): return self.nodes_by_type.get("Location", [])
+
     def load_graph_data(self) -> Dict[str, Any]:
-        """从Neo4j加载人物、事件、国家节点"""
-        logger.info("从Neo4j加载东周列国图数据...")
-
-        with self.driver.session() as session:
-            # 加载 Person 节点
-            result = session.run("""
-                MATCH (p:Person)
-                RETURN p.name as name, labels(p) as labels, properties(p) as props
-                ORDER BY p.name
-            """)
-            self.persons = []
-            for rec in result:
-                self.persons.append(GraphNode(
-                    node_id=rec["name"],
-                    labels=rec["labels"],
-                    name=rec["name"],
-                    properties=dict(rec["props"])
-                ))
-            logger.info(f"加载了 {len(self.persons)} 个 Person 节点")
-
-            # 加载 Event 节点
-            result = session.run("""
-                MATCH (e:Event)
-                RETURN e.event_id as eid, e.name as name, labels(e) as labels, properties(e) as props
-                ORDER BY e.time_start
-            """)
-            self.events = []
-            for rec in result:
-                self.events.append(GraphNode(
-                    node_id=rec["eid"] or rec["name"],
-                    labels=rec["labels"],
-                    name=rec["name"],
-                    properties=dict(rec["props"])
-                ))
-            logger.info(f"加载了 {len(self.events)} 个 Event 节点")
-
-            # 加载 State 节点
-            result = session.run("""
-                MATCH (s:State)
-                RETURN s.name as name, labels(s) as labels, properties(s) as props
-                ORDER BY s.name
-            """)
-            self.states = []
-            for rec in result:
-                self.states.append(GraphNode(
-                    node_id=rec["name"],
-                    labels=rec["labels"],
-                    name=rec["name"],
-                    properties=dict(rec["props"])
-                ))
-            logger.info(f"加载了 {len(self.states)} 个 State 节点")
-
-        # 同步兼容别名
-        self.recipes     = self.persons
-        self.ingredients = self.events
+        logger.info("从Neo4j加载封神演义图数据...")
+        with self.driver.session(database=self.database) as session:
+            for etype in ENTITY_TYPES:
+                self.nodes_by_type[etype] = self._load_nodes(session, etype, "name")
+            self.text_chunks = self._load_nodes(session, "TextChunk", "chunk_id")
+            self.chapters = self._load_nodes(session, "Chapter", "title", order_by="n.chapter_number")
+            self.communities = self._load_nodes(session, "Community", "community_id") if self._label_exists(session, "Community") else []
 
         return {
-            'persons': len(self.persons),
-            'events':  len(self.events),
-            'states':  len(self.states)
+            **{etype.lower() + "s": len(nodes) for etype, nodes in self.nodes_by_type.items()},
+            "text_chunks": len(self.text_chunks),
+            "chapters": len(self.chapters),
+            "communities": len(self.communities),
         }
 
-    # ─────────────────────────────────────────────────────────────
-    # 构建人物文档
-    # ─────────────────────────────────────────────────────────────
-    def build_person_documents(self) -> List[Document]:
-        """为每个Person构建RAG文档（包含其关系和参与事件）"""
-        logger.info("构建人物文档...")
-        documents = []
+    def _label_exists(self, session, label: str) -> bool:
+        rec = session.run("CALL db.labels() YIELD label RETURN collect(label) AS labels").single()
+        return label in (rec["labels"] or [])
 
-        with self.driver.session() as session:
-            for person in self.persons:
-                pname = person.name
-                props = person.properties
+    def _load_nodes(self, session, label: str, id_field: str, alias: str = "n", order_by: str = None) -> List[GraphNode]:
+        order_clause = f"ORDER BY {order_by}" if order_by else f"ORDER BY {alias}.{id_field}"
+        query = f"""
+            MATCH ({alias}:{label})
+            RETURN coalesce({alias}.{id_field}, {alias}.name, {alias}.chunk_id, elementId({alias})) as node_id,
+                   coalesce({alias}.title, {alias}.name, {alias}.chunk_id, {alias}.{id_field}) as name,
+                   labels({alias}) as labels,
+                   properties({alias}) as props
+            {order_clause}
+        """
+        nodes = []
+        try:
+            for rec in session.run(query):
+                nodes.append(GraphNode(rec["node_id"], rec["labels"], rec["name"] or rec["node_id"], dict(rec["props"])))
+        except Exception as e:
+            logger.debug("加载 %s 节点失败: %s", label, e)
+        logger.info("加载了 %s 个 %s 节点", len(nodes), label)
+        return nodes
 
-                # 获取该人物的关系
-                rel_result = session.run("""
-                    MATCH (p:Person {name: $name})-[r]->(other)
-                    RETURN type(r) as rtype, r.label as rlabel, other.name as other_name, labels(other) as other_labels
-                    LIMIT 30
-                """, {"name": pname})
+    def _serialize_value(self, value: Any) -> Any:
+        if isinstance(value, list):
+            return "、".join(str(item) for item in value)
+        if isinstance(value, dict):
+            return json.dumps(value, ensure_ascii=False)
+        return value
 
-                relations = []
+    def _node_to_row(self, node: GraphNode, fields: List[str]) -> Dict[str, Any]:
+        row = {"node_id": node.node_id, "name": node.name, "labels": "|".join(node.labels)}
+        for field in fields:
+            row[field] = self._serialize_value(node.properties.get(field, ""))
+        return row
+
+    def export_dataset_rows(self, dataset_name: str, relation_limit: int = 5000) -> List[Dict[str, Any]]:
+        if dataset_name == "relations":
+            return self.export_relation_rows(relation_limit)
+        if dataset_name == "text_chunks":
+            return [self._node_to_row(c, ["chapter_number", "chapter_title", "chunk_index", "text", "text_length"]) for c in self.text_chunks]
+        label_map = {
+            "persons": "Person", "factions": "Faction", "artifacts": "Artifact", "beasts": "Beast",
+            "formations": "Formation", "events": "Event", "deity_positions": "DeityPosition", "locations": "Location"
+        }
+        etype = label_map.get(dataset_name)
+        if not etype:
+            raise ValueError(f"不支持的数据集: {dataset_name}")
+        return [self._node_to_row(n, ["alias", "description", "entity_type"]) for n in self.nodes_by_type.get(etype, [])]
+
+    def export_relation_rows(self, limit: int = 5000) -> List[Dict[str, Any]]:
+        rows = []
+        try:
+            with self.driver.session(database=self.database) as session:
+                query = """
+                MATCH (a)-[r]->(b)
+                RETURN coalesce(a.name, a.chunk_id) AS source,
+                       head(labels(a)) AS source_type,
+                       type(r) AS relation,
+                       coalesce(b.name, b.chunk_id) AS target,
+                       head(labels(b)) AS target_type,
+                       properties(r) AS props
+                LIMIT $limit
+                """
+                for rec in session.run(query, {"limit": limit}):
+                    props = dict(rec["props"] or {})
+                    rows.append({
+                        "source": rec["source"], "source_type": rec["source_type"],
+                        "relation": rec["relation"], "target": rec["target"], "target_type": rec["target_type"],
+                        "evidence": self._serialize_value(props.get("evidence", "")),
+                        "confidence": self._serialize_value(props.get("confidence", "")),
+                    })
+        except Exception as e:
+            logger.error("导出关系表失败: %s", e)
+        return rows
+
+    def rows_to_csv(self, rows: List[Dict[str, Any]]) -> str:
+        if not rows:
+            return ""
+        buffer = StringIO()
+        fieldnames = list(rows[0].keys())
+        writer = csv.DictWriter(buffer, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow({key: self._serialize_value(value) for key, value in row.items()})
+        return buffer.getvalue()
+
+    def build_entity_documents(self, etype: str) -> List[Document]:
+        docs = []
+        nodes = self.nodes_by_type.get(etype, [])
+        with self.driver.session(database=self.database) as session:
+            for node in nodes:
+                name = node.name
+                props = node.properties
+                rels = []
+                rel_result = session.run(
+                    """
+                    MATCH (n {name: $name})-[r]-(other)
+                    WHERE coalesce(other.name, other.chunk_id) IS NOT NULL
+                    RETURN type(r) AS rtype,
+                           coalesce(other.name, other.chunk_id) AS other_name,
+                           head(labels(other)) AS other_type,
+                           r.evidence AS evidence,
+                           r.source_text AS source_text,
+                           r.source_chunk_id AS source_chunk_id
+                    LIMIT 50
+                    """,
+                    name=name,
+                )
+                relation_source_text = ""
+                relation_source_chunk_id = ""
                 for rr in rel_result:
-                    other = rr["other_name"]
-                    label = rr["rlabel"] or rr["rtype"]
-                    other_labels = rr["other_labels"] or []
-                    if "State" in other_labels:
-                        relations.append(f"效力于：{other}")
-                    elif "Event" in other_labels:
-                        rel_map = {
-                            "ATTACKED_IN": "主攻方参与战争",
-                            "DEFENDED_IN": "主守方参与战争",
-                            "ASSISTED_ATTACK_IN": "协助进攻",
-                            "ASSISTED_DEFEND_IN": "协助防守"
-                        }
-                        rel_desc = rel_map.get(rr["rtype"], "参与")
-                        relations.append(f"{rel_desc}：{other}")
-                    else:
-                        relations.append(f"{label}：{other}")
+                    rel_zh = RELATION_LABELS_ZH.get(rr["rtype"], rr["rtype"])
+                    otype = ENTITY_TYPES.get(rr["other_type"], rr["other_type"])
+                    item = f"{rel_zh} → {rr['other_name']}（{otype}）"
+                    if rr.get("evidence"):
+                        item += f"；证据：{str(rr['evidence'])[:80]}"
+                    if not relation_source_text and rr.get("source_text"):
+                        relation_source_text = rr.get("source_text")
+                    if not relation_source_chunk_id and rr.get("source_chunk_id"):
+                        relation_source_chunk_id = rr.get("source_chunk_id")
+                    rels.append(item)
 
-                # 获取参与的事件
-                event_result = session.run("""
-                    MATCH (p:Person {name: $name})-[r]->(e:Event)
-                    RETURN e.name as ename, e.time_start as ts, e.result as result, type(r) as rtype
-                    ORDER BY e.time_start
-                    LIMIT 10
-                """, {"name": pname})
-                events_info = []
-                for er in event_result:
-                    role_map = {
-                        "ATTACKED_IN": "主攻",
-                        "DEFENDED_IN": "主守",
-                        "ASSISTED_ATTACK_IN": "助攻",
-                        "ASSISTED_DEFEND_IN": "助守"
-                    }
-                    role = role_map.get(er["rtype"], "参与")
-                    ts = er["ts"]
-                    year_str = f"（约公元前{abs(ts)}年）" if ts and ts < 0 else (f"（{ts}年）" if ts else "")
-                    events_info.append(f"  - {er['ename']}{year_str}，以{role}方参战，结果：{er['result'] or '不详'}")
-
-                # 构建文档
-                life_year = props.get("life_year")
-                year_display = f"约公元前{abs(life_year)}年" if life_year and life_year < 0 else str(life_year or "不详")
-                is_king = "国君" if props.get("is_king") == "是" else "臣子/将领"
-
-                content_parts = [f"# {pname}"]
-                content_parts.append(f"\n**人物简介**")
-                content_parts.append(f"姓名：{pname}（姓{props.get('xing','')} 氏{props.get('shi','')} 名{props.get('ming','')}）")
-                content_parts.append(f"所属诸侯国：{props.get('state', '不详')}")
-                content_parts.append(f"身份：{is_king}")
-                content_parts.append(f"生活时代：{year_display}")
-                content_parts.append(f"工作时间：{props.get('work_time', '不详')}")
-                if props.get("note"):
-                    content_parts.append(f"备注：{props['note']}")
-
-                if relations:
-                    content_parts.append(f"\n**人物关系**")
-                    for rel in relations[:15]:
-                        content_parts.append(f"  - {rel}")
-
-                if events_info:
-                    content_parts.append(f"\n**参与历史事件**")
-                    content_parts.extend(events_info)
-
-                full_content = "\n".join(content_parts)
-
-                doc = Document(
-                    page_content=full_content,
-                    metadata={
-                        "node_id":      pname,
-                        "entity_name":  pname,
-                        "recipe_name":  pname,   # 兼容旧接口
-                        "node_type":    "Person",
-                        "state":        props.get("state", ""),
-                        "is_king":      props.get("is_king", ""),
-                        "life_year":    props.get("life_year", ""),
-                        "doc_type":     "person",
-                        "content_length": len(full_content)
-                    }
-                )
-                documents.append(doc)
-
-        logger.info(f"成功构建 {len(documents)} 个人物文档")
-        return documents
-
-    # ─────────────────────────────────────────────────────────────
-    # 构建事件文档
-    # ─────────────────────────────────────────────────────────────
-    def build_event_documents(self) -> List[Document]:
-        """为每个Event构建RAG文档"""
-        logger.info("构建事件文档...")
-        documents = []
-
-        with self.driver.session() as session:
-            for event in self.events:
-                eid   = event.node_id
-                ename = event.name
-                props = event.properties
-
-                # 获取参与人物
-                persons_result = session.run("""
-                    MATCH (p:Person)-[r]->(e:Event {name: $name})
-                    RETURN p.name as pname, p.state as pstate, type(r) as rtype
-                    LIMIT 20
-                """, {"name": ename})
-
-                attackers, defenders, helpers = [], [], []
-                for pr in persons_result:
-                    rt = pr["rtype"]
-                    entry = f"{pr['pname']}（{pr['pstate'] or ''}）"
-                    if rt == "ATTACKED_IN":
-                        attackers.append(entry)
-                    elif rt == "DEFENDED_IN":
-                        defenders.append(entry)
-                    else:
-                        helpers.append(entry)
-
-                ts = props.get("time_start")
-                te = props.get("time_end")
-                year_str = ""
-                if ts:
-                    year_str = f"约公元前{abs(ts)}年" if ts < 0 else f"{ts}年"
-                    if te:
-                        ye = f"公元前{abs(te)}年" if te < 0 else f"{te}年"
-                        year_str += f"至{ye}"
-
-                content_parts = [f"# {ename}"]
-                content_parts.append(f"\n**战争基本信息**")
-                content_parts.append(f"事件编号：{eid}")
-                content_parts.append(f"时间：{year_str or '不详'}")
-                content_parts.append(f"地点：{props.get('location', '不详')}")
-                content_parts.append(f"事件类型：{props.get('event_type', '战争')}")
-
-                content_parts.append(f"\n**交战双方**")
-                content_parts.append(f"主攻方：{props.get('attacker', '不详')}")
-                content_parts.append(f"主守方：{props.get('defender', '不详')}")
-                if props.get("atk_help"):
-                    content_parts.append(f"助攻方：{props['atk_help']}")
-                if props.get("def_help"):
-                    content_parts.append(f"助守方：{props['def_help']}")
-
-                if attackers:
-                    content_parts.append(f"\n**参战人物（进攻方）**：{', '.join(attackers)}")
-                if defenders:
-                    content_parts.append(f"**参战人物（防守方）**：{', '.join(defenders)}")
-                if helpers:
-                    content_parts.append(f"**其他参战人物**：{', '.join(helpers)}")
-
-                content_parts.append(f"\n**战役详情**")
-                content_parts.append(f"起因：{props.get('cause', '不详')}")
-                content_parts.append(f"结果：{props.get('result', '不详')}")
-
-                if props.get("atk_force"):
-                    content_parts.append(f"主攻方兵力：{props['atk_force']}")
-                if props.get("def_force"):
-                    content_parts.append(f"主守方兵力：{props['def_force']}")
-                if props.get("atk_loss"):
-                    content_parts.append(f"主攻方伤亡：{props['atk_loss']}")
-                if props.get("def_loss"):
-                    content_parts.append(f"主守方伤亡：{props['def_loss']}")
-                if props.get("content"):
-                    content_parts.append(f"\n**详细记载**\n{props['content']}")
-
-                full_content = "\n".join(content_parts)
-
-                doc = Document(
-                    page_content=full_content,
-                    metadata={
-                        "node_id":     eid,
-                        "entity_name": ename,
-                        "recipe_name": ename,   # 兼容旧接口
-                        "node_type":   "Event",
-                        "location":    props.get("location", ""),
-                        "time_start":  props.get("time_start", ""),
-                        "result":      props.get("result", ""),
-                        "doc_type":    "event",
-                        "content_length": len(full_content)
-                    }
-                )
-                documents.append(doc)
-
-        logger.info(f"成功构建 {len(documents)} 个事件文档")
-        return documents
-
-    # ─────────────────────────────────────────────────────────────
-    # 统一构建（原接口保留）
-    # ─────────────────────────────────────────────────────────────
-    def build_recipe_documents(self) -> List[Document]:
-        """兼容旧接口，构建全部文档（人物 + 事件）"""
-        person_docs = self.build_person_documents()
-        event_docs  = self.build_event_documents()
-        self.documents = person_docs + event_docs
-        logger.info(f"共构建 {len(self.documents)} 个文档（{len(person_docs)} 人物 + {len(event_docs)} 事件）")
-        return self.documents
-
-    # ─────────────────────────────────────────────────────────────
-    # 文档分块
-    # ─────────────────────────────────────────────────────────────
-    def chunk_documents(self, chunk_size: int = 600, chunk_overlap: int = 60) -> List[Document]:
-        """对文档进行分块"""
-        logger.info(f"文档分块，块大小: {chunk_size}, 重叠: {chunk_overlap}")
-        if not self.documents:
-            raise ValueError("请先构建文档")
-
-        chunks = []
-        chunk_id = 0
-
-        for doc in self.documents:
-            content = doc.page_content
-
-            if len(content) <= chunk_size:
-                chunk = Document(
+                alias = props.get("alias") or []
+                if isinstance(alias, str):
+                    alias = [alias]
+                entity_label = ENTITY_TYPES.get(etype, etype)
+                parts = [f"# {name}", f"类型：{entity_label}"]
+                if alias:
+                    parts.append(f"别名：{'、'.join(alias)}")
+                if props.get("description"):
+                    parts.append(f"简介：{props.get('description')}")
+                attr_lines = []
+                for k, v in props.items():
+                    if k.startswith("attr_") and v:
+                        attr_lines.append(f"{k[5:]}：{v}")
+                if attr_lines:
+                    parts.append("\n## 属性")
+                    parts.extend(attr_lines)
+                if rels:
+                    parts.append(f"\n## 关联关系（{len(rels)}条）")
+                    parts.extend(f"- {r}" for r in rels[:30])
+                content = "\n".join(parts)
+                docs.append(Document(
                     page_content=content,
                     metadata={
-                        **doc.metadata,
-                        "chunk_id":    f"{doc.metadata['node_id']}_chunk_{chunk_id}",
-                        "parent_id":   doc.metadata["node_id"],
-                        "chunk_index": 0,
-                        "total_chunks":1,
-                        "chunk_size":  len(content),
-                        "doc_type":    "chunk"
-                    }
-                )
-                chunks.append(chunk)
-                chunk_id += 1
-            else:
-                # 按二级标题分块
-                sections = content.split('\n## ')
-                if len(sections) <= 1:
-                    sections = content.split('\n**')
-                if len(sections) <= 1:
-                    # 按长度强制分块
-                    total_chunks = (len(content) - 1) // (chunk_size - chunk_overlap) + 1
-                    for i in range(total_chunks):
-                        start = i * (chunk_size - chunk_overlap)
-                        end   = min(start + chunk_size, len(content))
-                        chunk_content = content[start:end]
-                        chunk = Document(
-                            page_content=chunk_content,
-                            metadata={
-                                **doc.metadata,
-                                "chunk_id":    f"{doc.metadata['node_id']}_chunk_{chunk_id}",
-                                "parent_id":   doc.metadata["node_id"],
-                                "chunk_index": i,
-                                "total_chunks":total_chunks,
-                                "chunk_size":  len(chunk_content),
-                                "doc_type":    "chunk"
-                            }
-                        )
-                        chunks.append(chunk)
-                        chunk_id += 1
-                else:
-                    total_chunks = len(sections)
-                    for i, section in enumerate(sections):
-                        chunk_content = section if i == 0 else f"## {section}"
-                        chunk = Document(
-                            page_content=chunk_content,
-                            metadata={
-                                **doc.metadata,
-                                "chunk_id":    f"{doc.metadata['node_id']}_chunk_{chunk_id}",
-                                "parent_id":   doc.metadata["node_id"],
-                                "chunk_index": i,
-                                "total_chunks":total_chunks,
-                                "chunk_size":  len(chunk_content),
-                                "doc_type":    "chunk",
-                                "section_title": section.split('\n')[0][:30] if i > 0 else "主标题"
-                            }
-                        )
-                        chunks.append(chunk)
-                        chunk_id += 1
+                        "node_id": name,
+                        "entity_name": name,
+                        "node_type": etype,
+                        "doc_type": etype.lower(),
+                        "source_chunk_id": props.get("source_chunk_id") or relation_source_chunk_id,
+                        "source_text": props.get("source_text") or relation_source_text,
+                        "chapter_number": props.get("chapter_number"),
+                        "chapter_title": props.get("chapter_title"),
+                        "content_length": len(content),
+                    },
+                ))
+        return docs
 
+    def build_text_chunk_documents(self) -> List[Document]:
+        docs = []
+        for chunk in self.text_chunks:
+            props = chunk.properties
+            text = props.get("text", "")
+            ch_num = props.get("chapter_number", "?")
+            title = props.get("chapter_title", "?")
+            header = f"# 第{ch_num}回 {title}（片段{props.get('chunk_index', '?')}）"
+            content = f"{header}\n\n{text}"
+            docs.append(Document(
+                page_content=content,
+                metadata={
+                    "node_id": chunk.node_id,
+                    "chunk_id": chunk.node_id,
+                    "source_chunk_id": chunk.node_id,
+                    "source_text": text,
+                    "entity_name": header,
+                    "node_type": "TextChunk",
+                    "chapter_number": ch_num,
+                    "chapter_title": title,
+                    "doc_type": "text_chunk",
+                    "content_length": len(content),
+                },
+            ))
+        return docs
+
+    def build_history_documents(self) -> List[Document]:
+        docs = []
+        for etype in ENTITY_TYPES:
+            part = self.build_entity_documents(etype)
+            logger.info("构建 %s 文档 %s 个", etype, len(part))
+            docs.extend(part)
+        chunk_docs = self.build_text_chunk_documents()
+        docs.extend(chunk_docs)
+        self.documents = docs
+        logger.info("共构建 %s 个文档（含 %s 个原文片段）", len(docs), len(chunk_docs))
+        return docs
+
+    def chunk_documents(self, chunk_size: int = 800, chunk_overlap: int = 100) -> List[Document]:
+        if not self.documents:
+            raise ValueError("请先构建文档")
+        chunks = []
+        chunk_id = 0
+        for doc in self.documents:
+            content = doc.page_content
+            source_doc_type = doc.metadata.get("doc_type", "chunk")
+            if len(content) <= chunk_size:
+                chunks.append(Document(page_content=content, metadata={**doc.metadata, "chunk_id": f"{doc.metadata['node_id']}_chunk_{chunk_id}", "parent_id": doc.metadata["node_id"], "chunk_index": 0, "total_chunks": 1, "chunk_size": len(content), "source_doc_type": source_doc_type, "is_chunk": True}))
+                chunk_id += 1
+                continue
+            total = (len(content) - 1) // (chunk_size - chunk_overlap) + 1
+            for i in range(total):
+                start = i * (chunk_size - chunk_overlap)
+                end = min(start + chunk_size, len(content))
+                chunk_content = content[start:end]
+                chunks.append(Document(page_content=chunk_content, metadata={**doc.metadata, "chunk_id": f"{doc.metadata['node_id']}_chunk_{chunk_id}", "parent_id": doc.metadata["node_id"], "chunk_index": i, "total_chunks": total, "chunk_size": len(chunk_content), "source_doc_type": source_doc_type, "is_chunk": True}))
+                chunk_id += 1
         self.chunks = chunks
-        logger.info(f"文档分块完成，共 {len(chunks)} 个块")
+        logger.info("文档分块完成，共 %s 个块", len(chunks))
         return chunks
 
-    # ─────────────────────────────────────────────────────────────
-    # 统计 & 导出
-    # ─────────────────────────────────────────────────────────────
     def get_statistics(self) -> Dict[str, Any]:
         stats = {
-            'total_recipes':        len(self.persons),
-            'total_ingredients':    len(self.events),
-            'total_cooking_steps':  len(self.states),
-            'total_documents':      len(self.documents),
-            'total_chunks':         len(self.chunks),
-            # 东周专用键
-            'total_persons':        len(self.persons),
-            'total_events':         len(self.events),
-            'total_states':         len(self.states),
+            "total_documents": len(self.documents),
+            "total_chunks": len(self.chunks),
+            "total_text_chunks": len(self.text_chunks),
+            "total_chapters": len(self.chapters),
+            "total_communities": len(self.communities),
         }
-
-        if self.documents:
-            types = {}
-            states_cnt = {}
-            for doc in self.documents:
-                t = doc.metadata.get('doc_type', '未知')
-                types[t] = types.get(t, 0) + 1
-                s = doc.metadata.get('state', '未知')
-                if s:
-                    states_cnt[s] = states_cnt.get(s, 0) + 1
-            stats['doc_types'] = types
-            stats['state_distribution'] = states_cnt
-
+        for etype, nodes in self.nodes_by_type.items():
+            stats[f"total_{etype.lower()}s"] = len(nodes)
         return stats
 
-    def export_triples(self, recipe_names: List[str] = None, limit: int = 50) -> List[tuple]:
-        """导出三元组（兼容旧接口），用于知识图谱可视化"""
+    def export_triples(self, entity_names: List[str] = None, limit: int = 50) -> List[tuple]:
         triples = []
         try:
-            with self.driver.session() as session:
-                if recipe_names:
-                    # 按实体名查询相关三元组
+            with self.driver.session(database=self.database) as session:
+                if entity_names:
                     query = """
-                    UNWIND $names as nm
+                    UNWIND $names AS nm
                     MATCH (a)-[r]->(b)
-                    WHERE (a.name CONTAINS nm OR b.name CONTAINS nm)
-                      AND NOT type(r) IN ['BELONGS_TO']
-                    RETURN a.name as src, type(r) as rel, b.name as tgt
+                    WHERE coalesce(a.name, a.chunk_id, '') CONTAINS nm OR coalesce(b.name, b.chunk_id, '') CONTAINS nm
+                    RETURN coalesce(a.name, a.chunk_id) AS src, type(r) AS rel, coalesce(b.name, b.chunk_id) AS tgt
                     LIMIT $limit
                     """
-                    result = session.run(query, {"names": recipe_names, "limit": limit})
+                    result = session.run(query, {"names": entity_names, "limit": limit})
                 else:
                     query = """
                     MATCH (a)-[r]->(b)
-                    WHERE NOT type(r) = 'BELONGS_TO'
-                    RETURN a.name as src, type(r) as rel, b.name as tgt
+                    RETURN coalesce(a.name, a.chunk_id) AS src, type(r) AS rel, coalesce(b.name, b.chunk_id) AS tgt
                     LIMIT $limit
                     """
                     result = session.run(query, {"limit": limit})
-
                 for rec in result:
                     if rec["src"] and rec["tgt"]:
                         triples.append((rec["src"], rec["rel"], rec["tgt"]))
         except Exception as e:
-            logger.error(f"导出三元组失败: {e}")
-        logger.info(f"导出三元组完成，共 {len(triples)} 条")
+            logger.error("导出三元组失败: %s", e)
         return triples
 
     def __del__(self):

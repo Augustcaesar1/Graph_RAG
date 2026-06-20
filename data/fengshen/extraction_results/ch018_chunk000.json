@@ -1,0 +1,172 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "姜子牙",
+          "alias": [
+            "子牙",
+            "姜尚"
+          ],
+          "description": "元始天尊弟子，辅佐周室伐商",
+          "attributes": {
+            "sect": "阐教",
+            "faction": "周"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [
+            "苏娘娘"
+          ],
+          "description": "纣王宠妃",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "杨任",
+          "alias": [],
+          "description": "商朝上大夫，后被清虚道德真君所救",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "崇侯虎",
+          "alias": [],
+          "description": "商朝官员，负责监造鹿台",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "清虚道德真君",
+          "alias": [
+            "道德真君"
+          ],
+          "description": "青峰山紫阳洞炼气士",
+          "attributes": {
+            "sect": "阐教"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝势力",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "周",
+          "alias": [],
+          "description": "周朝势力",
+          "attributes": {}
+        },
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {
+            "leader": "元始天尊"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "青峰山紫阳洞",
+          "alias": [
+            "紫阳洞"
+          ],
+          "description": "清虚道德真君修炼之地",
+          "attributes": {}
+        },
+        {
+          "name": "摘星楼",
+          "alias": [],
+          "description": "纣王与妲己行乐之处",
+          "attributes": {}
+        },
+        {
+          "name": "九龙桥",
+          "alias": [],
+          "description": "子牙投水之处",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "建造鹿台",
+          "alias": [],
+          "description": "纣王下令建造的奢华工程",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "清虚道德真君",
+        "relation": "MASTER_OF",
+        "target_entity": "杨任",
+        "evidence": "杨任听罢，拜谢曰：‘弟子蒙真君怜救，指引还生，再见人世，此恩此德，何敢有忘！望真君不弃，愿拜为师。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜子牙",
+        "relation": "OPPOSES",
+        "target_entity": "纣王",
+        "evidence": "子牙曰：‘臣启陛下，鹿台之工，劳民伤财，愿陛下且息此念头，切为不可。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "MARRIED_TO",
+        "target_entity": "纣王",
+        "evidence": "纣王闻奏，对妲己曰：‘御妻，姜尚奏朕，台工要三十五年方成。’",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "INITIATES",
+        "target_entity": "建造鹿台",
+        "evidence": "纣王与妲已议鹿台差那一员官监造。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇侯虎",
+        "relation": "PARTICIPATES_IN",
+        "target_entity": "建造鹿台",
+        "evidence": "妲己奏曰：‘若造此台，非崇侯虎不能成功。’纣王准行，差承奉宣崇侯虎。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "杨任",
+        "relation": "OPPOSES",
+        "target_entity": "纣王",
+        "evidence": "杨任奏曰：‘臣闻治天下之道，君明臣直，言听计从，惟师保是用，忠良是亲，奸佞日远，和外国，顺民心，功赏罪罚，莫不得当，则四海顺从，八方仰德，仁政施于人，则天下景从，万民乐业，此乃圣主之所为。今陛下信后妃之言，而忠言不听，建造鹿台。’",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

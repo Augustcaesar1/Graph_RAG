@@ -1,0 +1,236 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "姜皇后",
+          "alias": [
+            "姜后"
+          ],
+          "description": "纣王的皇后，东伯侯姜桓楚之女",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [
+            "苏妲己"
+          ],
+          "description": "纣王的宠妃",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄妃",
+          "alias": [
+            "黄娘娘"
+          ],
+          "description": "纣王的妃子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜桓楚",
+          "alias": [
+            "东伯侯"
+          ],
+          "description": "姜皇后的父亲，东伯侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜环",
+          "alias": [],
+          "description": "刺客，姜桓楚所用之人",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "晁田",
+          "alias": [],
+          "description": "威武大将军",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "晁雷",
+          "alias": [],
+          "description": "威武大将军",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝",
+          "attributes": {
+            "leader": "纣王"
+          }
+        }
+      ],
+      "Location": [
+        {
+          "name": "西宫",
+          "alias": [],
+          "description": "姜皇后居住的宫殿",
+          "attributes": {}
+        },
+        {
+          "name": "不游宫",
+          "alias": [],
+          "description": "可能的贬谪之地",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [
+        {
+          "name": "剜目之刑",
+          "alias": [],
+          "description": "纣王下令剜去姜皇后一目",
+          "attributes": {}
+        },
+        {
+          "name": "砲烙之刑",
+          "alias": [],
+          "description": "纣王下令用铜斗烧红烙姜皇后二手",
+          "attributes": {}
+        }
+      ],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "姜皇后",
+        "relation": "MARRIED_TO",
+        "target_entity": "纣王",
+        "evidence": "君多年，蒙陛下恩宠，生殿下已正位东宫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜皇后",
+        "relation": "CHILD_OF",
+        "target_entity": "姜桓楚",
+        "evidence": "况姜桓楚官居东伯，位至皇亲",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜桓楚",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "况姜桓楚官居东伯，位至皇亲",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "纣王听罢，自思曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "纣王见妲己微笑，问曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄妃",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "黄妃在旁言曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜环",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "且姜环是他父亲所用之人",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "晁田",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "传旨着威武大将军晁田、晁雷",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "晁雷",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "传旨着威武大将军晁田、晁雷",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "妲己",
+        "relation": "OPPOSES",
+        "target_entity": "姜皇后",
+        "evidence": "妲己在旁微微冷笑",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "OPPOSES",
+        "target_entity": "姜皇后",
+        "evidence": "纣王听罢，自思曰",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "黄妃",
+        "relation": "ALLIES_WITH",
+        "target_entity": "姜皇后",
+        "evidence": "黄妃听说欲剜姜后目，心甚着忙",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "KILLS",
+        "target_entity": "姜皇后",
+        "evidence": "奉御官百般逼迫，容留不得，将姜皇后剜去一目",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "KILLS",
+        "target_entity": "姜皇后",
+        "evidence": "奉御官不由分说，将铜斗放在姜后两手，只烙的筋断皮焦，骨枯烟臭",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜皇后",
+        "relation": "OCCURS_IN",
+        "target_entity": "剜目之刑",
+        "evidence": "奉御官百般逼迫，容留不得，将姜皇后剜去一目",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜皇后",
+        "relation": "OCCURS_IN",
+        "target_entity": "砲烙之刑",
+        "evidence": "奉御官不由分说，将铜斗放在姜后两手，只烙的筋断皮焦，骨枯烟臭",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

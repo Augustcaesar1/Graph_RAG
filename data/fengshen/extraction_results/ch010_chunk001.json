@@ -1,0 +1,253 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "姬昌",
+          "alias": [
+            "姬伯"
+          ],
+          "description": "西伯侯，周文王",
+          "attributes": {
+            "faction": "周"
+          }
+        },
+        {
+          "name": "雷震子",
+          "alias": [],
+          "description": "姬昌收养的百子，后被云中子收为徒弟",
+          "attributes": {}
+        },
+        {
+          "name": "云中子",
+          "alias": [],
+          "description": "终南山玉柱洞炼气士",
+          "attributes": {
+            "sect": "阐教"
+          }
+        },
+        {
+          "name": "姜桓楚",
+          "alias": [
+            "东伯侯"
+          ],
+          "description": "东伯侯，姜皇后之父",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "鄂崇禹",
+          "alias": [
+            "南伯侯"
+          ],
+          "description": "南伯侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "崇侯虎",
+          "alias": [
+            "北伯侯"
+          ],
+          "description": "北伯侯，与费仲、尤浑勾结",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝末代君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王宠妃",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姜皇后",
+          "alias": [],
+          "description": "纣王皇后，姜桓楚之女",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "黄飞虎",
+          "alias": [
+            "武成王"
+          ],
+          "description": "商朝武将",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "比干",
+          "alias": [
+            "亚相"
+          ],
+          "description": "商朝大臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "费仲",
+          "alias": [],
+          "description": "商朝奸臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "尤浑",
+          "alias": [],
+          "description": "商朝奸臣",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "姚福",
+          "alias": [],
+          "description": "驿卒",
+          "attributes": {}
+        }
+      ],
+      "Faction": [
+        {
+          "name": "周",
+          "alias": [],
+          "description": "周国势力",
+          "attributes": {}
+        },
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝势力",
+          "attributes": {}
+        },
+        {
+          "name": "阐教",
+          "alias": [],
+          "description": "元始天尊门下教派",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "终南山玉柱洞",
+          "alias": [],
+          "description": "云中子修炼之地",
+          "attributes": {}
+        },
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "西岐",
+          "alias": [],
+          "description": "周国都城",
+          "attributes": {}
+        },
+        {
+          "name": "金庭馆驿",
+          "alias": [],
+          "description": "朝歌的驿站",
+          "attributes": {}
+        }
+      ],
+      "Event": [
+        {
+          "name": "姬伯燕山收雷震",
+          "alias": [],
+          "description": "姬昌在燕山收养雷震子",
+          "attributes": {}
+        },
+        {
+          "name": "姜皇后屈死西宫",
+          "alias": [],
+          "description": "姜皇后被纣王和妲己害死",
+          "attributes": {}
+        }
+      ]
+    },
+    "relations": [
+      {
+        "source_entity": "云中子",
+        "relation": "MASTER_OF",
+        "target_entity": "雷震子",
+        "evidence": "贫道今将此兒带上终南，以为徒弟",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姬昌",
+        "relation": "FATHER_OF",
+        "target_entity": "雷震子",
+        "evidence": "我孩有百子，今止有九十九子，适才之数，该得此兒，正成百子之兆",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "姜桓楚",
+        "relation": "FATHER_OF",
+        "target_entity": "姜皇后",
+        "evidence": "姜皇后乃桓楚之女",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇侯虎",
+        "relation": "ALLIES_WITH",
+        "target_entity": "费仲",
+        "evidence": "崇侯虎会夤缘钻刺，结党费仲、尤浑",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "崇侯虎",
+        "relation": "ALLIES_WITH",
+        "target_entity": "尤浑",
+        "evidence": "崇侯虎会夤缘钻刺，结党费仲、尤浑",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "鄂崇禹",
+        "relation": "OPPOSES",
+        "target_entity": "崇侯虎",
+        "evidence": "鄂崇禹平时知道崇侯虎会夤缘钻刺，结党费仲、尤浑",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "姜皇后",
+        "evidence": "姜皇后屈死西宫",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "纣王",
+        "relation": "MARRIED_TO",
+        "target_entity": "妲己",
+        "evidence": "天子信妲己娘娘暗传圣旨",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "云中子",
+        "relation": "BELONGS_TO_SECT",
+        "target_entity": "阐教",
+        "evidence": "贫道是终南山玉柱洞炼气士云中子是也",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]

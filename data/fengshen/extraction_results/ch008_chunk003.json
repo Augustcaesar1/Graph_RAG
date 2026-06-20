@@ -1,0 +1,235 @@
+[
+  {
+    "entities": {
+      "Person": [
+        {
+          "name": "殷郊",
+          "alias": [],
+          "description": "纣王之子，殷洪之兄",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷洪",
+          "alias": [],
+          "description": "纣王之子，殷郊之弟",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "方弼",
+          "alias": [],
+          "description": "商朝将军",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "方相",
+          "alias": [],
+          "description": "商朝将军",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "纣王",
+          "alias": [],
+          "description": "商朝君主",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "妲己",
+          "alias": [],
+          "description": "纣王妃子",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "鄂崇禹",
+          "alias": [],
+          "description": "南都诸侯",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "商容",
+          "alias": [],
+          "description": "商朝老丞相",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "殷破败",
+          "alias": [],
+          "description": "商朝将领",
+          "attributes": {
+            "faction": "商"
+          }
+        },
+        {
+          "name": "雷开",
+          "alias": [],
+          "description": "商朝将领",
+          "attributes": {
+            "faction": "商"
+          }
+        }
+      ],
+      "Faction": [
+        {
+          "name": "商",
+          "alias": [],
+          "description": "商朝势力",
+          "attributes": {
+            "leader": "纣王"
+          }
+        },
+        {
+          "name": "东鲁",
+          "alias": [],
+          "description": "诸侯势力",
+          "attributes": {}
+        },
+        {
+          "name": "南都",
+          "alias": [],
+          "description": "诸侯势力",
+          "attributes": {}
+        }
+      ],
+      "Location": [
+        {
+          "name": "朝歌",
+          "alias": [],
+          "description": "商朝都城",
+          "attributes": {}
+        },
+        {
+          "name": "轩辕庙",
+          "alias": [],
+          "description": "古庙",
+          "attributes": {}
+        },
+        {
+          "name": "太师府",
+          "alias": [],
+          "description": "商容府第",
+          "attributes": {}
+        }
+      ],
+      "Artifact": [],
+      "Beast": [],
+      "Formation": [],
+      "Event": [],
+      "DeityPosition": []
+    },
+    "relations": [
+      {
+        "source_entity": "殷郊",
+        "relation": "BROTHER_OF",
+        "target_entity": "殷洪",
+        "evidence": "殷郊对殷洪曰：“兄弟，你投那一路去？”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷洪",
+        "relation": "BROTHER_OF",
+        "target_entity": "殷郊",
+        "evidence": "殷洪垂泪点头曰：“哥哥，从此一别，不知何日再会？”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "CHILD_OF",
+        "target_entity": "纣王",
+        "evidence": "殷洪乃成汤三十一代之孙，纣王之子。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷洪",
+        "relation": "CHILD_OF",
+        "target_entity": "纣王",
+        "evidence": "殷洪乃成汤三十一代之孙，纣王之子。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "殷郊曰：“我往东鲁，你往南都。我见外翁，哭诉这场冤苦，舅爷必定调兵。我差官知会你，你或借数万之师，齐伐朝歌，擒拿妲己，为母亲报仇。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷洪",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "殷洪曰：“吾非别人，纣王之子殷洪是也。如今往南都见鄂崇禹。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "方弼",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "方相曰：“臣此去，不管那镇诸侯处暂且安身；俟殿下借兵进朝歌时，臣自来投拜麾下，以作前驱耳。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "方相",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "方相曰：“臣此去，不管那镇诸侯处暂且安身；俟殿下借兵进朝歌时，臣自来投拜麾下，以作前驱耳。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷破败",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "殷、雷二将领兵追趕二位殿下，虽有人马三千，俱是老弱不堪的",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "雷开",
+        "relation": "FIGHTS_FOR",
+        "target_entity": "商",
+        "evidence": "殷、雷二将领兵追趕二位殿下，虽有人马三千，俱是老弱不堪的",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "OPPOSES",
+        "target_entity": "妲己",
+        "evidence": "殷郊曰：“我往东鲁，你往南都。我见外翁，哭诉这场冤苦，舅爷必定调兵。我差官知会你，你或借数万之师，齐伐朝歌，擒拿妲己，为母亲报仇。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷洪",
+        "relation": "OPPOSES",
+        "target_entity": "妲己",
+        "evidence": "殷郊曰：“我往东鲁，你往南都。我见外翁，哭诉这场冤苦，舅爷必定调兵。我差官知会你，你或借数万之师，齐伐朝歌，擒拿妲己，为母亲报仇。",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷郊",
+        "relation": "RELATED_TO",
+        "target_entity": "商容",
+        "evidence": "商容见殷郊，下拜曰：“殿下何事到此？老臣有失迎迓，望乞恕罪。”",
+        "confidence": "explicit"
+      },
+      {
+        "source_entity": "殷洪",
+        "relation": "RELATED_TO",
+        "target_entity": "鄂崇禹",
+        "evidence": "殷洪曰：“吾非别人，纣王之子殷洪是也。如今往南都见鄂崇禹。”",
+        "confidence": "explicit"
+      }
+    ]
+  }
+]
